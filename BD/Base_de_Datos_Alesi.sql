@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `Alesi_BD`.`Alesi_tpersonas` (
   `Sexo` VARCHAR(1) NULL,
   `Telefono` VARCHAR(20) NULL,
   `Email` VARCHAR(45) NULL,
-  `id_Empresa` INT NULL,
+  `id_Empresa` VARCHAR(45) NULL,
   `Cargo` VARCHAR(90) NULL,
   `Otros` VARCHAR(45) NULL,
   PRIMARY KEY (`id_persona`))
@@ -105,7 +105,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `Alesi_BD`.`Alesi_tablas` ;
 
 CREATE TABLE IF NOT EXISTS `Alesi_BD`.`Alesi_tablas` (
-  `id_tabla` INT NOT NULL,
+  `id_tabla` INT NOT NULL  AUTO_INCREMENT,
   `Descipcion` VARCHAR(150) NOT NULL,
   `id_tabl_dep` INT NULL,
   PRIMARY KEY (`id_tabla`))
@@ -273,3 +273,21 @@ CREATE TABLE IF NOT EXISTS `Alesi_BD`.`Alesi_tvalcaso_2` (
   `Valor100` VARCHAR(36000) NULL)
 ENGINE = InnoDB;
 
+
+INSERT INTO `alesi_tablas` (`id_tabla`, `Descipcion`, `id_tabl_dep`) VALUES
+(1, 'Catalogo de Empresas', NULL),
+(2, 'Catalogo de Roles', NULL);
+
+INSERT INTO `alesi_ntablas` (`id_tabla`, `id_codigo`, `Descipcion`, `Campo_A`, `Campo_B`, `Campo_C`) VALUES
+(1, 'SoporteAlesi', 'Empresa que brinda soporte para Alesi', NULL, NULL, NULL),
+(2, 'Dev1', 'Perfil Desarrollador tipo1', NULL, NULL, NULL);
+
+
+INSERT INTO `alesi_tpersonas` (`id_persona`, `Nombre`, `ApellidoP`, `ApellidoM`, `Edad`, `Sexo`, `Telefono`, `Email`, `id_Empresa`, `Cargo`, `Otros`) VALUES
+(1, 'Jesus', 'Acosta', 'Maya', 99, 'M', '9999999999', 'algo@algo', 'SoporteAlesi', 'Developer1', NULL);
+
+
+INSERT INTO `alesi_tusuarios` (`Usuario`, `id_persona`, `Pass`, `Rol`, `Status`, `F_alta`, `F_ultima_conexion`) VALUES
+('JECHUS', 1, 'abc12345', 'Dev1', 'Activo', '2019-10-30', '2019-10-30');
+
+commit;
