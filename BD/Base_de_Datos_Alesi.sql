@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `ALESI_BD`.`ALESI_TVALCASO` (
   `ID_CASO` INT NOT NULL,
   `NUM_ATRIBUTO` INT NOT NULL,
   `VALOR` VARCHAR(36000) NULL,
-  PRIMARY KEY (`ID_CASO`),
+  PRIMARY KEY (`ID_CASO`,`NUM_ATRIBUTO`),
   CONSTRAINT `FK_2`
     FOREIGN KEY (`ID_CASO`)
     REFERENCES `ALESI_BD`.`ALESI_TCASO` (`ID_CASO`)
@@ -281,7 +281,7 @@ INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) V
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (4,'CAT_COBERT','CATALOGO DE COBERTURAS',NULL);
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (5,'CAT_TIP_SINIEST','CATALOGO DE TIPO DE SINIESTROS',NULL);
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (6,'CAT_AUTO_MARCA','CATALOGO DE MARCAS DE AUTOS',NULL);
-INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (7,'CAT_AUTO_TIPO','CATALOGO DE SUBTIPO DE MARCAS DE AUTOS',0);
+INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (7,'CAT_AUTO_TIPO','CATALOGO DE SUBTIPO DE MARCAS DE AUTOS',6);
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (8,'CAT_COLOR','CATALOLO DE COLORES',NULL);
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (9,'CAT_REST_INV','CATALOGO DE RESULTADOS DE INVESTIGACION',NULL);
 INSERT INTO `alesi_tablas` (`ID_TABLA`,`COD_TABLA`,`DESCIPCION`,`ID_TABL_DEP`) VALUES (10,'CAT_TIP_CONTACT','CATALOGO DE TIPO DE CONTACTO',NULL);
@@ -438,4 +438,88 @@ commit;
 INSERT INTO `alesi_tcaso` (`ID_CASO`,`ID_EMPRESA`,`TIPO_CASO`,`F_ALTA`,`F_ESTATUS`,`F_CIERRE`,`STATUS`,`ID_USUARIO_ALTA`,`ID_USUARIO_ASIGNADO`,`ID_USUARIO_ULTIMA_ACT`) VALUES (1,'SURA','SINIESTRO_AUTO_S','2018-11-03','2018-11-03','2018-11-03','EN_CURSO','JECHUS','JECHUS','JECHUS');
 
 
+
+
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,1,'JOSE PERES LEON');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,2,'PRESIDENTE');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,3,'1-211-2019-1111');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,4,'2019-10-01');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,5,'2019-10-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,6,'1-211-99999');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,7,'0');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,8,'2019-01-01');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,9,'2019-01-01');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,10,'AMPLIA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,11,'NOE SANTIAGO GARCIA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,12,'MARIA LA DEL BARRIO');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,13,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,14,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,15,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,16,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,17,'BMW');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,18,'EL MAS CHINGON');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,19,'2020');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,20,'NEGO');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,21,'56789');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,22,'3456789');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,23,'NFS-1TB');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,24,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,25,'2000000');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,26,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,27,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,28,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,29,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,30,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,31,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,32,'N');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,33,'P');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,34,'ME PEGARON');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,35,'SIN ENTREVISTAS');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,36,'LA FODA DE ALTAVISTA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,37,'ALTAVISTA NUMERO __');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,38,'AQUI VALIO CHICHARO');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,39,'SEPA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,40,'2019-11-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,41,'SAGN9212');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,42,'INNE');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,43,'SEPA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,44,'SEPA DOS');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,45,'11111111111');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,46,'1');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,47,'2019-11-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,48,'LA TORTERIA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,49,'Parece que pese a existir una diferencia de 1 aÃ±o exacto entre la versiÃ³n del Red Dead Redemption II para consolas y PC, Rockstar no ha tenido tiempo para ofrecer un juego perfecto, y es que los usuarios estÃ¡n reportando problemas con los mods.\r\n\r\nRead more https://elchapuzasinformatico.com/');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,50,'SEPA 3');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,51,'SEPA 4');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,52,'LOS CHISMOSOS DE LA CUADRA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,53,'ALGUIEN');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,54,'SEPA 5');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,55,'Si a principios de 2020 ya esperÃ¡bamos los Intel Comet Lake-S de 10 nÃºcleos y 20 hilos @ 14nm para el mercado de sobremesa, parece que tendremos que ir apuntando la llegada de una nueva generaciÃ³n de CPUs AMD Ryzen para eclipsar a la nueva.\r\n\r\nRead more https://elchapuzasinformatico.com/');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,56,'1-211-7898');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,57,'AMPLIA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,58,'2019-11-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,59,'2019-11-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,60,'Junto al Mi Note 10, Xiaomi anunciÃ³ sus dos nuevos televisores, los Mi TV 5 y Mi TV 5 Pro, los cuales se dividen en tres tamaÃ±os de 55, 65 y 75 pulgadas. En tÃ©rminos de panel, la variante Pro ofrece una mayor calidad, ademÃ¡s de contar con una...\r\n\r\nRead more https://elchapuzasinformatico.com/');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,61,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,62,'IXTAPALAPA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,63,'1293/1231:DASD');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,64,'2019-11-05');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,65,'06:50PM');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,66,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,67,'SEPA');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,68,'El director financiero de Intel, George Davis, en una entrevista con Barron, un periÃ³dico semanal estadounidense centrado en la informaciÃ³n financiera del paÃ­s, comentÃ³ la salud financiera de la empresa, y algunas de las razones que subyacen a...\r\n\r\nRead more https://elchapuzasinformatico.com/');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,69,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,70,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,71,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,72,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,73,'S');
+INSERT INTO `alesi_tvalcaso` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,74,'S');
+
+
+
+
 COMMIT;
+
+
+
+
