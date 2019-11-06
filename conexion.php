@@ -1,7 +1,7 @@
 <?php
 /*Datos de conexion a la base de datos*/
 $db_host = "localhost";
-$db_user = "alesi";
+$db_user = "alesi_bd";
 $db_pass = "Teresa1983#";
 $db_name = "alesi_bd";
 

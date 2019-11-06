@@ -58,12 +58,12 @@ include("conexion.php");
 			?>
 
 			<form class="form-horizontal" action="" method="post">
-				<div class="form-group">
+				<!--div class="form-group">
 					<label class="col-sm-3 control-label">Código</label>
 					<div class="col-sm-2">
 						<input type="text" name="ID_PERSONA" class="form-control" placeholder="Código" required>
 					</div>
-				</div>
+				</div-->
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Nombres</label>
 					<div class="col-sm-4">

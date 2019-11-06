@@ -10,11 +10,11 @@ header("location: profile.php");
 	<head>
 		<title>Alesi</title>
 		<!-- JQuery -->
-		<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-		<link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<!-- Bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style_nav.css" rel="stylesheet">
 		<!-- for-mobile-apps -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

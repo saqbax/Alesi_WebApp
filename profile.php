@@ -87,7 +87,7 @@ include('session.php');
 						<tr>
 							<td>'.$no.'</td>
 							<td>'.$row['ID_PERSONA'].'</td>
-							<td><a href="det.php?nik='.$row['ID_PERSONA'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['NOMBRE'].' '.$row['APELLIDOP'].' '.$row['APELLIDOM'].'</a></td>
+							<td><a href="det.php?nik='.$row['ID_PERSONA'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['NOMBRE'].'</a></td>
                             <td>'.$row['EMAIL'].'</td>
                             <td>'.$row['ID_EMPRESA'].'</td>
 							<td>'.$row['TELEFONO'].'</td>
