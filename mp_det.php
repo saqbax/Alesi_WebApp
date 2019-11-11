@@ -33,7 +33,7 @@ include("conexion.php");
 			// escaping, additionally removing everything that could be (html/javascript-) code
 			$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 			
-			$sql = mysqli_query($con, "SELECT * FROM alesi_tpersonas WHERE ID_PERSONA='$nik'");
+			$sql = mysqli_query($con, "SELECT * FROM ALESI_TPERSONAS WHERE ID_PERSONA='$nik'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: mp_list.php");
 			}else{
@@ -41,7 +41,7 @@ include("conexion.php");
 			}
 			
 			if(isset($_GET['aksi']) == 'delete'){
-				$delete = mysqli_query($con, "DELETE FROM alesi_tpersonas WHERE ID_PERSONA='$nik'");
+				$delete = mysqli_query($con, "DELETE FROM ALESI_TPERSONAS WHERE ID_PERSONA='$nik'");
 				if($delete){
 					echo '<div class="alert alert-danger alert-dismissable">><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Data berhasil dihapus.</div>';
 				}else{

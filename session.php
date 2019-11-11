@@ -6,7 +6,7 @@ session_start();// Iniciando Sesion
 // Guardando la sesion
 $user_check=$_SESSION['login_user_sys'];
 // SQL Query para completar la informacion del usuario
-$ses_sql=mysqli_query($con, "select USUARIO from alesi_tusuarios where USUARIO='$user_check'");
+$ses_sql=mysqli_query($con, "select USUARIO from ALESI_TUSUARIOS where USUARIO='$user_check'");
 $row = mysqli_fetch_assoc($ses_sql);
 $login_session =$row['USUARIO'];
 if(!isset($login_session)){

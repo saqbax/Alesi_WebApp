@@ -31,7 +31,7 @@ include("conexion.php");
 			
 			<?php
 			$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-			$sql = mysqli_query($con, "SELECT * FROM alesi_tpersonas WHERE ID_PERSONA='$nik'");
+			$sql = mysqli_query($con, "SELECT * FROM ALESI_TPERSONAS WHERE ID_PERSONA='$nik'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: mp_list.php");
 			}else{
@@ -47,7 +47,7 @@ include("conexion.php");
 				$CARGO		 = mysqli_real_escape_string($con,(strip_tags($_POST["CARGO"],ENT_QUOTES)));//Escanpando caracteres 
 				$ESTADO			 = mysqli_real_escape_string($con,(strip_tags($_POST["ESTADO"],ENT_QUOTES)));//Escanpando caracteres  
 				
-				$update = mysqli_query($con, "UPDATE alesi_tpersonas SET NOMBRE='$NOMBRE', EMAIL='$EMAIL', ID_EMPRESA='$ID_EMPRESA', EDAD='$EDAD', TELEFONO='$TELEFONO', CARGO='$CARGO', ESTADO='$ESTADO' WHERE ID_PERSONA='$nik'") or die(mysqli_error());
+				$update = mysqli_query($con, "UPDATE ALESI_TPERSONAS SET NOMBRE='$NOMBRE', EMAIL='$EMAIL', ID_EMPRESA='$ID_EMPRESA', EDAD='$EDAD', TELEFONO='$TELEFONO', CARGO='$CARGO', ESTADO='$ESTADO' WHERE ID_PERSONA='$nik'") or die(mysqli_error());
 				if($update){
 					header("Location: mp_edit.php?nik=".$nik."&pesan=sukses");
 				}else{

@@ -32,11 +32,11 @@ include('session.php');
 			<?php
 			if(isset($_GET['aksi']) == 'delete'){
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-				$cek = mysqli_query($con, "SELECT * FROM alesi_tpersonas WHERE ID_PERSONA='$nik'");
+				$cek = mysqli_query($con, "SELECT * FROM ALESI_TPERSONAS WHERE ID_PERSONA='$nik'");
 				if(mysqli_num_rows($cek) == 0){
 					echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
 				}else{
-					$delete = mysqli_query($con, "UPDATE alesi_tpersonas SET ESTADO = 2 WHERE ID_PERSONA='$nik'");
+					$delete = mysqli_query($con, "UPDATE ALESI_TPERSONAS SET ESTADO = 2 WHERE ID_PERSONA='$nik'");
 					if($delete){
 						echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
 					}else{
@@ -79,9 +79,9 @@ include('session.php');
 				</tr>
 				<?php
 				if($filter){
-					$sql = mysqli_query($con, "SELECT * FROM alesi_tpersonas WHERE ESTADO='$filter' ORDER BY ID_PERSONA ASC");
+					$sql = mysqli_query($con, "SELECT * FROM ALESI_TPERSONAS WHERE ESTADO='$filter' ORDER BY ID_PERSONA ASC");
 				}else{
-					$sql = mysqli_query($con, "SELECT * FROM alesi_tpersonas ORDER BY ID_PERSONA ASC");
+					$sql = mysqli_query($con, "SELECT * FROM ALESI_TPERSONAS ORDER BY ID_PERSONA ASC");
 				}
 				if(mysqli_num_rows($sql) == 0){
 					echo '<tr><td colspan="8">No hay datos.</td></tr>';

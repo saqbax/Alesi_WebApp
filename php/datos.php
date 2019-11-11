@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Configuramos la conexión a la base de datos
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'alesiorg_ALESI_BD_USER');
-define('DB_PASSWORD', 'Teresa1983#');
+define('DB_PASSWORD', 'EGWZXNGWPDG');
 define('DB_NAME', 'alesiorg_ALESI_BD');
 
 // Desplegamos la conexión a la Basde de Datos

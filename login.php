@@ -18,7 +18,7 @@ $variable=''; // Variable para almacenar el mensaje de error
 	$username    = mysqli_real_escape_string($con,(strip_tags($username,ENT_QUOTES)));
 	$password =  sha1($password);//Algoritmo de encriptacion de la contraseña 
 
-	$sql = "SELECT USUARIO, PASS FROM alesi_tusuarios WHERE USUARIO = '" . $username . "' and PASS='".$password."';";
+	$sql = "SELECT USUARIO, PASS FROM ALESI_TUSUARIOS WHERE USUARIO = '" . $username . "' and PASS='".$password."';";
 	$query=mysqli_query($con,$sql);
 
 	$counter=mysqli_num_rows($query);
