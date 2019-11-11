@@ -31,7 +31,7 @@ include("conexion.php");
 			
 			<?php
 			$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-			$sql = mysqli_query($con, "SELECT * FROM alesi_tpersonas WHERE ID_PERSONA='$nik'");
+			$sql = mysqli_query($con, "SELECT * FROM ALESI_TUSUARIOS WHERE ID_PERSONA='$nik'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: mu_list.php");
 			}else{
@@ -44,7 +44,7 @@ include("conexion.php");
 				$F_ALTA	 	= mysqli_real_escape_string($con,(strip_tags($_POST["F_ALTA"],ENT_QUOTES)));//Escanpando caracteres 
 				$STATUS		= mysqli_real_escape_string($con,(strip_tags($_POST["STATUS"],ENT_QUOTES)));//Escanpando caracteres  
 				
-				$update = mysqli_query($con, "UPDATE alesi_tusuarios SET USUARIO='$USUARIO', ROLA='$ROL', F_ALTA='$F_ALTA', STATUS='$STATUS' WHERE ID_PERSONA='$nik'") or die(mysqli_error());
+				$update = mysqli_query($con, "UPDATE ALESI_TUSUARIOS SET USUARIO='$USUARIO', ROLA='$ROL', F_ALTA='$F_ALTA', STATUS='$STATUS' WHERE ID_PERSONA='$nik'") or die(mysqli_error());
 				if($update){
 					header("Location: mu_edit.php?nik=".$nik."&pesan=sukses");
 				}else{

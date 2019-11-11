@@ -39,9 +39,9 @@ include("conexion.php");
 				
 			
 
-				$cek = mysqli_query($con, "SELECT * FROM alesi_tusuarios WHERE ID_PERSONA='$ID_PERSONA'");
+				$cek = mysqli_query($con, "SELECT * FROM ALESI_TUSUARIOS WHERE ID_PERSONA='$ID_PERSONA'");
 				if(mysqli_num_rows($cek) == 0){
-						$insert = mysqli_query($con, "INSERT INTO alesi_tusuarios(ID_PERSONA, USUARIO, ROL, F_ALTA, STATUS)
+						$insert = mysqli_query($con, "INSERT INTO ALESI_TUSUARIOS(ID_PERSONA, USUARIO, ROL, F_ALTA, STATUS)
 															VALUES('$ID_PERSONA','$USUARIO', '$ROL', '$F_ALTA', '$STATUS')") or die(mysqli_error());
 						if($insert){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho! Los datos han sido guardados con éxito.</div>';
