@@ -50,6 +50,7 @@ CREATE TABLE IF NOT EXISTS `alesiorg_ALESI_BD`.`ALESI_TPERSONAS` (
   `ID_EMPRESA` VARCHAR(45) NULL,
   `CARGO` VARCHAR(90) NULL,
   `OTROS` VARCHAR(45) NULL,
+  `ESTADO` INT NULL,
   PRIMARY KEY (`ID_PERSONA`))
 ENGINE = INNODB;
 
@@ -377,7 +378,7 @@ INSERT INTO `ALESI_NTABLAS` (`ID_TABLA`,`ID_CODIGO`,`DESCIPCION`,`CAMPO_A`,`CAMP
 
 
 INSERT INTO `ALESI_TPERSONAS` (`ID_PERSONA`, `NOMBRE`, `EDAD`, `SEXO`, `TELEFONO`, `EMAIL`, `ID_EMPRESA`, `CARGO`, `OTROS`) VALUES
-(1, 'JESUS ACOSTA MAYA', 99, 'M', '9999999999', 'algo@algo.com', 'SOPORTEALESI', 'DEVELOPER1', NULL);
+(1, 'JESUS ACOSTA MAYA', 99, 'M', '9999999999', 'algo@algo.com', 'SOPORTEALESI', 'DEVELOPER1', 1, NULL);
 
 --pas holamundo
 
@@ -626,7 +627,29 @@ INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,75,'R'
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,76,'Con fecha 10 de enero del presente año, se turna a esta firma la investigación de referencia por la posibilidad de encontrarnos ante una falsedad en la declaración y un posible robo preexistente al inicio de vigencia.\n\nEn la misma fecha nos damos a la tarea inmediata de comenzar con la presente investigación, inicialmente con la solicitud de los audios de cabina y realizando las gestiones propias para enriquecer la presente investigación.\n\nUn segundo elemento que se considera para declinar el presente siniestro se basa en las diversas documentales para acreditar la preexistencia del vehículo, apuntalaban una línea más de investigación y que arrojaba como resultado el robo previo al inicio de vigencia. Es importante mencionar que los vecinos del lugar donde supuestamente ocurre el robo, en ningún momento vieron la unidad asegurada estacionada por varios días.\n\nUn tercer elemento que apuntala la información del presente informe consiste en la entrevista con los CC Christian Martín Mercado López y Lucia Duran González,, encontrado discrepancias conforme a los datos de prueba recolectados en el lugar del siniestro, y a los manifestados en las entrevistas por parte del C. Christian Martín Mercado López. Adicionalmente la información proporcionada la consideramos falaz, ya que se encontraba alejada de toda lógica y de la mecánica real del siniestro. \n\nAnte la situación anterior y derivado de que se le hace saber a la C. Lucia Duran González,, la falsedad de la declaración inicial por parte del C. Christian Martín Mercado López, manifiesta que no es su deseo intervenir en ningún procedimiento legal, por lo que firma el desistimiento correspondiente.\n\nPor lo anterior, bajo el orden de argumentos y datos de prueba señalados, una vez que dicha información se contrasta con entrevistas, resulta improcedente el siniestro, toda vez que se puede comprobar de manera indubitable que la mecánica de hechos narrada al ajustador, no corresponde. Existiendo dolo en la declaración inicial al ajustador, simulando los hechos, encontrando para ello diversos datos de prueba e indicios que fueron susceptibles de investigación.\n\nSin más por el momento reciba un afectuoso saludo, no sin antes reiterarle que quedo a sus órdenes para cualquier aclaración al respecto.\n');
 
 
+--
+-- Estructura de tabla para la tabla `casos`
+--
 
+CREATE TABLE `alesiorg_ALESI_BD`.`casos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `stock` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `precio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `casos`
+--
+
+INSERT INTO `casos` (`id`, `nombre`, `stock`, `precio`) VALUES
+(1, 'En atencion', '50', '3,000,000.00'),
+(3, 'Cerrados', '35', '500,000.00'),
+(4, 'En revision', '45', '40,000.00'),
+(5, 'Pendientes Informacion', '36', '20,000.00'),
+(6, 'Solucionados', '60', '11,000,000.00'),
+(7, 'Cancelados', '26', '60,000.00');
+COMMIT;
 
 COMMIT;
 
