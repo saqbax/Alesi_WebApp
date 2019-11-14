@@ -1,0 +1,6 @@
+Plantillas para utilizar a generar documentos
+
+--> example02.php  --> se ve bien
+--> example03.php  --> margenes superiores con numero de hoja
+--> example07.php  --> hace una carta
+
