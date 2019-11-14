@@ -22,17 +22,102 @@ div.zone_over
     overflow: hidden;
 }
 
+
+table.page_header {width: 100%; border: none; background-color: #00AEEA; border-bottom: solid 1mm #0B6E9C; padding: 2mm }
+table.page_footer {width: 100%; border: none;  border-top: solid 1mm #0B6E9C; padding: 2mm}
+h1 {color: #000033}
+h2 {color: #000055}
+h3 {color: #000077}
+
+div.standard
+{
+    padding-left: 5mm;
+}
+
+table.siniestro {
+   width: 100%;
+   border: 1px solid #000;
+}
+
+
 -->
 </style>
 <page style="font-size: 10pt">
-    <span style="font-size: 16pt ; font-weight: bold">Démonstration des images</span><br>
+
+    <page_footer>
+        <table class="page_footer">
+            <tr>
+                <td style="width: 100%; text-align: right; ">
+                    pagina [[page_cu]]/[[page_nb]]
+                </td>
+            </tr>
+        </table>
+    </page_footer>
+    
+    <table class="page_header">
+            <tr>
+                <td style="width: 100%; text-align: left; font-size: 18pt;font-weight: bold; color:#FFFFFF">
+                    ALESI
+                </td>
+            </tr>
+        </table>
     <br>
-    <b>Dans un tableau :</b><br>
-    <table style="width: 50%;border: solid 3px #5544DD" align="center">
-        <tr>
-            <td style="width: 30%; text-align: left; ">Text à gauche<br>avec retour à<br>la ligne</td>
-            <td style="width: 40%; text-align: center;"><img src="./res/logo.gif" alt="" ><br><i>légende</i></td>
-            <td style="width: 30%; text-align: right; ">Texte à droite</td>
+    <p style="text-align: right; font-weight: bold">Ciudad de México a 19 de Marzo de 2018</p>
+    <p style="text-align: right; font-weight: bold">Ref. Int 0000001</p><br>
+    <br>
+    <b>Seguros Sura S.A. de C.V </b><br>
+    <b>Gustavo Pineda González.</b><br>
+    <b>Analista de Valuación y Dictamen.</b><br>
+    <b>Presente.</b><br>
+    <p style="text-align: right; font-weight: bold">Asunto: Informe de Investigación de Siniestro</p><br>
+    <p style="text-align: justify"> 
+        &nbsp;&nbsp;&nbsp;&nbsp; Estimado Gustavo: En relación al siniestro citado anteriormente, 
+        mismo que nos encomendó hacer un análisis, e investigación del hecho ocurrido, y de acuerdo a las diferentes técnicas y métodos de investigación 
+        empleados le proporciono el siguiente informe detallado
+    </p>
+    <p style="text-align: center; font-weight: bold">DATOS DEL SINIESTRO</p><br>
+    <table class="siniestro">
+        <tbody style="color: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+            <tr>
+                <th>No. de Siniestro</th>
+                <th>Fecha del Siniestro</th>
+                <th>Fecha del Reporte</th>
+                <th colspan="3"></th>
+            </tr>
+            <tr ">
+                <td>1-211-2019-M-123</td>
+                <td>05 Enero- 2019</td>
+                <td>06 Enero-2019</td>            
+            </tr>
+        </tbody>
+        <tr style="vertical-align: top">
+            <td>No. de Póliza</td>
+            <td>Inciso</td>
+            <td>Inicio Vigencia</td>
+            <td>Término Vigencia</td>
+            <td>Coberturas</td>
+        </tr>       
+        <tr style="vertical-align: top">
+            <td>1902977</td>
+            <td></td>
+            <td>03 Enero 2019</td>
+            <td>03 Enero 2020</td>
+            <td>Amplia</td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td>Nombre del Asegurado: </td>
+            <td>Lucia Duran González.</td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td>Nombre del Conductor: </td>
+            <td>Estacionado</td>
+        </tr>
+        <tr style="vertical-align: top">
+            <td>Tipo de siniestro Robo: </td>
+            <td> con violencia</td>
+            <td> sin violencia</td>
+            <td> Estacionado</td>
+            <td> Colisión y/o vuelco</td>
         </tr>
     </table>
     <br>

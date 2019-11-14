@@ -57,14 +57,14 @@ td    { vertical-align: top; }
     <i>
         <b><u>Objet </u>: &laquo; Bon de Retour &raquo;</b><br>
         Compte client : 00C4520100A<br>
-        Référence du Dossier : 71326_11<br>
+        Référence du Dossier : 71326<br>
     </i>
     <br>
     <br>
     Madame, Monsieur, Cher Client,<br>
     <br>
     <br>
-    Nous souhaitons vous informer que le dossier <b>71326_11</b> concernant un &laquo; Bon de Retour &raquo; pour les articles suivants a été accepté.<br>
+    Nous souhaitons vous informer que le dossier <b>71326</b> concernant un &laquo; Bon de Retour &raquo; pour les articles suivants a été accepté.<br>
     <br>
     <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; font-size: 10pt;">
         <colgroup>
