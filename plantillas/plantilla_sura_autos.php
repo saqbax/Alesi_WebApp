@@ -77,7 +77,7 @@ table.siniestro {
     </p>
     <p style="text-align: center; font-weight: bold">DATOS DEL SINIESTRO</p><br>
     <table >
-        <tbody ">
+        <tbody >
             <tr>
                 <th>No. de Siniestro</th>
                 <th></th>
@@ -86,7 +86,7 @@ table.siniestro {
                 <th>Fecha del Reporte</th>
                 
             </tr>
-            <tr ">
+            <tr >
                 <td>1-211-2019-M-123</td>
                 <th></th>
                 <td>05 Enero- 2019</td>
@@ -94,42 +94,70 @@ table.siniestro {
                 <td>06 Enero-2019</td>            
             </tr>
         </tbody>
-        <tr style="vertical-align: top">
-            <td>No. de Póliza</td>
-            <td>Inciso</td>
-            <td>Inicio Vigencia</td>
-            <td>Término Vigencia</td>
-            <td>Coberturas</td>
-        </tr>       
-        <tr style="vertical-align: top">
-            <td>1902977</td>
-            <td></td>
-            <td>03 Enero 2019</td>
-            <td>03 Enero 2020</td>
-            <td>Amplia</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Nombre del Asegurado: </td>
-            <td>Lucia Duran González.</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Nombre del Conductor: </td>
-            <td>Estacionado</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Tipo de siniestro Robo: </td>
-            <td><input type="checkbox" > con violencia</td>
-            <td><input type="checkbox" checked="checked"> sin violencia</td>
-            <td><input type="checkbox" checked="checked"> Estacionado</td>
-            <td><input type="checkbox" disabled (true)> Colisión y/o vuelco</td>
-        </tr>
+            <tr style="vertical-align: top">
+                <td>No. de Póliza</td>
+                <td>Inciso</td>
+                <td>Inicio Vigencia</td>
+                <td>Término Vigencia</td>
+                <td>Coberturas</td>
+            </tr>       
+            <tr style="vertical-align: top">
+                <td>1902977</td>
+                <td></td>
+                <td>03 Enero 2019</td>
+                <td>03 Enero 2020</td>
+                <td>Amplia</td>
+            </tr>
+            <tr style="vertical-align: top">
+                <td>Nombre del Asegurado: </td>
+                <th>Lucia Duran González.</th>
+            </tr>
+            <tr style="vertical-align: top">
+                <td>Nombre del Conductor: </td>
+                <th>Estacionado</th>
+            </tr>
+            <tr style="vertical-align: top">
+                <td>Tipo de siniestro Robo: </td>
+                <td><input type="checkbox" > con violencia</td>
+                <td><input type="checkbox" checked="checked"> sin violencia</td>
+                <td><input type="checkbox" checked="checked"> Estacionado</td>
+                <td><input type="checkbox" disabled (true)> Colisión y/o vuelco</td>
+            </tr>
     </table>
     <br>
     <p style="text-align: center; font-weight: bold">DATOS DEL VEHÍCULO.</p><br>
-    <table border 1>
+    <table border="1" style="text-align: center; border: solid 2px #00AEEA; width: 100%" align="center">
+        <tr>            
+            <th style ="width=140;">Marca</th>            
+            <th style ="width=140;">Tipo</th>
+            <th style ="width=140;">Modelo</th>
+            <th style ="width=140;">Color</th>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>Hiace</td>
+            <td>2014</td>
+            <td>Blanco</td>
+        </tr>
+    </table>
+    <table border="1" style="text-align: center; border: solid 2px #00AEEA; width: 100%" align="center">
+        <tr>
+            <td>No. de serie</td>
+            <td>No. de motor</td>
+            <td>Placas</td>
+        </tr> 
+        <tr>
+            <th>JTFSX23P6148447</th>
+            <th>NINGUNO</th>
+            <th>F39 AYF </th>
+        </tr> 
+    </table>    
+    <br>
+    <p style="text-align: center; font-weight: bold">ASIGNACIÓN DE LA INVESTIGACIÓN</p><br>    
+    <br>
+    <table>
         <tbody ">
             <tr>
-                <th></th>
                 <th>Marca</th>                
                 <th>Tipo</th>
                 <th>Modelo</th>
@@ -137,42 +165,13 @@ table.siniestro {
                 
             </tr>
             <tr>
-                <th></th>
                 <td>Toyota</td>                
                 <td>Hiace</td>
                 <th>2014</th>
                 <td>Blanco</td>            
             </tr>
         </tbody>
-        <tr style="vertical-align: top">
-            <td col>No. de serie</td>
-            <td>No. de motor</td>
-            <td>Placas</td>
-        </tr>       
-        <tr style="vertical-align: top">
-            <td>1902977</td>
-            <td></td>
-            <td>03 Enero 2019</td>
-            <td>03 Enero 2020</td>
-            <td>Amplia</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Nombre del Asegurado: </td>
-            <td>Lucia Duran González.</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Nombre del Conductor: </td>
-            <td>Estacionado</td>
-        </tr>
-        <tr style="vertical-align: top">
-            <td>Tipo de siniestro Robo: </td>
-            <td><input type="checkbox" > con violencia</td>
-            <td><input type="checkbox" checked="checked"> sin violencia</td>
-            <td><input type="checkbox" checked="checked"> Estacionado</td>
-            <td><input type="checkbox" disabled (true)> Colisión y/o vuelco</td>
-        </tr>
-    </table>
-    <br>
+        </table>
     Texte <span style="text-decoration: underline">souligné</span>,
     texte <span style="text-decoration: overline">surligné</span>,
     texte <span style="text-decoration: line-through">barré</span>,
