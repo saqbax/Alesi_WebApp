@@ -24,7 +24,7 @@ div.zone_over
 
 
 table.page_header {width: 100%; border: none; background-color: #00AEEA; border-bottom: solid 1mm #0B6E9C; padding: 2mm }
-table.page_footer {width: 100%; border: none;  border-top: solid 1mm #0B6E9C; padding: 2mm}
+table.page_footer {width: 100%; border: none;   padding: 2mm}
 h1 {color: #000033}
 h2 {color: #000055}
 h3 {color: #000077}
@@ -126,7 +126,7 @@ table.siniestro {
     </table>
     <br>
     <p style="text-align: center; font-weight: bold">DATOS DEL VEHÍCULO.</p><br>
-    <table border="1" style="text-align: center; border: solid 2px #00AEEA; width: 100%" align="center">
+    <table style="text-align: center;  width: 100%" align="center">
         <tr>            
             <th style ="width=140;">Marca</th>            
             <th style ="width=140;">Tipo</th>
@@ -140,11 +140,11 @@ table.siniestro {
             <td>Blanco</td>
         </tr>
     </table>
-    <table border="1" style="text-align: center; border: solid 2px #00AEEA; width: 100%" align="center">
+    <table  style="text-align: center; width: 100%" align="center">
         <tr>
-            <td>No. de serie</td>
-            <td>No. de motor</td>
-            <td>Placas</td>
+            <td style ="width=140;>No. de serie</td>
+            <td style ="width=140;>No. de motor</td>
+            <td style ="width=140;>Placas</td>
         </tr> 
         <tr>
             <th>JTFSX23P6148447</th>
@@ -154,24 +154,43 @@ table.siniestro {
     </table>    
     <br>
     <p style="text-align: center; font-weight: bold">ASIGNACIÓN DE LA INVESTIGACIÓN</p><br>    
+    <table  style="text-align: left;  width: 100%; " align="center">
+        <tr>            
+            <td style ="width=165;">Investigación solicitada por:</td>            
+            <td style ="width=140;">Gustavo Pineda</td>
+            <td style ="width=140;"> </td>
+            <td style ="width=140;"> </td>
+        </tr>
+        <tr>            
+            <td style ="width=165;">Fecha de Asignación</td>            
+            <td style ="width=140;">10-Enero-2019</td>
+            <td style ="width=140;">Fecha de Entrega: </td>
+            <td style ="width=140;">19-Marzo-2019 </td>
+        </tr>
+    </table>
     <br>
-    <table>
-        <tbody ">
-            <tr>
-                <th>Marca</th>                
-                <th>Tipo</th>
-                <th>Modelo</th>
-                <th>Color</th>
-                
-            </tr>
-            <tr>
-                <td>Toyota</td>                
-                <td>Hiace</td>
-                <th>2014</th>
-                <td>Blanco</td>            
-            </tr>
-        </tbody>
-        </table>
+    <p style="text-align: center; font-weight: bold">MOTIVO DE LA INVESTIGACIÓN.</p><br>    
+    <table  style="text-align: left;  width: 100%; " align="center">
+        <tr>            
+            <td style ="width=165;">El siniestro es:</td>            
+            <td style ="width=140;"><input type="checkbox" disabled (true)>Procedente</td>
+            <td style ="width=140;"><input type="checkbox" disabled (true)>Rechazo</td>
+            <td style ="width=140;"><input type="checkbox" disabled (true)>Convenio</td>
+        </tr>
+    </table>
+    <br>
+    <p style="text-align: center; font-weight: bold">DECLARACION DEL ASEGURADO O CONDUCTOR VERTIDA AL AJUSTADOR.</p>
+    <p style="text-align: justify;">Declaracion Inicial.  (SIC) El Ing Christian recoge camioneta en tula hdgo el dia jueves 3 para probable trabajo y verificacion vehicular el dia sabado 05/01 me llama por la tarde informandome que ya no se encontraba camioneta donde la habia dejado estacionada 
+    </p>
+    <br>
+    <p style="text-align: center; font-weight: bold">ENTREVISTA CON EL ASEGURADO O CONDUCTOR.</p>
+    <table style="text-align: justify;  width: 100%; border=1" align="center">
+        <tr><td style ="width=100%;"><p>
+        Es importante mencionar que derivado de la condici├│n del presente siniestro, se opta llevar una investigaci├│n de manera cronol├│gica, supeditada a que se cumplan los tiempos de cada una de las fases de la presente investigaci├│n, agotando cada fase  con los tiempos establecidos en el plan de trabajo.<br><br>1.- Con fecha 10 de enero del presente a├▒o, se hace un an├ílisis detallado del expediente, con la finalidad de obtener datos que nos permitan determinar el procedimiento a seguir en la presente investigaci├│n.<br><br>2.- Con fecha 15 de enero del presente a├▒o, se acude al lugar se├▒alado en la declaraci├│n de siniestro, apoyando la b├║squeda de datos de prueba para acreditar la preexistencia del veh├¡culo asegurado, conforme a lo narrado por la C. Lucia Duran Gonzalez al momento de reportar el siniestro.  Es importante se├▒alar que el ultimo conductor del veh├¡culo fue el C. Christian Martin Mercado L├│pez.<br><br>3.- Con fecha 14 de Enero del a├▒o en curso, se sostuvo entrevista en las instalaciones de SURA con la C. Lucia Duran Gonz├ílez, ├║nicamente argumentando que el C. Christian Martin Mercado Lopez,  se encontraba realizando trabajos propios de su empresa Ciudad Ju├írez, por tal motivo no pod├¡a asistir a la cita en cuanto el regresara podr├¡amos tener una entrevista con el C. Christian Martin Mercado L├│pez , que lo ├║nico que ella sab├¡a era lo que hab├¡a declarado cuando reporto el siniestro, al tiempo que pudimos notar no contaba de momento con la documentaci├│n en orden de su veh├¡culo robado y su carpeta de investigaci├│n aun estaba incompleta recomend├índole ordenar su documentaci├│n as├¡ como tener entrevista con su empleado.<br><br>4.- En fecha 21 de enero del a├▒o en curso en las instalaciones de SURA nos entrevistamos con el C. Christian Mart├¡n Mercado L├│pez, quien refiere que el d├¡a jueves 03 de enero del a├▒o en curso acude a la Ciudad de Tula Hidalgo por la camioneta de referencia a efecto de trasladarla a la Ciudad de M├®xico, ya que ten├¡a pendiente un trabajo y verificaci├│n vehicular de la misma, as├¡ mismo refiere ser ├®l quien lleva a cabo los tramites de diversos veh├¡culos que tiene la C. Lucia Duran Gonzalez. Nos da referencia que dejo estacionada la camioneta en el exterior de la oficina entre los n├║meros 312 y 315 de la mencionada calle y seg├║n su dicho la camioneta ah├¡ se queda estacionada, y es hasta el s├íbado 05 que se percata ya no est├í en el lugar donde la dejo, a preguntas expresas de ┬┐Si hab├¡a movido o prestado la camioneta? R.  Refiere nunca la mueve de lugar, ┬┐D├│nde verificar├¡a la unidad asegurada? R.  Refiere la llevar├¡a a la Avenida Central en el Estado de M├®xico.<br><br>Es importante precisar que el sujeto en todo momento se torna nervioso y evasivo a cuestionamientos dejando claro miente en su dicho.<br><br>5.- En fecha 08 de febrero del a├▒o en curso, se tuvo entrevista en las instalaciones de SURA, con la C. Lucia Duran, quien a la fecha no ha podido acreditar la preexistencia del veh├¡culo, toda vez que como se desprende de las diligencias documentales y de campo el veh├¡culo tuvo que haber sido verificada en segundo periodo de verificaci├│n vehicular correspondiente al a├▒o 2018. Por tanto, se comprometi├│ a conseguir la documentaci├│n que acredite su dicho.<br>
+        </p></td></tr>
+    </table>    
+    <br>
+    <br>
     Texte <span style="text-decoration: underline">souligné</span>,
     texte <span style="text-decoration: overline">surligné</span>,
     texte <span style="text-decoration: line-through">barré</span>,
