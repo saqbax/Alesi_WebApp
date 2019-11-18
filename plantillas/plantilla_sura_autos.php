@@ -1,10 +1,3 @@
-<?php
-$content = 'A Test overflow<br>A Test overflow<br>A Test overflow<br>
-<img src="./res/logo.gif" alt="logo" style="width: XXXmm"><br>
-B Test overflow<br>B Test overflow<br>B Test overflow<br>
-<img src="./res/logo.gif" alt="logo" style="width: XXXmm"><br>
-C Test overflow<br>C Test overflow<br>C Test overflow<br>';
-?>
 <style type="text/css">
 <!--
 div.zone
@@ -303,37 +296,116 @@ table.siniestro {
 <!--############################### VERIFICACIÓN DE PÓLIZAS -########################################### -->
     <p style="text-align: center; font-weight: bold">VERIFICACIÓN DE PÓLIZAS.</p>
     <br>    
-    <table style="text-align: center;  width: 100%; border:2" align="center">
+    <table style="text-align: center;  width: 100%; " align="center">
         <tr>
-            <th style ="width=20%;">Domicilio de N/A</th>
-            <th style ="width=80%;">Direccion</th>
+            <th style ="width=25%;">Póliza Anterior</th>
+            <th style ="width=25%;">Cobertura</th>
+            <th style ="width=25%;">Vigencia desde</th>
+            <th style ="width=25%;">Vigencia Hasta</th>
         </tr>
         <tr>
-            <td style ="width=20%;"><input type="checkbox" checked="checked" disabled (true)>SI <input type="checkbox"disabled (true)>NO</td>
-            <td style ="width=80%;">Oriente 138, estacionada frente a los números 312 y 315, Col. Moctezuma 2ª Secc. Alcaldía Venustiano Carranza, Ciudad de México.</td>
-        </tr>
-    </table>
-    <br>
-    <table style="text-align: left;  width: 100%; border:2 " align="center">
-        <tr>
-            <td style ="width=40%;"> Testigos de la preexistencia del vehículo:</td>
-            <td style ="width=60%;"><input type="checkbox" checked="checked" disabled (true)>SI <input type="checkbox"disabled (true)>NO</td>
+            <td style ="width=25%;"><input type="checkbox" disabled (true)>SI <input type="checkbox" checked="checked" disabled (true)>NO</td>
+            <td style ="width=25%;"></td>
+            <td style ="width=25%;"></td>
+            <td style ="width=25%;"></td>
         </tr>
     </table>
-    <table style="text-align: left;  width: 100%; border:2 " align="center">
-        <tr>
-            <th style ="width=40%;"> Nombre</th>
-            <th style ="width=60%;">Dirección o referencia</th>
-        </tr>
-        <tr>
-            <td style ="width=40%;"></td>
-            <td style ="width=60%;"></td>
-        </tr>        
-    </table>      
-    <!-- Atributo 55-->
+    <!-- Atributo 60-->
     <table style="text-align: justify;  width: 100%; " align="center">
         <tr><td style ="width=100%;"><p>
-        A pesar de solicitar en diversas ocasiones a la C. Lucia Duran Gonz├ílez, se nos presentara documentales para acreditar la preexistencia del veh├¡culo, esto no fue posible ya que los documentos que nos presentaba para tratar de acreditar la preexistencia de la unidad asegurada, apuntalaban una l├¡nea m├ís de investigaci├│n. Es importante mencionar que los vecinos del lugar donde supuestamente ocurre el robo, en ning├║n momento vieron la unidad asegurada estacionada. Externan sus quejas, ya que el C. Christian Mart├¡n Mercado L├│pez estaciona diversos veh├¡culos en las entradas a los domicilios contiguos, sin embargo, aseguran no recordar una camioneta estacionada por varios d├¡as, con las caracter├¡sticas del bien asegurado.
+        Se nos hace saber por parte de la C. Lucia Duran Gonz├ílez, que no se encontraba asegurada anteriormente por ser un veh├¡culo de reciente adquisici├│n
+        </p></td></tr>
+    </table>    
+<!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->
+<!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->
+    <p style="text-align: center; font-weight: bold">CARPETA DE INVESTIGACIÓN.</p>
+    <p style="text-align: left; ">Denuncia ante el Ministerio Público.</p>
+    <br>    
+    <table style="text-align: center;  width: 100%; " align="center">
+        <tr>
+            <th style ="width=20%;">Alcaldía o Municipio.</th>
+            <th style ="width=35%;">Carpeta </th>
+            <th style ="width=15%;">Fecha</th>
+            <th style ="width=10%;">Hora</th>
+            <th style ="width=20%;">Registrada</th>
+        </tr>
+        <tr>
+            <td style ="width=20%;">Venustiano Carranza</td>
+            <td style ="width=35%;">CI-FVC/VC-2/UI-1 S/D/00005/01-2019</td>
+            <td style ="width=15%;">5-Enero-2019</td>
+            <td style ="width=10%;">23:10</td>
+            <td style ="width=20%;"><input type="checkbox" disabled (true)>SI <input type="checkbox" checked="checked" disabled (true)>NO</td>
+        </tr>
+    </table>
+    <table style="text-align: center;  width: 100%;" align="center">
+        <tr>
+            <th style ="width=20%;">Carpeta Relacionada.</th>
+            <th style ="width=35%;">Carpeta </th>
+            <th style ="width=45%;">Motivo de la Carpeta relacionada.</th>
+        </tr>
+        <tr>
+            <td style ="width=20%;"><input type="checkbox" disabled (true)>SI <input type="checkbox" checked="checked" disabled (true)>NO</td>
+            <td style ="width=35%;"></td>
+            <td style ="width=45%;"></td>            
+        </tr>
+    </table>    
+    <!-- Atributo 68-->
+    <table style="text-align: justify;  width: 100%; " align="center">
+        <tr><td style ="width=100%;"><p>
+        Se encuentra debidamente registrada la Carpeta de Investigaci├│n en las diversas plataformas de Seguridad Publica.
+        </p></td></tr>
+    </table>       
+    <br>
+<!--############################### DOCUMENTOS ANEXOS. -########################################### -->
+<!--############################### DOCUMENTOS ANEXOS. -########################################### -->
+    <p style="text-align: center; font-weight: bold">DOCUMENTOS ANEXOS.</p>
+    <p style="text-align: left; ">Documentos que se anexan a la investigación:</p>
+    <br>    
+    <table style="text-align: left;  width: 100%; " align="center">
+        <tr>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Póliza</td>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Facturas</td>
+        </tr>
+        <tr>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Actas</td>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Tenencias</td>
+        </tr>
+        <tr>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Fotografias</td>
+            <td style ="width=50%;"><input type="checkbox" disabled (true)> Otros</td>
+        </tr>
+    </table>
+<!--############################### CONCLUSIONES. -########################################### -->
+<!--############################### CONCLUSIONES. -########################################### -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="text-align: center; font-weight: bold">CONCLUSIONES.</p>
+    <br>    
+    <table style="text-align: left;  width: 100%; border:2" align="center">
+        <tr>
+            <td style ="width=50%;"><b>Resultado del siniestro:</b></td>
+            <td style ="width=50%;">Recahzo</td>     
+        </tr>   
+    </table>
+    <p style="text-align: center; font-weight: bold">CONSIDERANDO.</p>
+    <!-- Atributo 76-->
+    <table style="text-align: justify;  width: 100%; " align="center">
+        <tr><td style ="width=100%;"><p>
+        Con fecha 10 de enero del presente año, se turna a esta firma la investigación de referencia por la posibilidad de encontrarnos ante una falsedad en la declaración y un posible robo preexistente al inicio de vigencia.<br><br>En la misma fecha nos damos a la tarea inmediata de comenzar con la presente investigación, inicialmente con la solicitud de los audios de cabina y realizando las gestiones propias para enriquecer la presente investigación.<br><br>Un segundo elemento que se considera para declinar el presente siniestro se basa en las diversas documentales para acreditar la preexistencia del vehículo, apuntalaban una línea más de investigación y que arrojaba como resultado el robo previo al inicio de vigencia. Es importante mencionar que los vecinos del lugar donde supuestamente ocurre el robo, en ningún momento vieron la unidad asegurada estacionada por varios días.<br><br>Un tercer elemento que apuntala la información del presente informe consiste en la entrevista con los CC Christian Martín Mercado López y Lucia Duran González,, encontrado discrepancias conforme a los datos de prueba recolectados en el lugar del siniestro, y a los manifestados en las entrevistas por parte del C. Christian Martín Mercado López. Adicionalmente la información proporcionada la consideramos falaz, ya que se encontraba alejada de toda lógica y de la mecánica real del siniestro. <br><br>Ante la situación anterior y derivado de que se le hace saber a la C. Lucia Duran González,, la falsedad de la declaración inicial por parte del C. Christian Martín Mercado López, manifiesta que no es su deseo intervenir en ningún procedimiento legal, por lo que firma el desistimiento correspondiente.<br><br>Por lo anterior, bajo el orden de argumentos y datos de prueba señalados, una vez que dicha información se contrasta con entrevistas, resulta improcedente el siniestro, toda vez que se puede comprobar de manera indubitable que la mecánica de hechos narrada al ajustador, no corresponde. Existiendo dolo en la declaración inicial al ajustador, simulando los hechos, encontrando para ello diversos datos de prueba e indicios que fueron susceptibles de investigación.<br><br>Sin más por el momento reciba un afectuoso saludo, no sin antes reiterarle que quedo a sus órdenes para cualquier aclaración al respecto.<br>
         </p></td></tr>
     </table>     
+    <br>
+    <br>
+    <p>Atentamente.</p>
+    <br>
+    <br>
+    <br>
+    <p>Lic. César Quiñones G.<br>
+    Director Operativo<br>
+    Asesoría Legal Especializada e Investigaciones S.C<br>
+    alesi.sc@prodigy.net.mx</p>
+
+
 </page>
