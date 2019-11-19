@@ -668,8 +668,147 @@ COMMIT;
 CREATE TABLE `ALESIORG_ALESI_BD`.`ALESI_PDF_PLANTILLAS` (
   `ID_PDF` VARCHAR(45) NOT NULL,
   `PDF_DESCRIPCION` VARCHAR(45) NOT NULL,
-  `PDF_CODIGO` VARCHAR(20000) NOT NULL,
+  `PDF_CODIGO` text NOT NULL,
   PRIMARY KEY (`ID_PDF`))
 ENGINE = INNODB
 DEFAULT CHARACTER SET = UTF8
 COMMENT = '		';
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `alesi_pdf_plantillas` (`ID_PDF`,`PDF_DESCRIPCION`,`PDF_CODIGO`) VALUES ('SINIESTRO_AUTO_S','PLANTILLA PARA SINEISTROS AUTOS SURA','<style type=\"text/css\">\n<!--\ndiv.zone\n{\n    border: solid 2mm #66AACC;\n    border-radius: 3mm;\n    padding: 1mm;\n    background-color: #FFEEEE;\n    color: #440000;\n}\ndiv.zone_over\n{\n    width: 30mm;\n    height: 35mm;\n    overflow: hidden;\n}\n\n\ntable.page_header {width: 100%; border: none; background-color: #00AEEA; border-bottom: solid 1mm #0B6E9C; padding: 2mm }\ntable.page_footer {width: 100%; border: none;   padding: 2mm}\nh1 {color: #000033}\nh2 {color: #000055}\nh3 {color: #000077}\n\ndiv.standard\n{\n    padding-left: 5mm;\n}\n\ntable.siniestro {\n   width: 100%;\n   border: 1px solid #000;\n}\n\n\n-->\n</style>\n<page style=\"font-size: 10pt\">\n\n    <page_footer>\n        <table class=\"page_footer\">\n            <tr>\n                <td style=\"width: 100%; text-align: right; \">\n                    pagina [[page_cu]]/[[page_nb]]\n                </td>\n            </tr>\n        </table>\n    </page_footer>\n    \n    <table class=\"page_header\">\n            <tr>\n                <td style=\"width: 100%; text-align: left; font-size: 18pt;font-weight: bold; color:#FFFFFF\">\n                    ALESI\n                </td>\n            </tr>\n        </table>\n    <br>\n    <p style=\"text-align: right; font-weight: bold\">Ciudad de México a ?v_FECHA_PDF?</p>\n    <p style=\"text-align: right; font-weight: bold\">Ref. Int ?v_REF_INT?</p><br>\n    <br>\n    <b>Seguros Sura S.A. de C.V </b><br>\n    <b>?DIRIGIDO_A?</b><br>\n    <b>?CARGO?</b><br>\n    <b>Presente.</b><br>\n    <p style=\"text-align: right; font-weight: bold\">Asunto: Informe de Investigación de Siniestro</p><br>\n    <p style=\"text-align: justify\"> \n        &nbsp;&nbsp;&nbsp;&nbsp; Estimado ?DIRIGIDO_A?: En relación al siniestro citado anteriormente, \n        mismo que nos encomendó hacer un análisis, e investigación del hecho ocurrido, y de acuerdo a las diferentes técnicas y métodos de investigación \n        empleados le proporciono el siguiente informe detallado\n    </p>\n    <p style=\"text-align: center; font-weight: bold\">DATOS DEL SINIESTRO</p><br>\n    <table >\n        <tbody >\n            <tr>\n                <th>No. de Siniestro</th>\n                <th></th>\n                <th>Fecha del Siniestro</th>\n                <th></th>\n                <th>Fecha del Reporte</th>\n                \n            </tr>\n            <tr >\n                <td>?N_DE_SINIESTRO?</td>\n                <th></th>\n                <td>?F_DE_SINIESTRO?</td>\n                <th></th>\n                <td>?F_DE_REPORTE?</td>            \n            </tr>\n        </tbody>\n            <tr style=\"vertical-align: top\">\n                <td>No. de Póliza</td>\n                <td>Inciso</td>\n                <td>Inicio Vigencia</td>\n                <td>Término Vigencia</td>\n                <td>Coberturas</td>\n            </tr>       \n            <tr style=\"vertical-align: top\">\n                <td>?N_DE_POLIZA?</td>\n                <td>?INCISO?</td>\n                <td>?INI_VIG?</td>\n                <td>?FIN_VIG?</td>\n                <td>?COBERTURA?</td>\n            </tr>\n            <tr style=\"vertical-align: top\">\n                <td>Nombre del Asegurado: </td>\n                <th>?NOM_ASEGURADO?.</th>\n            </tr>\n            <tr style=\"vertical-align: top\">\n                <td>Nombre del Conductor: </td>\n                <th>?NOM_CONDUCTOR?</th>\n            </tr>\n            <tr style=\"vertical-align: top\">\n                <td>Tipo de siniestro Robo: </td>\n				<td>?CON_VIOLENCIA?</td>\n                <td>?SIN_VIOLENCIA?</td>\n                <td>?EN_DOMICILIO?</td>\n                <td>?COLISION_VUELCO?</td>\n            </tr>\n    </table>\n    <br>\n    <p style=\"text-align: center; font-weight: bold\">DATOS DEL VEHÍCULO.</p><br>\n    <table style=\"text-align: center;  width: 100%\" align=\"center\">\n        <tr>            \n            <th style =\"width=140;\">Marca</th>            \n            <th style =\"width=140;\">Tipo</th>\n            <th style =\"width=140;\">Modelo</th>\n            <th style =\"width=140;\">Color</th>\n        </tr>\n        <tr>\n            <td>?MARCA?</td>\n            <td>?TIPO?</td>\n            <td>?MODELO?</td>\n            <td>?COLOR?</td>\n        </tr>\n    </table>\n    <table  style=\"text-align: center; width: 100%\" align=\"center\">\n        <tr>\n            <td style =\"width=140;\">No. de serie</td>\n            <td style =\"width=140;\">No. de motor</td>\n            <td style =\"width=140;\">Placas</td>\n        </tr> \n        <tr>\n            <th>?N_DE_SERIE?</th>\n            <th>?N_MOTOR?</th>\n            <th>?PLACAS?</th>\n        </tr> \n    </table>    \n    <br>\n    <p style=\"text-align: center; font-weight: bold\">ASIGNACIÓN DE LA INVESTIGACIÓN</p><br>    \n    <table  style=\"text-align: left;  width: 100%; \" align=\"center\">\n        <tr>            \n            <td style =\"width=165;\">Investigación solicitada por:</td>            \n            <td style =\"width=140;\">Gustavo Pineda</td>\n            <td style =\"width=140;\"> </td>\n            <td style =\"width=140;\"> </td>\n        </tr>\n        <tr>            \n            <td style =\"width=165;\">Fecha de Asignación</td>            \n            <td style =\"width=140;\">10-Enero-2019</td>\n            <td style =\"width=140;\">Fecha de Entrega: </td>\n            <td style =\"width=140;\">19-Marzo-2019 </td>\n        </tr>\n    </table>\n    <br>\n	<br>\n    <p style=\"text-align: center; font-weight: bold\">MOTIVO  DE LA INVESTIGACIÓN.</p><br>    \n    <table  style=\"text-align: left;  width: 100%; \" align=\"center\">\n        <tr>            \n            <td style =\"width=50%;\">?SINI_TREINTA_DIAS?</td>\n			<td style =\"width=50%;\">?FALSEDAD_DECALRACION?</td>\n        </tr>\n        <tr>            \n            <td style =\"width=50%;\">?SUMA_ASEGURADA?</td>\n			<td style =\"width=50%;\">?CAMBIO_CONDUCTOR?</td>\n        </tr>		\n        <tr>            \n            <td style =\"width=50%;\">?PREEXISTENCIA_AUTO?</td>\n			<td style =\"width=50%;\">?DOC_APOCRIFOS?</td>\n        </tr>		\n        <tr>            \n            <td style =\"width=50%;\">?REECONSTRUCCION_HECHOS?</td>\n			<td style =\"width=50%;\">?OTROS?</td>\n        </tr>		\n    </table>\n    <br>\n	<br>\n    <p style=\"text-align: center; font-weight: bold\">RESULTADO DE LA INVESTIGACIÓN.</p><br>    \n    <table  style=\"text-align: left;  width: 100%; \" align=\"center\">\n        <tr>            \n            <td style =\"width=50%\">El siniestro es:</td>            \n            <td style =\"width=50%\">?RESULT_INVEST?</td>\n        </tr>\n    </table>\n    <br>\n    <p style=\"text-align: center; font-weight: bold\">DECLARACION DEL ASEGURADO O CONDUCTOR VERTIDA AL AJUSTADOR.</p>\n    <p style=\"text-align: justify;\">\n	?DECLA_INI?\n    </p>\n    <br>\n    <br>\n    <p style=\"text-align: center; font-weight: bold\">ENTREVISTA CON EL ASEGURADO O CONDUCTOR.</p>\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?DESA_ENTREVISTA?\n        </p></td></tr>\n    </table>       \n    <br>\n    <br>\n    <p style=\"text-align: center; font-weight: bold\">RECONSTRUCCIÓN E INSPECCION EN LUGAR DE LOS HECHOS.</p>\n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=20%;\"> Lugar visitado </th>\n            <th style =\"width=80%;\"> Ubicacion </th>\n        </tr>\n        <tr>\n            <td>?LUGAR_VISITADO?</td>\n            <td>?UBICACION?</td>\n        </tr>\n    </table>\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBSERVACIONES?\n        </p></td></tr>\n    </table>     \n    <br>\n    <br>\n    <!-- DOCUMENTOS DE PROPIEDAD -->\n    <p style=\"text-align: center; font-weight: bold\">DOCUMENTOS DE PROPIEDAD.</p>\n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=15%;\"> Tipo de Documento</th>\n            <th style =\"width=15%;\"> Fecha</th>\n            <th style =\"width=70%;\"> Razón Social o Nombre del establecimiento </th>\n        </tr>\n        <tr>\n            <td>?TIP_DOC_PROP?</td>\n            <td>?F_DOC?</td>\n            <td>?RFC_PROP?</td>\n        </tr>\n    </table>\n    <table style=\"text-align: center;  width: 100%;  \" align=\"center\">\n        <tr>\n            <th style =\"width=15%;\"> Documento Legal</th>\n            <th style =\"width=20%;\"> Cotejado con</th>\n            <th style =\"width=45%;\">Cargo y/o departamento</th>\n            <th style =\"width=20%;\">Teléfono</th>\n        </tr>\n        <tr>\n            <td>?DOC_LEGAL?</td>\n            <td>?COTEJADO_CON?</td>\n            <td>?CARGO_DTO?</td>\n            <td>?TEL_PROP?</td>\n        </tr>\n    </table>    \n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=20%;\">Tipo de contacto</th>\n            <th style =\"width=60%;\">Lugar de contacto (Dirección)</th>\n            <th style =\"width=20%;\">Fecha</th>\n        </tr>\n        <tr>\n            <td>?CONTACTO?</td>\n            <td>?LUGAR_CONTACTO?</td>\n            <td>?F_CONTACTO?</td>\n        </tr>\n    </table>        \n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBSERVACIONES_CONTACT?\n        </p></td></tr>\n    </table> \n<!-- PREEXISTENCIA DEL VEHÍCULO. -########################################### -->\n    <p style=\"text-align: center; font-weight: bold\">PREEXISTENCIA DEL VEHÍCULO.</p>\n    <p style=\"text-align: left; \">La preexistencia del bien asegurado se verificó en:</p>         \n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=20%;\">Domicilio de N/A</th>\n            <th style =\"width=80%;\">Direccion</th>\n        </tr>\n        <tr>\n            <td style =\"width=20%;\">?DOMICILIO_NA?</td>\n            <td style =\"width=80%;\">?DIRECCION_PREX?</td>\n        </tr>\n    </table>\n    <br>\n    <table style=\"text-align: left;  width: 100%;  \" align=\"center\">\n        <tr>\n            <td style =\"width=40%;\"> Testigos de la preexistencia del vehículo:</td>\n            <td style =\"width=60%;\">?TESTIGOS_PREX?</td>\n        </tr>\n    </table>\n    <table style=\"text-align: left;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=40%;\"> Nombre</th>\n            <th style =\"width=60%;\">Dirección o referencia</th>\n        </tr>\n        <tr>\n            <td style =\"width=40%;\">?NOMBRE_PREX?</td>\n            <td style =\"width=60%;\">?DIR_REF_PREX?</td>\n        </tr>        \n    </table>      \n    <!-- Atributo 55-->\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBSERVACIONES_PREX?\n        </p></td></tr>\n    </table> \n<!--############################### VERIFICACIÓN DE PÓLIZAS -########################################### -->\n<!--############################### VERIFICACIÓN DE PÓLIZAS -########################################### -->\n    <p style=\"text-align: center; font-weight: bold\">VERIFICACIÓN DE PÓLIZAS.</p>\n    <br>    \n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=25%;\">Póliza Anterior</th>\n            <th style =\"width=25%;\">Cobertura</th>\n            <th style =\"width=25%;\">Vigencia desde</th>\n            <th style =\"width=25%;\">Vigencia Hasta</th>\n        </tr>\n        <tr>\n            <td style =\"width=25%;\">?POL_ANTER?</td>\n            <td style =\"width=25%;\">?COBERTURA_ANTER?</td>\n            <td style =\"width=25%;\">?F_INI_ANTER?</td>\n            <td style =\"width=25%;\">?F_FIN_ANTER?</td>\n        </tr>\n    </table>\n    <!-- Atributo 60-->\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBSERVACION_ANTER?\n        </p></td></tr>\n    </table>    \n<!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->\n<!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->\n    <p style=\"text-align: center; font-weight: bold\">CARPETA DE INVESTIGACIÓN.</p>\n    <p style=\"text-align: left; \">Denuncia ante el Ministerio Público. ?DENUNCIA_MP?</p>\n    <br>    \n    <table style=\"text-align: center;  width: 100%; \" align=\"center\">\n        <tr>\n            <th style =\"width=20%;\">Alcaldía o Municipio.</th>\n            <th style =\"width=35%;\">Carpeta </th>\n            <th style =\"width=15%;\">Fecha</th>\n            <th style =\"width=10%;\">Hora</th>\n            <th style =\"width=20%;\">Registrada</th>\n        </tr>\n        <tr>\n            <td style =\"width=20%;\">?MUNICIPIO?</td>\n            <td style =\"width=35%;\">?CARPETA?</td>\n            <td style =\"width=15%;\">?F_INV?</td>\n            <td style =\"width=10%;\">?HORA_INV?</td>\n            <td style =\"width=20%;\">?CARP_REG?</td>\n        </tr>\n    </table>\n    <table style=\"text-align: center;  width: 100%;\" align=\"center\">\n        <tr>\n            <th style =\"width=20%;\">Carpeta Relacionada.</th>\n            <th style =\"width=35%;\">Carpeta </th>\n            <th style =\"width=45%;\">Motivo de la Carpeta relacionada.</th>\n        </tr>\n        <tr>\n            <td style =\"width=20%;\">?CARP_REG?</td>\n            <td style =\"width=35%;\"></td>\n            <td style =\"width=45%;\">?MOT_CARP_INV?</td>            \n        </tr>\n    </table>    \n    <!-- Atributo 68-->\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBSERVACION_INV?\n        </p></td></tr>\n    </table>       \n    <br>\n<!--############################### DOCUMENTOS ANEXOS. -########################################### -->\n<!--############################### DOCUMENTOS ANEXOS. -########################################### -->\n    <p style=\"text-align: center; font-weight: bold\">DOCUMENTOS ANEXOS.</p>\n    <p style=\"text-align: left; \">Documentos que se anexan a la investigación:</p>\n    <br>    \n    <table style=\"text-align: left;  width: 100%; \" align=\"center\">\n        <tr>\n            <td style =\"width=50%;\">?POLIZA_DOC?</td>\n            <td style =\"width=50%;\">?FACTURA_DOC?</td>\n        </tr>\n        <tr>\n            <td style =\"width=50%;\">?ACTA_MP_DOC?</td>\n            <td style =\"width=50%;\">?TENENCIAS?</td>\n        </tr>\n        <tr>\n            <td style =\"width=50%;\">?FOTOGRAFIAS_DOC?</td>\n            <td style =\"width=50%;\">?CUEST_ROBO_OTROS_DOC?</td>\n        </tr>\n    </table>\n<!--############################### CONCLUSIONES. -########################################### -->\n<!--############################### CONCLUSIONES. -########################################### -->\n    <br>\n    <br>\n    <br>\n    <br>\n    <p style=\"text-align: center; font-weight: bold\">CONCLUSIONES.</p>\n    <br>    \n    <table style=\"text-align: left;  width: 100%; border:2\" align=\"center\">\n        <tr>\n            <td style =\"width=50%;\"><b>Resultado del siniestro:</b></td>\n            <td style =\"width=50%;\">?CONCLUCION_CASO?</td>     \n        </tr>   \n    </table>\n    <p style=\"text-align: center; font-weight: bold\">CONSIDERANDO.</p>\n    <!-- Atributo 76-->\n    <table style=\"text-align: justify;  width: 100%; \" align=\"center\">\n        <tr><td style =\"width=100%;\"><p>\n        ?OBS_CONCLUSION?\n        </p></td></tr>\n    </table>     \n    <br>\n    <br>\n    <p>Atentamente.</p>\n    <br>\n    <br>\n    <br>\n    <p>Lic. César Quiñones G.<br>\n    Director Operativo<br>\n    Asesoría Legal Especializada e Investigaciones S.C<br>\n    alesi.sc@prodigy.net.mx</p>\n\n\n</page>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS p_crea_pdf//
+CREATE PROCEDURE p_crea_pdf(IN p_id_caso INT, OUT p_plantilla TEXT) 
+BEGIN 
+
+	-- Declaracion de variables 
+    DECLARE v_TIPO_CASO VARCHAR(45);
+    DECLARE v_PDF_CODIGO, v_VALOR  TEXT;
+    DECLARE v_FECHA_PDF, v_REF_INT  VARCHAR(45);
+    DECLARE v_ID_CAMPO,v_ETIQUETA, v_TIPO_DATO, v_CATALOGO, v_REEMPLAZO varchar(150) DEFAULT "";
+    DECLARE v_NUM_ATRIBUTO , finished INT DEFAULT 0;
+    DECLARE cur_ATRIBUTOS
+		CURSOR FOR select a.NUM_ATRIBUTO, a.ID_CAMPO, a.ETIQUETA, a.TIPO_DATO, a.CATALOGO, b.VALOR
+					from ALESI_TATRICASO a, ALESI_TVALCASO b
+					where b.ID_CASO = p_id_caso
+					and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO
+					order by a.NUM_ATRIBUTO;
+                    -- LIMIT 7;
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET finished = 1;
+    
+    -- seteo de valores para Mexico    
+    SET lc_time_names = 'es_MX';
+    
+    -- Variables necesarias
+	select  date_format(SYSDATE(),'%d de %M de %Y') INTO v_FECHA_PDF;
+    select  lpad(p_id_caso,7,0) INTO v_REF_INT;
+    
+    
+	-- obtencion del  parametro dependiendo el caso a buscar la plantilla
+    select TIPO_CASO
+    into v_TIPO_CASO
+    from ALESI_TCASO 
+    WHERE ID_CASO = p_id_caso;
+    
+    select PDF_CODIGO 
+    into v_PDF_CODIGO 
+    from ALESI_PDF_PLANTILLAS 
+    where ID_PDF = v_TIPO_CASO;
+    
+    set v_PDF_CODIGO = replace(v_PDF_CODIGO, '?v_FECHA_PDF?',v_FECHA_PDF);   
+    set v_PDF_CODIGO = replace(v_PDF_CODIGO, '?v_REF_INT?',v_REF_INT);   
+    
+    -- tratamiento de datos de acuerdo a la parametria del caso 
+    
+    -- select 'Hello World';
+    
+	OPEN cur_ATRIBUTOS; 
+    getATRIBUTOS: LOOP
+        FETCH cur_ATRIBUTOS INTO v_NUM_ATRIBUTO, v_ID_CAMPO, v_ETIQUETA,  v_TIPO_DATO, v_CATALOGO, v_VALOR;
+        IF finished = 1 THEN 
+            LEAVE getATRIBUTOS;
+        END IF;
+        -- Logica
+        SET v_REEMPLAZO = '';
+        SET v_REEMPLAZO = concat('?',v_ID_CAMPO,'?');
+        
+        
+        
+        -- dependiendo el tipo de dato se formatea
+        if (v_VALOR is  NULL) or (v_VALOR = '') then
+            set v_VALOR = ' ';
+		else        
+			if !(v_CATALOGO is not NULL) or (v_CATALOGO != '') then
+				
+                if (v_TIPO_DATO ='C') and (v_CATALOGO ='CAT_SI_NO')  then
+					if v_VALOR = 'N' then
+						set v_VALOR = concat('<input type="checkbox" >',v_ETIQUETA);
+                    elseif v_VALOR = 'S' then
+						set v_VALOR = concat('<input type="checkbox" checked="checked">',v_ETIQUETA);
+                    end if;
+				elseif (v_TIPO_DATO ='R') and (v_CATALOGO ='CAT_SI_NO')  then
+					if v_VALOR = 'N' then
+						set v_VALOR = '<input type="checkbox" >SI <input type="checkbox" checked="checked" >NO';
+					elseif v_VALOR = 'S' then
+						set v_VALOR = '<input type="checkbox" checked="checked" >SI <input type="checkbox"  >NO';
+                    end if;
+				else
+					select DESCIPCION
+					into v_VALOR
+					from alesi_ntablas 
+					where ID_TABLA= (select id_tabla from alesi_tablas where COD_TABLA =v_CATALOGO)
+					and ID_CODIGO = v_VALOR; 
+                end if;
+				 
+			else
+				if v_TIPO_DATO = 'D' then
+					set v_VALOR =  date_format(v_VALOR,'%d-%M-%Y');
+				
+				elseif v_TIPO_DATO ='A' then
+					set v_VALOR = v_VALOR;
+				elseif v_TIPO_DATO ='T' then
+					set v_VALOR = replace(v_VALOR,'\n','<br>');
+				end if;   
+			end if;
+		end if;
+        
+        
+        set v_PDF_CODIGO = replace(v_PDF_CODIGO, v_REEMPLAZO,v_VALOR);   
+    END LOOP getATRIBUTOS;
+    CLOSE cur_ATRIBUTOS;
+    
+    set p_plantilla = v_PDF_CODIGO;
+    
+END
+//
+DELIMITER ;
