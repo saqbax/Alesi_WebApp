@@ -13,6 +13,7 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav ">
 					<li class="nav-item active"><span class="navbar-brand" style="font-size: 14px;"><b>Bienvenido</b> <?php echo $login_session; ?></span></li>
+					<li><a href="mc_list.php">Mantenimiento de casos</a></li>
 					<li><a href="mp_list.php">Mantenimiento de personas</a></li>
 					<li><a href="mu_list.php">Mantenimiento de usuarios</a></li>
 					<li class="nav-item"><a class="nav-link" href="logout.php"> Cerrar sesión</a></li>
