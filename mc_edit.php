@@ -57,7 +57,9 @@ include("conexion.php");
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca1 = 1;
 										while($cata1 = mysqli_fetch_assoc($cat1)){
-												echo '<option value = '.$cata1['ID_CODIGO'].'">'.$cata1['DESCIPCION'].'</option>';
+												echo '<option value = '.$cata1['ID_CODIGO'].'" ';
+												if($cata1['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+												echo '>'.$cata1['DESCIPCION'].'</option>';
 											$ca1++;
 										}
 									echo '</select>';
@@ -66,7 +68,9 @@ include("conexion.php");
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca3 = 1;
 										while($cata3 = mysqli_fetch_assoc($cat3)){
-												echo '<option value = '.$cata3['ID_CODIGO'].'">'.$cata3['DESCIPCION'].'</option>';
+												echo '<option value = '.$cata3['ID_CODIGO'].'" ';
+												if($cata3['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+												echo '>'.$cata3['DESCIPCION'].'</option>';
 											$ca3++;
 										}
 									echo '</select>';
@@ -75,7 +79,9 @@ include("conexion.php");
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca4 = 1;
 										while($cata4 = mysqli_fetch_assoc($cat4)){
-												echo '<option value = '.$cata4['ID_CODIGO'].'">'.$cata4['DESCIPCION'].'</option>';
+												echo '<option value = '.$cata4['ID_CODIGO'].'" ';
+												if($cata4['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+												echo '>'.$cata4['DESCIPCION'].'</option>';
 											$ca4++;
 										}
 									echo '</select>';
@@ -84,7 +90,9 @@ include("conexion.php");
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca5 = 1;
 										while($cata5 = mysqli_fetch_assoc($cat5)){
-												echo '<option value = '.$cata5['ID_CODIGO'].'">'.$cata5['DESCIPCION'].'</option>';
+												echo '<option value = '.$cata5['ID_CODIGO'].'" ';
+												if($cata5['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+												echo '>'.$cata5['DESCIPCION'].'</option>';
 											$ca5++;
 										}
 									echo '</select>';
@@ -93,23 +101,25 @@ include("conexion.php");
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca8 = 1;
 										while($cata8 = mysqli_fetch_assoc($cat8)){
-												echo '<option value = '.$cata8['ID_CODIGO'].'">'.$cata8['DESCIPCION'].'</option>';
+												echo '<option value = '.$cata8['ID_CODIGO'].'" ';
+												if($cata8['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+												echo '>'.$cata8['DESCIPCION'].'</option>';
 											$ca8++;
 										}
 									echo '</select>';
 								}
 								else {
-									echo '<input type = "text" maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;" />';
+									echo '<input type = "text" maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$row['VALOR']. '" class="input-group form-control" style = "width:320px;" />';
 								}
 							}
                             else if ($row['TIPO_DATO'] == 'N' ){
-								echo '<input type = "number" minlength = "' .$row['LONGITUD_MIN']. '" maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;" />';
+								echo '<input type = "number" minlength = "' .$row['LONGITUD_MIN']. '" maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$row['VALOR']. '" class="input-group form-control" style = "width:320px;" />';
 							}
                             else if ($row['TIPO_DATO'] == 'D' ){
-								echo '<div class="form-group"><div class="input-group date"><input type = "text" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="date form-control" style = "width:320px;" /></div></div>';
+								echo '<div class="form-group"><div class="input-group date"><input type = "text" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$row['VALOR']. '" class="date form-control" style = "width:320px;" /></div></div>';
 							}
                             else if ($row['TIPO_DATO'] == 'T' ){
-								echo '<textarea maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" style = "width:320px;"></textarea>';
+								echo '<textarea maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" style = "width:320px;">' .$row['VALOR']. '</textarea>';
 							}
                             else if ($row['TIPO_DATO'] == 'E' ){
 								echo '<label id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" >' .$row['VALOR']. '</label>';
