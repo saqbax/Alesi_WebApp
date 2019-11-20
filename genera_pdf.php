@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 			$row = mysqli_fetch_assoc($resultado);
 
 			$content = $row['p_out'];
-			$html2pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', array(15, 5, 15, 5));
+			$html2pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', array(15, 5, 15, 20));
 			$html2pdf->pdf->SetDisplayMode('fullpage');
 			$html2pdf->writeHTML($content);
 			$html2pdf->output('example02.pdf');
