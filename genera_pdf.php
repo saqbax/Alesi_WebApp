@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 {
     if (isset($_GET['id']))
     {
-		try {
+		//try {
 			
 			mysqli_query($con, "CALL p_crea_pdf(".$_GET['id'].", @p_salida)");
 			
@@ -19,15 +19,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 
 			$row = mysqli_fetch_assoc($resultado);
 
+			echo $row;
+
+			
 			$content = $row['p_out'];
-			$html2pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', array(15, 5, 15, 20));
+
+			echo $content;
+			/*$html2pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', array(15, 5, 15, 20));
 			$html2pdf->pdf->SetDisplayMode('fullpage');
 			$html2pdf->writeHTML($content);
 			$html2pdf->output('example02.pdf');
 
 			header("HTTP/1.1 200 OK");
 	  		exit();
-		} catch (Html2PdfException $e) {
+		/*} catch (Html2PdfException $e) {
 			//Para debug Activar
 			$html2pdf->clean();
 			$formatter = new ExceptionFormatter($e);
@@ -35,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 			header("HTTP/1.1 500". "fallo");
       		exit();
 
-		} 
+		} */
 
 	  
     }
