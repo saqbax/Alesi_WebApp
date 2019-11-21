@@ -9,9 +9,11 @@ use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
 {
-    if (isset($_GET['id']))
+    if (isset($con, $_GET['id']))
     {
 		//try {
+
+			mysqli_query("SET NAMES 'utf8'");
 			
 			mysqli_query($con, "CALL p_crea_pdf(".$_GET['id'].", @p_salida)");
 			
