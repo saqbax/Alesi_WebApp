@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
     {
 		//try {
 
-			mysqli_query($con,"SET NAMES 'utf8'");
+//			mysqli_query($con,"SET NAMES 'utf8'");
 			
 			mysqli_query($con, "CALL p_crea_pdf(".$_GET['id'].", @p_salida)");
 			

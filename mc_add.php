@@ -9,6 +9,7 @@ include("conexion.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Datos del caso</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
@@ -41,6 +42,7 @@ include("conexion.php");
 					$cat7 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_TIP_CONTACT')");
 					$cat8 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_MUNICIPIO')");
 					$cat9 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_CONCLUSION')");
+					$cat10 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_COBERT')");
 				//Iteracion principal
 				if(mysqli_num_rows($sql) == 0){
 					echo '<tr><td colspan="8">No hay datos.</td></tr>';
@@ -53,14 +55,28 @@ include("conexion.php");
 							<td>';
 							if($row['TIPO_DATO'] == 'A'){
 								if($row['CATALOGO'] == 'CAT_COBERT'){
-									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
-										$ca1 = 1;
-										while($cata1 = mysqli_fetch_assoc($cat1)){
-												echo '<option value = '.$cata1['ID_CODIGO'].'">'.$cata1['DESCIPCION'].'</option>';
-											$ca1++;
-										}
-									echo '</select>';
-								} 
+									if($row['NUM_ATRIBUTO'] == '10'){
+										echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
+											$ca1 = 1;
+											while($cata1 = mysqli_fetch_assoc($cat1)){
+													echo '<option value = '.$cata1['ID_CODIGO'].'" ';
+													if($cata1['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+													echo '>'.$cata1['DESCIPCION'].'</option>';
+												$ca1++;
+											}
+										echo '</select>';
+									} else {
+										echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
+											$ca10 = 1;
+											while($cata10 = mysqli_fetch_assoc($cat10)){
+													echo '<option value = '.$cata10['ID_CODIGO'].'" ';
+													if($cata10['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
+													echo '>'.$cata10['DESCIPCION'].'</option>';
+												$ca10++;
+											}
+										echo '</select>';
+									}
+								}
 								else if($row['CATALOGO'] == 'CAT_AUTO_MARCA'){
 									echo '<select id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca3 = 1;
@@ -105,7 +121,7 @@ include("conexion.php");
 								echo '<input type = "number" minlength = "' .$row['LONGITUD_MIN']. '" maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;" />';
 							}
                             else if ($row['TIPO_DATO'] == 'D' ){
-								echo '<div class="form-group"><div class="input-group date"><input type = "text" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="date form-control" style = "width:320px;" /></div></div>';
+								echo '<input type = "text" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="datepicker form-control" style = "width:320px;" />';
 							}
                             else if ($row['TIPO_DATO'] == 'T' ){
 								echo '<textarea maxlength = "' .$row['LONGITUD_MAX']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" style = "width:320px;"></textarea>';
@@ -140,8 +156,11 @@ include("conexion.php");
 								}
 							}
                             else if ($row['TIPO_DATO'] == 'C' ){
-								echo '<input type = "checkbox" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" />';
+								echo '<input type = "checkbox" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '">' .$row['ID_CAMPO']. '</input>';
 							} 
+                            else if ($row['TIPO_DATO'] == 'R2' ){
+									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"N"> No </input>';
+							}
 							echo '
 							</td>
 						</tr>
@@ -165,20 +184,16 @@ include("conexion.php");
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-  	<script type="text/javascript">
-	$(function () {
-        $('.date').datetimepicker();
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false
-        });
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-        });
-    });
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript">
+		$('.datepicker').datepicker({
+			format: 'yyyy-mm-dd',
+			weekStart: 1,
+			daysOfWeekHighlighted: "6,0",
+			autoclose: true,
+			todayHighlight: true,
+		});
+		$('.datepicker').datepicker("setDate", new Date());
 	</script>
 </body>
 </html>
