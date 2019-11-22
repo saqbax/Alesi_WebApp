@@ -762,7 +762,7 @@ BEGIN
 		else        
 			if !(v_CATALOGO is not NULL) or (v_CATALOGO != '') then
 				
-                if (v_TIPO_DATO ='C') and (v_CATALOGO ='CAT_SI_NO')  then
+                if (v_TIPO_DATO in('C','RC')) and (v_CATALOGO ='CAT_SI_NO')  then
 					if v_VALOR = 'N' then
 						set v_VALOR = concat('<input type="checkbox" >',v_ETIQUETA);
                     elseif v_VALOR = 'S' then
