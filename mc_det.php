@@ -32,6 +32,7 @@ include("conexion.php");
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 			?>
 			<div class="table-responsive">
+			<a href="mc_upl.php?cas=<?php echo $nik;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
 			<table class="table table-striped table-hover">
 				<tr>
 					<th>Campo</th>
