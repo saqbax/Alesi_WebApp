@@ -29,7 +29,7 @@ while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro suce
       $expensions= array("pdf");
       
       if(in_array($file_ext,$expensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+         $errors[]="No es un archivo PDF.";
       }
       
       if($file_size > 2097152){
