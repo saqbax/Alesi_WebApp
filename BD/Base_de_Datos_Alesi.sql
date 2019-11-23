@@ -893,6 +893,56 @@ INSERT INTO `alesiorg_alesi_bd`.`alesi_tatricaso`(`ID_EMPRESA`, `TIPO_CASO`, `BL
 
 
 
+-- ----- caso de prueba cardif
+
+INSERT INTO `ALESI_TCASO` (`ID_CASO`,`ID_EMPRESA`,`TIPO_CASO`,`F_ALTA`,`F_ESTATUS`,`F_CIERRE`,`STATUS`,`ID_USUARIO_ALTA`,`ID_USUARIO_ASIGNADO`,`ID_USUARIO_ULTIMA_ACT`) VALUES (3,'CARDIF','SINIESTRO_TDC_C','2018-11-03','2018-11-03','2018-11-03','EN_CURSO','JECHUS','JECHUS','JECHUS');
+
+
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 1, 'Don Manuelito');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 2, 'Presidente');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 3, '1-2011-109');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 4, '2019-11-23');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 5, '2019-11-23');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 6, 'A');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 7, 'Octavio Flores');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 8, 'Octavio Flores');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 9, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 10, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 11, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 12, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 13, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 14, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 15, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 16, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 17, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 18, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 19, 'R');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 20, 'MUCHO TEXTO AQUI');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 21, 'mas texto aqui');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 22, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 23, 'EN ALGUN LUGAR');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 24, 'MUCHO TEXTO AQUI');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 25, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 26, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 27, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 28, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 29, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 30, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 31, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 32, '');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 33, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 34, NULL);
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 35, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 36, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 37, 'S');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 38, 'N');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 39, 'P');
+INSERT INTO `alesiorg_alesi_bd`.`alesi_tvalcaso`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 40, 'MUCHO TEXTO');
+
+
+COMMIT;
+
+
 
 
 
