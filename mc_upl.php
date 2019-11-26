@@ -2,20 +2,32 @@
 <html>
 <body>
 
+
+
 <?php
-$cas = mysqli_real_escape_string($con,(strip_tags($_GET["cas"],ENT_QUOTES)));
+//$cas = mysqli_real_escape_string($con,(strip_tags($_GET["cas"],ENT_QUOTES)));
+$cas = 2;
 $directorio = opendir("casos/".$cas); //ruta actual
+echo "<table class='table table-striped table-hover'>";
+echo "<tr><th>Nombre</th><th>Opciones</th></tr>";
 while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro sucesivamente
 {
     if (is_dir($archivo))//verificamos si es o no un directorio
     {
-        echo "[".$archivo . "]<br />"; //de ser un directorio lo envolvemos entre corchetes
+        //echo "[".$archivo . "]<br />"; //de ser un directorio lo envolvemos entre corchetes
     }
     else
     {
-        echo $archivo . "<br />";
+        echo "<tr>
+                 <td>" . $archivo . "</td>
+                 <td>
+                   <a href='#' title='Descargar' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-download-alt' aria-hidden='true'></span></a>                   
+                   <a href='#' title='Eliminar' class='btn btn-danger btn-sm'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
+                 </td>
+               </tr>";
     }
 }
+echo "</table>";
 ?><br>
 <?php
    if(isset($_FILES['image'])){
@@ -40,7 +52,8 @@ while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro suce
          move_uploaded_file($file_tmp,"casos/".$cas."/".$file_name);
          echo "Subido";
       }else{
-         print_r($errors);
+         //print_r($errors);
+         echo "hola";
       }
    }
 ?>

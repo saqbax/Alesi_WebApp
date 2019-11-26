@@ -33,6 +33,31 @@ include("conexion.php");
 			?>
 			<div class="table-responsive">
 			<a href="mc_upl.php?cas=<?php echo $nik;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+			<button type="button" class="btn btn-success openBtn">Archivos</button>
+			<a href='genera_pdf.php?id='<?php echo $nik;?>><button type="button" class="btn btn-success ">Generar PDF</button> </a>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<h4 class="modal-title">Administracion de Archivos</h4>
+						</div>
+						<div class="modal-body">
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
 			<table class="table table-striped table-hover">
 				<tr>
 					<th>Campo</th>
@@ -67,5 +92,48 @@ include("conexion.php");
 	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$('.openBtn').on('click',function(){
+			$('.modal-body').load('mc_upl.php',function(){
+				$('#myModal').modal({show:true});
+			});
+		});
+
+		$('.gen_pdf').on('click',function(){
+			$.ajax({
+				// la URL para la petición
+				url : '/genera_pdf.php',
+		
+				// la información a enviar
+				data : { 'id' : 2 },
+		
+				// especifica si será una petición POST o GET
+				type : 'GET',
+		
+				// el tipo de información que se espera de respuesta
+				//dataType : 'pdf',
+				
+				contentType: "application/json; charset=UTF-8",
+		
+				// código a ejecutar si la petición es satisfactoria;
+				success : function(response) {
+					//$('#MyProducto').html(respuesta);
+				//	alert('got response');
+        		//	window.open(response);
+				//download.bind(response, "mydownload.pdf", "application/pdf");
+				window.open("data:application/pdf," + response);
+				},
+
+				error: function (textStatus, errorThrown) {
+					console.log('Err');
+				}
+
+				
+			});
+			//});
+		});
+
+		
+	</script>
 </body>
 </html>
