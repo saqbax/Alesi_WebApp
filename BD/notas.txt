@@ -5,3 +5,38 @@ Plantillas para utilizar a generar documentos
 --> example07.php  --> hace una carta
 
 http://localhost/genera_pdf.php?id=2
+
+
+http://www.mysqltutorial.org/mysql-transaction.aspx
+https://stackoverflow.com/questions/57913862/mysql-stored-procedure-to-iterate-json-array-data
+https://gist.github.com/jonathanvx/513066eea8cb5919b648b2453db47890
+
+
+#############################################################
+
+delimiter $$
+drop procedure if exists p_insert_tvalocaso$$
+create procedure p_insert_tvalocaso( json_in JSON)
+BEGIN
+DECLARE v_valor varchar(255) default null;
+DECLARE v_valor_int int default null;
+
+START TRANSACTION;
+	set v_valor_int = JSON_LENGTH(json_in) ;
+    insert into casos (id,nombre,stock,precio) values (v_valor_int,1,1,1);
+    
+    rollback;
+
+END $$
+delimiter ;
+
+##############################################################
+
+
+select * from casos;
+
+1	En atencion	50	3,000,000.00
+
+call county_summary('{"county":"YORK","year": 2010,"month":12}');
+
+call p_insert_tvalocaso('{"county":"YORK","year": 2010,"month":12,"monthy":12, "monthyy":12}');
