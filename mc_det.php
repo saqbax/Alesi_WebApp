@@ -30,11 +30,16 @@ include("conexion.php");
 			<hr />
 			<?php
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
+				$nik_2 = $_GET['nik'];
+				//echo $nik_2;
 			?>
 			<div class="table-responsive">
 			<a href="mc_upl.php?cas=<?php echo $nik;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
 			<button type="button" class="btn btn-success openBtn">Archivos</button>
-			<a href='genera_pdf.php?id='<?php echo $nik;?>><button type="button" class="btn btn-success ">Generar PDF</button> </a>
+			<a target="_blank" href="genera_pdf.php?id=<?php echo $nik_2;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
+
+			
+      <!-- <a target="_blank" href="http://www.forosdelweb.com/f2/formac.php?a=pisc"> -->
 
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" role="dialog">
@@ -98,42 +103,6 @@ include("conexion.php");
 				$('#myModal').modal({show:true});
 			});
 		});
-
-		$('.gen_pdf').on('click',function(){
-			$.ajax({
-				// la URL para la petición
-				url : '/genera_pdf.php',
-		
-				// la información a enviar
-				data : { 'id' : 2 },
-		
-				// especifica si será una petición POST o GET
-				type : 'GET',
-		
-				// el tipo de información que se espera de respuesta
-				//dataType : 'pdf',
-				
-				contentType: "application/json; charset=UTF-8",
-		
-				// código a ejecutar si la petición es satisfactoria;
-				success : function(response) {
-					//$('#MyProducto').html(respuesta);
-				//	alert('got response');
-        		//	window.open(response);
-				//download.bind(response, "mydownload.pdf", "application/pdf");
-				window.open("data:application/pdf," + response);
-				},
-
-				error: function (textStatus, errorThrown) {
-					console.log('Err');
-				}
-
-				
-			});
-			//});
-		});
-
-		
 	</script>
 </body>
 </html>

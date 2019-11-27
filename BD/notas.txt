@@ -14,18 +14,61 @@ https://gist.github.com/jonathanvx/513066eea8cb5919b648b2453db47890
 
 #############################################################
 
+
+
 delimiter $$
 drop procedure if exists p_insert_tvalocaso$$
 create procedure p_insert_tvalocaso( json_in JSON)
 BEGIN
-DECLARE v_valor varchar(255) default null;
 DECLARE v_valor_int int default null;
 
-START TRANSACTION;
-	set v_valor_int = JSON_LENGTH(json_in) ;
-    insert into casos (id,nombre,stock,precio) values (v_valor_int,1,1,1);
+DECLARE finished, v_NUM_ATRIBUTO INTEGER DEFAULT 0; 
+DECLARE i INTEGER DEFAULT 0;
+DECLARE usages,v_ID_CAMPO,v_ETIQUETA, v_TIPO_DATO, v_CATALOGO, v_REEMPLAZO VARCHAR(4000);
+DECLARE v_PDF_CODIGO, v_VALOR , v_VALOR_JSON  TEXT;
+
+
+DECLARE curParametria
+   CURSOR FOR
+       select a.NUM_ATRIBUTO, a.ID_CAMPO, a.ETIQUETA, a.TIPO_DATO, a.CATALOGO, b.VALOR -- ,C.TIPO_CASO
+					from ALESI_TATRICASO a, ALESI_TVALCASO b, ALESI_TCASO C
+					where b.ID_CASO = 2 -- p_id_caso
+					AND B.ID_CASO = C.ID_CASO
+					AND A.ID_EMPRESA = C.ID_EMPRESA
+					and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO
+					order by a.NUM_ATRIBUTO;
+
+-- START TRANSACTION;
+
+DECLARE CONTINUE HANDLER 
+    FOR NOT FOUND SET finished = 1;
+
+OPEN curParametria;
+
+	getCampos: LOOP
+	
+			FETCH curParametria INTO  v_NUM_ATRIBUTO, v_ID_CAMPO, v_ETIQUETA,  v_TIPO_DATO, v_CATALOGO, v_VALOR;
+			IF finished = 1 THEN 
+					LEAVE getCampos;
+			END IF;
+			
+			-- WHILE i < JSON_LENGTH(json_in) DO
+				-- set v_valor_int = JSON_LENGTH(json_in) ; '$.county'
+				
+				 SET v_VALOR_JSON =  JSON_EXTRACT(json_in,CONCAT('$.',v_ID_CAMPO));
+				 if v_VALOR_JSON is null or v_VALOR_JSON = '' then
+					set v_VALOR_JSON  = 'nada';
+				 end if;
+				
+				insert into casos (id,nombre,stock,precio) values (finished,v_VALOR_JSON ,2,1);
+				-- SET i = i + 1;
+			
+			-- END WHILE;
     
-    rollback;
+		  -- SET i = 0;
+						
+	END LOOP getCampos;		
+CLOSE curParametria;		
 
 END $$
 delimiter ;
@@ -33,10 +76,19 @@ delimiter ;
 ##############################################################
 
 
-select * from casos;
+
+select * from casos WHERE id = 0;
+
+delete from casos WHERE id = 0;
 
 1	En atencion	50	3,000,000.00
 
 call county_summary('{"county":"YORK","year": 2010,"month":12}');
 
 call p_insert_tvalocaso('{"county":"YORK","year": 2010,"month":12,"monthy":12, "monthyy":12}');
+
+
+call  p_insert_tvalocaso('{"DIRIGIDO_A":"NELZON","CARGO": "el vergonzozo","month":12}');
+
+
+SELECT JSON_EXTRACT( '{"county":"YORK","year": 2010,"month":12,"monthy":12, "monthyy":12}' , CONCAT('$.','county')) AS test;
