@@ -18,6 +18,9 @@ include("conexion.php");
 		<?php include("nav.php");?>
 	</nav>
 	<div class="container">
+
+	<form action="#" method="POST" enctype="multipart/form-data" id="theform">
+
 		<div class="form-row">
 			<h2>Datos del caso &raquo; Info</h2>
 			<hr />
@@ -180,6 +183,10 @@ include("conexion.php");
 					</div>
 				</div>
 		</div>
+
+	   </form>
+
+
 	</div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
@@ -194,6 +201,34 @@ include("conexion.php");
 			todayHighlight: true,
 		});
 		$('.datepicker').datepicker("setDate", new Date());
+
+
+
+		let nosubmit = (e) => {
+
+		console.log("que pex aqui");
+		e.preventDefault();
+		const f = Array.from(new FormData(e.target));
+		const obj = f.reduce((o, [k, v]) => {
+			let a = v,
+			b, i,
+			m = k.split('['),
+			n = m[0],
+			l = m.length;
+			if (l > 1) {
+			a = b = o[n] || [];
+			for (i = 1; i < l; i++) {
+				m[i] = (m[i].split(']')[0] || b.length) * 1;
+				b = b[m[i]] = ((i + 1) == l) ? v : b[m[i]] || [];
+			}
+			}
+			return { ...o, [n]: a };
+		}, {});
+		console.log(obj);
+		}
+
+		document.querySelector('#theform').addEventListener('submit', nosubmit, {capture: true});
+
 	</script>
 </body>
 </html>
