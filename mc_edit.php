@@ -23,17 +23,18 @@ include("conexion.php");
 			<hr />
 			<?php
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
+				$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
 			?>
 			<div class="table-responsive">
 			<a href="mc_upl.php?cas=<?php echo $nik;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
 			<table class="table table-striped table-hover">
 				<tr>
-					<th align = "center">Campo</th>
+					<th align = "center" colspan="2">Campo</th>
 					<th align = "center">Valor</th>
 				</tr>
 				<?php
 //					$sql = mysqli_query($con, "SELECT * FROM ALESI_TATRICASO");
-					$sql = mysqli_query($con, "SELECT b.TIPO_DATO,b.BLOQUE,b.CATALOGO,b.ORDEN,b.ID_CAMPO,b.ETIQUETA,a.VALOR,a.NUM_ATRIBUTO FROM ALESI_TVALCASO a JOIN ALESI_TATRICASO b on a.NUM_ATRIBUTO = b.NUM_ATRIBUTO WHERE a.ID_CASO = '$nik'");
+					$sql = mysqli_query($con, "SELECT b.TIPO_DATO,b.BLOQUE,b.CATALOGO,b.ORDEN,b.ID_CAMPO,b.ETIQUETA,a.VALOR,a.NUM_ATRIBUTO FROM ALESI_TVALCASO a JOIN ALESI_TATRICASO b on a.NUM_ATRIBUTO = b.NUM_ATRIBUTO WHERE a.ID_CASO = '$nik' and b.ID_EMPRESA = '$emp'");
 					//catalogos
 					$cat1 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_COBERT')");
 					$cat2 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_SI_NO')");
@@ -53,6 +54,7 @@ include("conexion.php");
 					while($row = mysqli_fetch_assoc($sql)){
 						echo '
 						<tr>
+							<td>'.$no.'</td>
 							<td>'.$row['ETIQUETA'].'</td>
 							<td>';
 							if($row['TIPO_DATO'] == 'A'){
@@ -180,7 +182,7 @@ include("conexion.php");
 								if('S' == $row['VALOR']){ echo 'checked'; }
 								echo '> ' .$row['ID_CAMPO']. '</input>';
 							} 
-                            else if ($row['TIPO_DATO'] == 'R2' ){
+                            else if ($row['TIPO_DATO'] == 'RC' ){
 									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"S" ';
 									if('S' == $row['VALOR']){ echo 'checked'; }
 									echo '> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" id = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"N" ';

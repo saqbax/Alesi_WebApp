@@ -9,7 +9,7 @@ header("location: profile.php");
 <html>
 	<head>
 		<title>Alesi</title>
-		<!-- JQuery -->
+		<!-- JQuery UI-->
 		<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 		<link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all"/>
 		<!-- JQuery -->

@@ -9,6 +9,10 @@ include('session.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Datos del caso</title>
 
+	<!-- JQuery -->
+	<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all"/>
+
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
@@ -30,6 +34,7 @@ include('session.php');
 			<hr />
 
 			<?php
+			$cat = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_EMPRESA') AND CAMPO_A = 'ASG'");
 			if(isset($_GET['aksi']) == 'delete'){
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 				$cek = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE ID_CASO='$nik'");
@@ -60,7 +65,8 @@ include('session.php');
 									<option value="2" <?php if($filter == 'VENCIDO'){ echo 'selected'; } ?>>Vencido</option>
 								</select>
 							</td>
-							<td style="text-align:right"><a class="btn btn-primary" href="mc_add.php">Nuevo Caso</a></td>
+							<td style="text-align:right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nuevo Caso</button></td>
+							<td style="text-align:right;display:none"><a class="btn btn-primary" href="mc_add.php">Nuevo Caso</a></td>
 						</tr>
 					</table>
 				</div>
@@ -95,7 +101,7 @@ include('session.php');
 						<tr>
 							<td>'.$no.'</td>
 							<td>'.$row['ID_CASO'].'</td>
-							<td><a href="mc_det.php?nik='.$row['ID_CASO'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['ID_EMPRESA'].'</a></td>
+							<td><a href="mc_det.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['ID_EMPRESA'].'</a></td>
                             <td>'.$row['TIPO_CASO'].'</td>
 							<td>'.$row['F_ALTA'].'</td>
                             <td>'.$row['F_CIERRE'].'</td>
@@ -112,7 +118,7 @@ include('session.php');
 							</td>
 							<td>
 
-								<a href="mc_edit.php?nik='.$row['ID_CASO'].'" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 								<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 							</td>
 						</tr>
@@ -125,5 +131,40 @@ include('session.php');
 			</div>
 		</div>
 	</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Seleccion de Empresa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:justify;">
+			<table class="table table-striped table-hover">
+				<tr>
+					<th align = "center">Empresa</th>
+				</tr>
+				<?php
+				if(mysqli_num_rows($cat) == 0){
+					echo '<tr><td colspan="8">No hay datos.</td></tr>';
+				}else{
+					$nu = 1;
+					while($ca = mysqli_fetch_assoc($cat)){
+						echo '
+						<tr>
+							<td><a href="mc_add.php?nik='.$ca['ID_CODIGO'].'"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> '.$ca['DESCIPCION'].'</a></td>
+							</td>
+						</tr>
+						';
+						$nu++;
+					}
+				}
+				?>
+	  </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
