@@ -14,7 +14,7 @@ include("conexion.php");
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body>
-<form class="form-horizontal" action="mc_rpo.php" method="post">
+<form class="form-horizontal" action="mc_rpo.php" method="post" id="theform">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<?php include("nav.php");?>
 	</nav>
@@ -195,6 +195,30 @@ include("conexion.php");
 			todayHighlight: true,
 		});
 		$('.datepicker').datepicker("setDate", new Date());
+
+		let nosubmit = (e) => {
+
+		e.preventDefault();
+		const f = Array.from(new FormData( e.target ));
+		const obj = f.reduce((o, [k, v]) => {
+			let a = v,
+			b, i,
+			m = k.split('['),
+			n = m[0],
+			l = m.length;
+			if (l > 1) {
+			a = b = o[n] || [];
+			for (i = 1; i < l; i++) {
+				m[i] = (m[i].split(']')[0] || b.length) * 1;
+				b = b[m[i]] = ((i + 1) == l) ? v : b[m[i]] || [];
+			}
+			}
+			return { ...o, [n]: a };
+		}, {});
+		console.log(obj);
+		};
+		document.querySelector('#theform').addEventListener('submit', {capture: true});
+
 	</script>
 </form>
 </body>
