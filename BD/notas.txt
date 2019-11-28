@@ -12,6 +12,8 @@ https://stackoverflow.com/questions/57913862/mysql-stored-procedure-to-iterate-j
 https://gist.github.com/jonathanvx/513066eea8cb5919b648b2453db47890
 
 
+
+call p_insert_tvalocaso('U',7,'CARDIF','SINIESTRO_TDC_C','NEO2','{"county":"YORK","year": 2010,"month":12,"monthy":12, "monthyy":12,"DIRIGIDO_A":"el vergatanazo"}');
 #############################################################
 
 

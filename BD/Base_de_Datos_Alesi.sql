@@ -948,3 +948,79 @@ COMMIT;
 
 
 
+delimiter $$
+drop procedure if exists p_insert_tvalocaso$$
+create procedure p_insert_tvalocaso(  p_Operador VARCHAR(20),  p_id_casoP int,p_id_empresa VARCHAR(200), p_tipo_caso VARCHAR(200), p_id_usuario VARCHAR(200), json_in JSON)
+BEGIN 
+DECLARE finished, v_NUM_ATRIBUTO, p_id_caso INTEGER DEFAULT 0; 
+DECLARE i INTEGER DEFAULT 0;
+DECLARE usages,v_ID_CAMPO,v_ETIQUETA, v_TIPO_DATO, v_CATALOGO, v_REEMPLAZO VARCHAR(4000);
+DECLARE v_PDF_CODIGO, v_VALOR , v_VALOR_JSON  TEXT;
+DECLARE v_F_ALTA, v_F_FIN DATE;
+
+
+DECLARE curParametria
+   CURSOR FOR
+       select a.NUM_ATRIBUTO, a.ID_CAMPO, a.ETIQUETA, a.TIPO_DATO, a.CATALOGO
+			from ALESI_TATRICASO a,  ALESI_TCASO C
+			where C.ID_CASO =  p_id_caso
+			AND A.ID_EMPRESA = C.ID_EMPRESA
+			order by a.NUM_ATRIBUTO;
+
+-- START TRANSACTION;
+
+DECLARE CONTINUE HANDLER 
+    FOR NOT FOUND SET finished = 1;
+	
+
+	if p_Operador = 'I' then
+
+	 -- insert a tcaso
+	 set v_F_ALTA = date_format(SYSDATE(),'%Y-%m-%d');
+	 set v_F_FIN =   DATE_ADD(date_format(SYSDATE(),'%Y-%m-%d'),INTERVAL 5 DAY) ;
+
+	INSERT INTO ALESI_TCASO(`ID_CASO`, `ID_EMPRESA`, `TIPO_CASO`, `F_ALTA`, `F_ESTATUS`, `F_CIERRE`, `STATUS`, `ID_USUARIO_ALTA`, `ID_USUARIO_ASIGNADO`, `ID_USUARIO_ULTIMA_ACT`) 
+	VALUES (null, p_id_empresa, p_tipo_caso, v_F_ALTA, v_F_ALTA, v_F_FIN, 'EN_CURSO', p_id_usuario, p_id_usuario, p_id_usuario);
+
+
+	set p_id_caso =  last_insert_id();
+	else
+	set p_id_caso =p_id_casoP;
+
+	end if;
+	
+	delete from alesi_tvalcaso where ID_CASO =p_id_caso;
+	commit;
+
+
+OPEN curParametria;
+
+	getCampos: LOOP
+	
+			FETCH curParametria INTO  v_NUM_ATRIBUTO, v_ID_CAMPO, v_ETIQUETA,  v_TIPO_DATO, v_CATALOGO;
+			IF finished = 1 THEN 
+					LEAVE getCampos;
+			END IF;
+			
+			-- WHILE i < JSON_LENGTH(json_in) DO
+				-- set v_valor_int = JSON_LENGTH(json_in) ; '$.county'
+				
+				 SET v_VALOR_JSON =  JSON_EXTRACT(json_in,CONCAT('$.',v_ID_CAMPO));
+				 if v_VALOR_JSON is null or v_VALOR_JSON = '' then
+					set v_VALOR_JSON  = '';
+				 end if;
+				-- select * from alesi_tvalcaso.VALOR
+				insert into alesi_tvalcaso (ID_CASO,NUM_ATRIBUTO,VALOR) values (p_id_caso,v_NUM_ATRIBUTO,v_VALOR_JSON );
+				-- SET i = i + 1;
+			
+			-- END WHILE;
+    
+		  -- SET i = 0;
+						
+	END LOOP getCampos;		
+CLOSE curParametria;		
+
+END $$
+delimiter ;
+
+commit;
