@@ -61,7 +61,7 @@ include("conexion.php");
 										echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 											$ca1 = 1;
 											while($cata1 = mysqli_fetch_assoc($cat1)){
-													echo '<option value = '.$cata1['ID_CODIGO'].'" ';
+													echo '<option value = "'.$cata1['ID_CODIGO'].'" ';
 													if($cata1['ID_CODIGO'] == $row['VALOR']){ echo 'selected'; }
 													echo '>'.$cata1['DESCIPCION'].'</option>';
 												$ca1++;
@@ -71,7 +71,7 @@ include("conexion.php");
 										echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 											$ca10 = 1;
 											while($cata10 = mysqli_fetch_assoc($cat10)){
-													echo '<option value = '.$cata10['ID_CODIGO'].'" ';
+													echo '<option value = "'.$cata10['ID_CODIGO'].'" ';
 													echo '>'.$cata10['DESCIPCION'].'</option>';
 												$ca10++;
 											}
@@ -82,7 +82,7 @@ include("conexion.php");
 									echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca3 = 1;
 										while($cata3 = mysqli_fetch_assoc($cat3)){
-												echo '<option value = '.$cata3['ID_CODIGO'].'">'.$cata3['DESCIPCION'].'</option>';
+												echo '<option value = "'.$cata3['ID_CODIGO'].'">'.$cata3['DESCIPCION'].'</option>';
 											$ca3++;
 										}
 									echo '</select>';
@@ -91,7 +91,7 @@ include("conexion.php");
 									echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca4 = 1;
 										while($cata4 = mysqli_fetch_assoc($cat4)){
-												echo '<option value = '.$cata4['ID_CODIGO'].'">'.$cata4['DESCIPCION'].'</option>';
+												echo '<option value = "'.$cata4['ID_CODIGO'].'">'.$cata4['DESCIPCION'].'</option>';
 											$ca4++;
 										}
 									echo '</select>';
@@ -100,7 +100,7 @@ include("conexion.php");
 									echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca5 = 1;
 										while($cata5 = mysqli_fetch_assoc($cat5)){
-												echo '<option value = '.$cata5['ID_CODIGO'].'">'.$cata5['DESCIPCION'].'</option>';
+												echo '<option value = "'.$cata5['ID_CODIGO'].'">'.$cata5['DESCIPCION'].'</option>';
 											$ca5++;
 										}
 									echo '</select>';
@@ -109,7 +109,7 @@ include("conexion.php");
 									echo '<select name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
 										$ca8 = 1;
 										while($cata8 = mysqli_fetch_assoc($cat8)){
-												echo '<option value = '.$cata8['ID_CODIGO'].'">'.$cata8['DESCIPCION'].'</option>';
+												echo '<option value = "'.$cata8['ID_CODIGO'].'">'.$cata8['DESCIPCION'].'</option>';
 											$ca8++;
 										}
 									echo '</select>';
@@ -132,26 +132,26 @@ include("conexion.php");
 							}
                             else if ($row['TIPO_DATO'] == 'R' ){
 								if($row['CATALOGO'] == 'CAT_SI_NO'){
-									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"N"> No </input>';
+									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value= "N"> No </input>';
 								}
 								else if($row['CATALOGO'] == 'CAT_REST_INV'){
 										$ca6 = 1;
 										while($cata6 = mysqli_fetch_assoc($cat6)){
-												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"' .$cata6['ID_CODIGO']. '"> ' .$cata6['DESCIPCION']. ' </input>';
+												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$cata6['ID_CODIGO']. '"> ' .$cata6['DESCIPCION']. ' </input>';
 											$ca6++;
 										}
 								}
 								else if($row['CATALOGO'] == 'CAT_TIP_CONTACT'){
 										$ca7 = 1;
 										while($cata7 = mysqli_fetch_assoc($cat7)){
-												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"' .$cata7['ID_CODIGO']. '"> ' .$cata7['DESCIPCION']. ' </input>';
+												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$cata7['ID_CODIGO']. '"> ' .$cata7['DESCIPCION']. ' </input>';
 											$ca7++;
 										}
 								}
 								else if($row['CATALOGO'] == 'CAT_CONCLUSION'){
 										$ca9 = 1;
 										while($cata9 = mysqli_fetch_assoc($cat9)){
-												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"' .$cata9['ID_CODIGO']. '"> ' .$cata9['DESCIPCION']. ' </input>';
+												echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "' .$cata9['ID_CODIGO']. '"> ' .$cata9['DESCIPCION']. ' </input>';
 											$ca9++;
 										}
 								}
@@ -160,7 +160,7 @@ include("conexion.php");
 								echo '<input type = "checkbox" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '">' .$row['ID_CAMPO']. '</input>';
 							} 
                             else if ($row['TIPO_DATO'] == 'RC' ){
-									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"N"> No </input>';
+									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value = "N"> No </input>';
 							}
 							echo '
 							</td>
