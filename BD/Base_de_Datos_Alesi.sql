@@ -947,8 +947,7 @@ COMMIT;
 
 
 
-
-
+-- ===============================================================================================================================
 delimiter $$
 drop procedure if exists p_insert_tvalocaso$$
 create procedure p_insert_tvalocaso(  p_Operador VARCHAR(20),  p_id_casoP int,p_id_empresa VARCHAR(200), p_tipo_caso VARCHAR(200), p_id_usuario VARCHAR(200), json_in JSON, OUT P_MESSAGE VARCHAR(100))
@@ -1007,6 +1006,9 @@ OPEN curParametria;
 				-- set v_valor_int = JSON_LENGTH(json_in) ; '$.county'
 				
 				 SET v_VALOR_JSON =  JSON_EXTRACT(json_in,CONCAT('$.',v_ID_CAMPO));
+				 
+				 SET v_VALOR_JSON = SUBSTRING(v_VALOR_JSON,2,LENGTH(v_VALOR_JSON)-2);
+				 -- select SUBSTRING('"Cosa"',2,LENGTH('"Cosa"')-2) valor ;
 				 if v_VALOR_JSON is null or v_VALOR_JSON = '' then
 					set v_VALOR_JSON  = '';
 				 end if;
@@ -1023,9 +1025,10 @@ CLOSE curParametria;
 
 COMMIT;
 
-SET P_MESSAGE = 'Se insertó correctamente';
+SET P_MESSAGE = '1';
 
 END $$
 delimiter ;
+-- ===============================================================================================================================
 
 commit;
