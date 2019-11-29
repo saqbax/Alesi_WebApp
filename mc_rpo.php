@@ -38,10 +38,19 @@ try{
 		
 		$content = $row['p_out'];
 
-		echo $content;
+		if($content == "1"){
+			echo "<button type='button' class='btn btn-primary' onclick='redirect();'>Regresar</button>";
+		}
 
 } catch (Exception $e){
 	echo $e;
 }
 
  ?>
+ 	<script>
+		function redirect(){
+			var URLactual = window.location;
+			var url = URLactual.toString().replace("mc_rpo.php","mc_list.php");
+			location.href = url;
+		}
+	</script> 
