@@ -951,7 +951,7 @@ COMMIT;
 
 delimiter $$
 drop procedure if exists p_insert_tvalocaso$$
-create procedure p_insert_tvalocaso(  p_Operador VARCHAR(20),  p_id_casoP int,p_id_empresa VARCHAR(200), p_tipo_caso VARCHAR(200), p_id_usuario VARCHAR(200), json_in JSON)
+create procedure p_insert_tvalocaso(  p_Operador VARCHAR(20),  p_id_casoP int,p_id_empresa VARCHAR(200), p_tipo_caso VARCHAR(200), p_id_usuario VARCHAR(200), json_in JSON, OUT P_MESSAGE VARCHAR(100))
 BEGIN 
 DECLARE finished, v_NUM_ATRIBUTO, p_id_caso INTEGER DEFAULT 0; 
 DECLARE i INTEGER DEFAULT 0;
@@ -1019,7 +1019,11 @@ OPEN curParametria;
 		  -- SET i = 0;
 						
 	END LOOP getCampos;		
-CLOSE curParametria;		
+CLOSE curParametria;	
+
+COMMIT;
+
+SET P_MESSAGE = 'Se insertó correctamente';
 
 END $$
 delimiter ;
