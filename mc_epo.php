@@ -3,19 +3,17 @@
 include("session.php");
 require __DIR__.'/php/conexion.php';
 
+$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
 $nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-	if($nik == "CARDIF"){
-		$emp = "SINIESTRO_TDC_C";
+	if($emp == "CARDIF"){
+		$ink = "SINIESTRO_TDC_C";
 	} else {
-		$emp = "SINIESTRO_AUTO_S";
+		$ink = "SINIESTRO_AUTO_S";
 	}
 
 echo $login_session . '<br>';
 echo $nik . '<br>';
 echo $emp . '<br>';
-
-$v_json = json_encode($_POST);
-echo $v_json . '<br>';
 
    if($_POST)
     {
@@ -26,11 +24,8 @@ echo $v_json . '<br>';
    }
    
 try{
-//		p_insert_tvalocaso(  "A",  NULL,$nik, $emp, $login_session, $_POST); 
 
-
-			//mysqli_query($con, "CALL p_insert_tvalocaso('A',NULL,".$nik.",".$emp.",".$login_session.",".$_POST.")");
-		mysqli_query($con, "CALL p_insert_tvalocaso('I',NULL,'".$nik."','".$emp."','".$login_session."', '".$v_json."',@p_salida )" );
+		mysqli_query($con, "CALL p_insert_tvalocaso('U',".$nik.",'".$emp."','".$ink."','".$login_session."','".json_encode($_POST)."',@p_salida )");
 
 		$resultado = mysqli_query( $con, "SELECT @p_salida as p_out");
 
@@ -42,6 +37,7 @@ try{
 			echo "<button type='button' class='btn btn-primary' onclick='redirect();'>Regresar</button>";
 		}
 
+
 } catch (Exception $e){
 	echo $e;
 }
@@ -50,7 +46,9 @@ try{
  	<script>
 		function redirect(){
 			var URLactual = window.location;
-			var url = URLactual.toString().replace("mc_rpo.php","mc_list.php");
+			var url = URLactual.toString().replace("mc_epo.php","mc_list.php");
 			location.href = url;
 		}
-	</script> 
+	</script>
+
+ 
