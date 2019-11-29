@@ -1,6 +1,10 @@
 <?php
 include("conexion.php");
 ?>
+	<?php
+		$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
+		$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
+	?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,13 +12,12 @@ include("conexion.php");
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Datos del caso</title>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body>
-<form class="form-horizontal" action="mc_rpo.php" method="post" id="theform">
+<form class="form-horizontal" action="mc_rpo.php?nik=<?php echo $nik;?>&emp=<?php echo $emp;?>" method="post" id="theform">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<?php include("nav.php");?>
 	</nav>
@@ -22,9 +25,6 @@ include("conexion.php");
 		<div class="form-row">
 			<h2>Datos del caso &raquo; Info</h2>
 			<hr />
-			<?php
-				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-			?>
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
 				<tr>
@@ -160,7 +160,7 @@ include("conexion.php");
                             else if ($row['TIPO_DATO'] == 'C' ){
 								echo '<input type = "checkbox" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '">' .$row['ID_CAMPO']. '</input>';
 							} 
-                            else if ($row['TIPO_DATO'] == 'R2' ){
+                            else if ($row['TIPO_DATO'] == 'RC' ){
 									echo '<input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"S"> Si </input> <input type = "radio" name = "' .$row['ID_CAMPO']. '" name = "' .$row['ID_CAMPO']. '" tabindex="' .$row['ORDEN']. '" value"N"> No </input>';
 							}
 							echo '

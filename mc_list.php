@@ -35,6 +35,7 @@ include('session.php');
 
 			<?php
 			$cat = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_EMPRESA') AND CAMPO_A = 'ASG'");
+			$cat1 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_TIP_CASO')");
 			if(isset($_GET['aksi']) == 'delete'){
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 				$cek = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE ID_CASO='$nik'");
@@ -142,29 +143,64 @@ include('session.php');
         </button>
       </div>
       <div class="modal-body" style="text-align:justify;">
+		<form class="form-horizontal" action="mc_add.php?nik=<?php echo $CAT_TIP_CASO;?>&emp=<?php echo $EMPRESA;?>" method="post">
 			<table class="table table-striped table-hover">
 				<tr>
 					<th align = "center">Empresa</th>
 				</tr>
-				<?php
-				if(mysqli_num_rows($cat) == 0){
-					echo '<tr><td colspan="8">No hay datos.</td></tr>';
-				}else{
-					$nu = 1;
-					while($ca = mysqli_fetch_assoc($cat)){
-						echo '
-						<tr>
-							<td><a href="mc_add.php?nik='.$ca['ID_CODIGO'].'"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> '.$ca['DESCIPCION'].'</a></td>
-							</td>
-						</tr>
-						';
-						$nu++;
-					}
-				}
-				?>
+				<tr>
+					<td>
+						<?php
+						if(mysqli_num_rows($cat) == 0){
+							echo 'No hay datos.';
+						}else{
+							echo '<select name = "EMPRESA" id = "EMPRESA" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
+								$nu = 1;
+									while($ca = mysqli_fetch_assoc($cat)){
+										echo '<option value = "'.$ca['ID_CODIGO'].'" ';
+										echo '>'.$ca['DESCIPCION'].'</option>';
+									$nu++;
+									}
+								echo '</select>';
+							}
+						?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<?php
+						if(mysqli_num_rows($cat1) == 0){
+							echo 'No hay datos.';
+						}else{
+							echo '<select name = "CAT_TIP_CASO" id = "CAT_TIP_CASO" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
+								$nu = 1;
+									while($ca1 = mysqli_fetch_assoc($cat1)){
+										echo '<option value = "'.$ca1['ID_CODIGO'].'" ';
+										echo '>'.$ca1['DESCIPCION'].'</option>';
+									$nu++;
+									}
+								echo '</select>';
+							}
+						?>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="#" title="Editar datos" class="btn btn-primary btn-sm" onclick="redirect();">Confirmar</a></td>
+				</tr>
+			</table>
+		</form>
 	  </div>
     </div>
   </div>
 </div>
+	<script>
+		function redirect(){
+			var URLactual = window.location;
+//			alert(URLactual);
+			var url = URLactual.toString().replace("mc_list.php","mc_add.php");
+//			var url = URLactual.toString().split("/");
+			location.href = url + "?nik=" + document.getElementById("EMPRESA").value + "&emp=" + document.getElementById("CAT_TIP_CASO").value;
+		}
+	</script>
 </body>
 </html>
