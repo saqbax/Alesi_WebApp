@@ -4,7 +4,11 @@ include("session.php");
 require __DIR__.'/php/conexion.php';
 
 $nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
+	if($nik == "CARDIF"){
+		$emp = "SINIESTRO_TDC_C";
+	} else {
+		$emp = "SINIESTRO_AUTO_S";
+	}
 
 echo $login_session . '<br>';
 echo $nik . '<br>';

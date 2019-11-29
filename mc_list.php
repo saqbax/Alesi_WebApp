@@ -143,7 +143,7 @@ include('session.php');
         </button>
       </div>
       <div class="modal-body" style="text-align:justify;">
-		<form class="form-horizontal" action="mc_add.php?nik=<?php echo $CAT_TIP_CASO;?>&emp=<?php echo $EMPRESA;?>" method="post">
+		<form class="form-horizontal" action="mc_add.php?nik=<?php echo $CAT_TIP_CASO;?>" method="post">
 			<table class="table table-striped table-hover">
 				<tr>
 					<th align = "center">Empresa</th>
@@ -167,24 +167,6 @@ include('session.php');
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<?php
-						if(mysqli_num_rows($cat1) == 0){
-							echo 'No hay datos.';
-						}else{
-							echo '<select name = "CAT_TIP_CASO" id = "CAT_TIP_CASO" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
-								$nu = 1;
-									while($ca1 = mysqli_fetch_assoc($cat1)){
-										echo '<option value = "'.$ca1['ID_CODIGO'].'" ';
-										echo '>'.$ca1['DESCIPCION'].'</option>';
-									$nu++;
-									}
-								echo '</select>';
-							}
-						?>
-					</td>
-				</tr>
-				<tr>
 					<td><a href="#" title="Editar datos" class="btn btn-primary btn-sm" onclick="redirect();">Confirmar</a></td>
 				</tr>
 			</table>
@@ -196,10 +178,8 @@ include('session.php');
 	<script>
 		function redirect(){
 			var URLactual = window.location;
-//			alert(URLactual);
 			var url = URLactual.toString().replace("mc_list.php","mc_add.php");
-//			var url = URLactual.toString().split("/");
-			location.href = url + "?nik=" + document.getElementById("EMPRESA").value + "&emp=" + document.getElementById("CAT_TIP_CASO").value;
+			location.href = url + "?nik=" + document.getElementById("EMPRESA").value;
 		}
 	</script>
 </body>

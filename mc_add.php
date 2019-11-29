@@ -3,7 +3,6 @@ include("conexion.php");
 ?>
 	<?php
 		$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-		$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
 	?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,7 +16,7 @@ include("conexion.php");
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body>
-<form class="form-horizontal" action="mc_rpo.php?nik=<?php echo $nik;?>&emp=<?php echo $emp;?>" method="post" id="theform">
+<form class="form-horizontal" action="mc_rpo.php?nik=<?php echo $nik;?>" method="post" id="theform">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<?php include("nav.php");?>
 	</nav>
