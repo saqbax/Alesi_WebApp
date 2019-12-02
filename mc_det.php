@@ -32,9 +32,10 @@ include("conexion.php");
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 				$nik_2 = $_GET['nik'];
 				//echo $nik_2;
+				$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
 			?>
 			<div class="table-responsive">
-			<a href="mc_upl.php?cas=<?php echo $nik;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+			<a href="mc_upl.php?cas=<?php echo $nik;?>&emp=<?php echo $emp;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
 			<button type="button" class="btn btn-success openBtn">Archivos</button>
 			<a target="_blank" href="genera_pdf.php?id=<?php echo $nik_2;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
 
