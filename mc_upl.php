@@ -38,7 +38,7 @@
 						echo "<tr>
 								 <td>" . $archivo . "</td>
 								 <td>
-								   <a href='http://appweb.alesi.org.mx/Alesi_WebApp/casos/".$cas."/".$archivo."' target='_blank' title='Descargar' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-download-alt' aria-hidden='true'></span></a>                   
+								   <a href='http://appweb.alesi.org.mx/casos/".$cas."/".$archivo."' target='_blank' title='Descargar' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-download-alt' aria-hidden='true'></span></a>                   
 								   <a href='#' title='Eliminar' class='btn btn-danger btn-sm'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
 								 </td>
 							   </tr>";
