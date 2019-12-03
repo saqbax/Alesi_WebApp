@@ -35,12 +35,11 @@ include("conexion.php");
 				$emp = mysqli_real_escape_string($con,(strip_tags($_GET["emp"],ENT_QUOTES)));
 			?>
 			<div class="table-responsive">
-			<a href="mc_upl.php?cas=<?php echo $nik;?>&emp=<?php echo $emp;?>" title="Manejo de Archivos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
-			<button type="button" class="btn btn-success openBtn">Archivos</button>
+			<a href="mc_upl.php?cas=<?php echo $nik;?>&emp=<?php echo $emp;?>" title="Manejo de Archivos" class="btn btn-success openBtn">Archivos</span></a>
+			<!--button type="button" class="btn btn-success openBtn">Archivos</button-->
 			<a target="_blank" href="genera_pdf.php?id=<?php echo $nik_2;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
 
 			
-      <!-- <a target="_blank" href="http://www.forosdelweb.com/f2/formac.php?a=pisc"> -->
 
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" role="dialog">

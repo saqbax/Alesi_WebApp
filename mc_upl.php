@@ -23,7 +23,7 @@
 				<?php
 				$cas = $_GET["cas"]."";
 				$emp = $_GET["emp"]."";
-				$cas = "2";
+//				$cas = "2";
 				$directorio = opendir("casos/".$cas); //ruta actual
 				echo "<table class='table table-striped table-hover'>";
 				echo "<tr><th>Nombre</th><th>Opciones</th></tr>";
@@ -65,13 +65,17 @@
 						 $errors[]='El tamaño del archivo excede los 2 MB';
 					  }
 					  
+					  $carpeta = "casos/".$cas."/";
 					  if(empty($errors)==true){
+						  if (!file_exists($carpeta)) {
+								mkdir($carpeta, 0755, true);
+							}
 						 move_uploaded_file($file_tmp,"casos/".$cas."/".$file_name);
 						 header("location:mc_upl.php?cas=".$cas);
 						 echo "Subido";
 					  }else{
 						 //print_r($errors);
-						 echo "hola";
+//						 echo "hola";
 					  }
 				   }
 				?>
