@@ -55,10 +55,10 @@
 					  $file_type=$_FILES['image']['type'];
 					  $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
 					  
-					  $expensions= array("pdf");
+					  $expensions= array("pdf","jpg","png");
 					  
 					  if(in_array($file_ext,$expensions)=== false){
-						 $errors[]="No es un archivo PDF.";
+						 $errors[]="No es un archivo PDF, JPG o PNG.";
 					  }
 					  
 					  if($file_size > 2097152){
