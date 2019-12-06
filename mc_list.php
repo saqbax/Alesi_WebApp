@@ -60,13 +60,11 @@ include('session.php');
 								<select name="filter" class="form-control" onchange="form.submit()">
 									<option value="0">Filtros de datos de personas</option>
 									<?php $filter = (isset($_GET['filter']) ? strtolower($_GET['filter']) : NULL);  ?>
-									<option value="1" <?php if($filter == 'ABIERTO'){ echo 'selected'; } ?>>Abierto</option>
-									<option value="2" <?php if($filter == 'EN_PROCESO'){ echo 'selected'; } ?>>En proceso</option>
-									<option value="2" <?php if($filter == 'CERRADO'){ echo 'selected'; } ?>>Cerrado</option>
-									<option value="2" <?php if($filter == 'VENCIDO'){ echo 'selected'; } ?>>Vencido</option>
+									<option value="EN_CURSO" <?php if($filter == 'EN_CURSO'){ echo 'selected'; } ?>>En proceso</option>
+									<option value="CERRADO" <?php if($filter == 'CERRADO'){ echo 'selected'; } ?>>Cerrado</option>
 								</select>
 							</td>
-							<td style="text-align:right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nuevo Caso</button></td>
+							<td style="text-align:right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" <?php if($login_rol == "ASG"){echo "style='display:none'";}?> >Nuevo Caso</button></td>
 							<td style="text-align:right;display:none"><a class="btn btn-primary" href="mc_add.php">Nuevo Caso</a></td>
 						</tr>
 					</table>
@@ -89,9 +87,17 @@ include('session.php');
 				</tr>
 				<?php
 				if($filter){
-					$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE STATUS='$filter' ORDER BY ID_CASO ASC");
+					if($login_rol == "ASG"){
+						$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE STATUS='$filter' AND ID_EMPRESA = '".$login_emp."' ORDER BY ID_CASO ASC");
+					} else {
+						$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE STATUS='$filter' ORDER BY ID_CASO ASC");
+					}
 				}else{
-					$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO ORDER BY ID_CASO ASC");
+					if($login_rol == "ASG"){
+						$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO WHERE ID_EMPRESA = '".$login_emp."' ORDER BY ID_CASO ASC");
+					} else {
+						$sql = mysqli_query($con, "SELECT * FROM ALESI_TCASO ORDER BY ID_CASO ASC");
+					}
 				}
 				if(mysqli_num_rows($sql) == 0){
 					echo '<tr><td colspan="8">No hay datos.</td></tr>';
@@ -115,12 +121,15 @@ include('session.php');
                             else if ($row['STATUS'] == 'CERRADO' ){
 								echo '<span class="label label-info">Cerrado</span>';
 							}
+						if($login_rol == "ASG"){
+							$nueva = 'style="display:none"';
+						}
 						echo '
 							</td>
 							<td>
 
-								<a href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-								<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+								<a href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'" title="Editar datos" class="btn btn-primary btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						';
