@@ -19,17 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 
 			$row = mysqli_fetch_assoc($resultado);
 
-			echo $row;
+			//echo $row;
 
 			
 			$content = $row['p_out'];
 
-			echo $content;
-			/*
+			//echo $content;
+			
 			$html2pdf = new Html2Pdf('P', 'A4', 'es', true, 'UTF-8', array(15, 5, 15, 20));
 			$html2pdf->pdf->SetDisplayMode('fullpage');
 			$html2pdf->writeHTML($content);
-			$html2pdf->output('example02.pdf');*/
+			$html2pdf->output('example02.pdf');
 
 			header("HTTP/1.1 200 OK");
 	  		exit();
