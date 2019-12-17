@@ -139,10 +139,6 @@ table.siniestro {
         </tr>
         <tr>            
             <td style ="width=50%;">?SUMA_ASEGURADA?</td>
-			<td style ="width=50%;">?CAMBIO_CONDUCTOR?</td>
-        </tr>		
-        <tr>            
-            <td style ="width=50%;">?PREEXISTENCIA_AUTO?</td>
 			<td style ="width=50%;">?DOC_APOCRIFOS?</td>
         </tr>		
         <tr>            
@@ -160,13 +156,13 @@ table.siniestro {
         </tr>
     </table>
     <br>
-    <p style="text-align: center; font-weight: bold">DECLARACION DEL ASEGURADO O CONDUCTOR VERTIDA AL AJUSTADOR.</p>
+    <p style="text-align: center; font-weight: bold">DECLARACION DEL ASEGURADO VERTIDA A LA ASEGURADORA.</p>
     <p style="text-align: justify;">
 	?DECLA_INI?
     </p>
     <br>
     <br>
-    <p style="text-align: center; font-weight: bold">ENTREVISTA CON EL ASEGURADO O CONDUCTOR.</p>
+    <p style="text-align: center; font-weight: bold">ENTREVISTA CON EL ASEGURADO.</p>
     <table style="text-align: justify;  width: 100%; " align="center">
         <tr><td style ="width=100%;"><p>
         ?DESA_ENTREVISTA?
@@ -192,111 +188,6 @@ table.siniestro {
     </table>     
     <br>
     <br>
-    <!-- DOCUMENTOS DE PROPIEDAD -->
-    <p style="text-align: center; font-weight: bold">DOCUMENTOS DE PROPIEDAD.</p>
-    <table style="text-align: center;  width: 100%; " align="center">
-        <tr>
-            <th style ="width=15%;"> Tipo de Documento</th>
-            <th style ="width=15%;"> Fecha</th>
-            <th style ="width=70%;"> Razón Social o Nombre del establecimiento </th>
-        </tr>
-        <tr>
-            <td>?TIP_DOC_PROP?</td>
-            <td>?F_DOC?</td>
-            <td>?RFC_PROP?</td>
-        </tr>
-    </table>
-    <table style="text-align: center;  width: 100%;  " align="center">
-        <tr>
-            <th style ="width=15%;"> Documento Legal</th>
-            <th style ="width=20%;"> Cotejado con</th>
-            <th style ="width=45%;">Cargo y/o departamento</th>
-            <th style ="width=20%;">Teléfono</th>
-        </tr>
-        <tr>
-            <td>?DOC_LEGAL?</td>
-            <td>?COTEJADO_CON?</td>
-            <td>?CARGO_DTO?</td>
-            <td>?TEL_PROP?</td>
-        </tr>
-    </table>    
-    <table style="text-align: center;  width: 100%; " align="center">
-        <tr>
-            <th style ="width=20%;">Tipo de contacto</th>
-            <th style ="width=60%;">Lugar de contacto (Dirección)</th>
-            <th style ="width=20%;">Fecha</th>
-        </tr>
-        <tr>
-            <td>?CONTACTO?</td>
-            <td>?LUGAR_CONTACTO?</td>
-            <td>?F_CONTACTO?</td>
-        </tr>
-    </table>        
-    <table style="text-align: justify;  width: 100%; " align="center">
-        <tr><td style ="width=100%;"><p>
-        ?OBSERVACIONES_CONTACT?
-        </p></td></tr>
-    </table> 
-<!-- PREEXISTENCIA DEL VEHÍCULO. -########################################### -->
-    <p style="text-align: center; font-weight: bold">PREEXISTENCIA DEL VEHÍCULO.</p>
-    <p style="text-align: left; ">La preexistencia del bien asegurado se verificó en:</p>         
-    <table style="text-align: center;  width: 100%; " align="center">
-        <tr>
-            <th style ="width=20%;">Domicilio de N/A</th>
-            <th style ="width=80%;">Direccion</th>
-        </tr>
-        <tr>
-            <td style ="width=20%;">?DOMICILIO_NA?</td>
-            <td style ="width=80%;">?DIRECCION_PREX?</td>
-        </tr>
-    </table>
-    <br>
-    <table style="text-align: left;  width: 100%;  " align="center">
-        <tr>
-            <td style ="width=40%;"> Testigos de la preexistencia del vehículo:</td>
-            <td style ="width=60%;">?TESTIGOS_PREX?</td>
-        </tr>
-    </table>
-    <table style="text-align: left;  width: 100%; " align="center">
-        <tr>
-            <th style ="width=40%;"> Nombre</th>
-            <th style ="width=60%;">Dirección o referencia</th>
-        </tr>
-        <tr>
-            <td style ="width=40%;">?NOMBRE_PREX?</td>
-            <td style ="width=60%;">?DIR_REF_PREX?</td>
-        </tr>        
-    </table>      
-    <!-- Atributo 55-->
-    <table style="text-align: justify;  width: 100%; " align="center">
-        <tr><td style ="width=100%;"><p>
-        ?OBSERVACIONES_PREX?
-        </p></td></tr>
-    </table> 
-<!--############################### VERIFICACIÓN DE PÓLIZAS -########################################### -->
-<!--############################### VERIFICACIÓN DE PÓLIZAS -########################################### -->
-    <p style="text-align: center; font-weight: bold">VERIFICACIÓN DE PÓLIZAS.</p>
-    <br>    
-    <table style="text-align: center;  width: 100%; " align="center">
-        <tr>
-            <th style ="width=25%;">Póliza Anterior</th>
-            <th style ="width=25%;">Cobertura</th>
-            <th style ="width=25%;">Vigencia desde</th>
-            <th style ="width=25%;">Vigencia Hasta</th>
-        </tr>
-        <tr>
-            <td style ="width=25%;">?POL_ANTER?</td>
-            <td style ="width=25%;">?COBERTURA_ANTER?</td>
-            <td style ="width=25%;">?F_INI_ANTER?</td>
-            <td style ="width=25%;">?F_FIN_ANTER?</td>
-        </tr>
-    </table>
-    <!-- Atributo 60-->
-    <table style="text-align: justify;  width: 100%; " align="center">
-        <tr><td style ="width=100%;"><p>
-        ?OBSERVACION_ANTER?
-        </p></td></tr>
-    </table>    
 <!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->
 <!--############################### CARPETA DE INVESTIGACIÓN -########################################### -->
     <p style="text-align: center; font-weight: bold">CARPETA DE INVESTIGACIÓN.</p>
@@ -345,15 +236,12 @@ table.siniestro {
     <table style="text-align: left;  width: 100%; " align="center">
         <tr>
             <td style ="width=50%;">?POLIZA_DOC?</td>
-            <td style ="width=50%;">?FACTURA_DOC?</td>
         </tr>
         <tr>
             <td style ="width=50%;">?ACTA_MP_DOC?</td>
-            <td style ="width=50%;">?TENENCIAS?</td>
         </tr>
         <tr>
             <td style ="width=50%;">?FOTOGRAFIAS_DOC?</td>
-            <td style ="width=50%;">?CUEST_ROBO_OTROS_DOC?</td>
         </tr>
     </table>
 <!--############################### CONCLUSIONES. -########################################### -->
