@@ -42,8 +42,7 @@ include('session.php');
 								 <td>" . $archivo . "</td>
 								 <td>";
 						if($login_rol == 'USER'){echo "";}else{echo "<a href='http://appweb.alesi.org.mx/casos/".$cas."/".$archivo."' target='_blank' title='Descargar' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-download-alt' aria-hidden='true'></span></a>";}
-						echo "	   <a href='#' title='Eliminar' class='btn btn-danger btn-sm'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
-								 </td>
+						echo "	 </td>
 							   </tr>";
 					}
 				}
