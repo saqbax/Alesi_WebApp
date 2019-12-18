@@ -723,7 +723,7 @@ BEGIN
 		CURSOR FOR select a.NUM_ATRIBUTO, a.ID_CAMPO, a.ETIQUETA, a.TIPO_DATO, a.CATALOGO, b.VALOR
 					from ALESI_TATRICASO a, ALESI_TVALCASO b , ALESI_TCASO C
 					where b.ID_CASO = p_id_caso
-					AND B.ID_CASO = C.ID_CASO
+					AND b.ID_CASO = C.ID_CASO
 					AND a.ID_EMPRESA = C.ID_EMPRESA
 					and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO
 					order by a.NUM_ATRIBUTO;
@@ -789,8 +789,8 @@ BEGIN
 				else
 					select DESCIPCION
 					into v_VALOR
-					from alesi_ntablas 
-					where ID_TABLA= (select id_tabla from alesi_tablas where COD_TABLA =v_CATALOGO)
+					from ALESI_NTABLAS 
+					where ID_TABLA= (select ID_TABLA from ALESI_TABLAS where COD_TABLA =v_CATALOGO)
 					and ID_CODIGO = v_VALOR; 
                 end if;
 				 
