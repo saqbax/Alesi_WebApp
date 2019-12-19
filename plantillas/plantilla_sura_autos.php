@@ -218,7 +218,7 @@ table.siniestro {
         <tr>
             <td style ="width=20%;">?CARP_REG?</td>
             <td style ="width=35%;"></td>
-            <td style ="width=45%;">?MOT_CARP_INV?</td>            
+            <td style ="width=45%;">?CARP_MOTIVO?</td>            
         </tr>
     </table>    
     <!-- Atributo 68-->
@@ -275,6 +275,4 @@ table.siniestro {
     Director Operativo<br>
     Asesoría Legal Especializada e Investigaciones S.C<br>
     alesi.sc@prodigy.net.mx</p>
-
-
 </page>
