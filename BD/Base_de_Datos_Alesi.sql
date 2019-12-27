@@ -1043,3 +1043,3695 @@ INSERT INTO ALESI_PDF_PLANTILLAS(`ID_PDF`, `PDF_DESCRIPCION`, `PDF_CODIGO`) VALU
 
 -- ===============================================================================================================================
 commit;
+
+
+-- ======================================= MARCAS ========================================================================================
+
+CREATE TABLE T_REL_MARCA_TIPO
+(
+  MARCA  VARCHAR2(15 BYTE),
+  TIPO   VARCHAR2(15 BYTE)
+);
+
+SET DEFINE OFF;
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA ILX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA MDX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA RDX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA RLX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA TL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA TLX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ACURA TSX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'MDX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'RDX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'RL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'TL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'TSX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ACURA', 'ZDX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'BRERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'GIULIETTA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'GT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'GTV');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'MITO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', 'SPIDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', '147');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', '156');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', '159');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ALFA ROMEO', '166');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ANTIGUOS', 'ANTIGUO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ANTIGUOS', 'RC PRIMA FIJA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ANTIGUOS PICKUP', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ANTIGUOS VALOR', 'ANTIGUO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'AUDI CABRIOLET');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A1');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'A8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'CABRIOLET');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'Q2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'Q3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'Q5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'Q7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'Q8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'RS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'RS4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'RS4 QUATTRO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S-3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'S8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI', 'TT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'ALL ROAD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'A3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'A4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'A6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'A8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUDI ANT', 'TT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOBACK BRONZE', 'AUTOBACK BRONZE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOBACK GOLD', 'AUTOBACK GOLD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOBACK IRON', 'AUTOBACK IRON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOBACK PLATIN', 'AUTOBACK PLATIN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOBACK SILVER', 'AUTOBACK SILVER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOS TURISTAS', 'AUTO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('AUTOS TURISTAS', 'PICK - UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'BJ20');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'BJ40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'D20');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'X25');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'X35');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BAIC', 'X65');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'BMW 645');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'CABRIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'COOPER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'COOPER S');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'MINI COOPER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'M6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE i3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 1');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'SERIE 8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X1');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'X6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'Z3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', 'Z4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW', '645');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'SERIE Z');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'SERIE 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'SERIE 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'SERIE 7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'SERIE 8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('BMW ANT', 'X5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'ATS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'BLS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'CATERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'CTS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'DE VILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'DEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'DORADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'ENCLAVE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'ENCORE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'ENVISION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'ESCALADE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'LACROSSE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'REGAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'SEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'SRX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'STS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'VERANO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'XT4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC', 'XT5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC ANT', 'CATERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC ANT', 'DEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC ANT', 'ELDORADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CADILLAC ANT', 'SEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'ACADIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'ASTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'AVALANCHE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'AVEO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'BEAT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'BLAZER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'BOLT EV');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CAMARO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CANYON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CAPTIVA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CAVALIER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CENTURY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CHEVY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CHEYENNE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'COLORADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CORSA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CORVETTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CRUZE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'CUTLASS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'EIGHTY EIGHT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'ENCLAVE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'EQUINOX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'EXPRESS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'G - 30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'HHR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'IMPALA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'LUMINA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'MALIBU');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'MATIZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'MERIVA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'OPTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'PICK UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'REGAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SIERRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SILHOUETTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SILVERADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SONIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SONORA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SPARK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'SUBURBAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TAHOE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TERRAIN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TIGRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TRACKER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TRAIL BLAZER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TRAVERSE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'TRAX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'UPLANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'VECTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'VENTURE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'VOLT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'YUKON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET', 'ZAFIRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'ASTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'BLAZER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CAMARO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CAPRICE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CAVALIER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CELEBRITY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CENTURY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CHEVELLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CHEVY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CITATION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CORVETTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'CUTLASS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'EIGHTY EIGHT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'EXPRESS VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'GEO TRACKER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'IMPALA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'LUMINA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'MALIBU');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'MONTE CARLO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'NOVA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'OPEL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'REGAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'SILHOUETTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'SILVERADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'SONORA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'SUBURBAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'TIGRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'TRACKER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET ANT', 'VENTURE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET1', 'CANYON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET1', 'CHEYENNE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET1', 'COLORADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHEVROLET1', 'SILVERADO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'ASPEN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'ATOS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'ATTITUDE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'AVENGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'BREEZE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CALIBER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CHALLENGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CHARGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CHEROKEE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CHRYSLER 200');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CIRRUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'COMMANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'COMPASS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CONCORDE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'CROSSFIRE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'DART');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'DURANGO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'GRAND CARAVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'GRAND CHEROKEE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'GRAND VOYAGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'GTS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'H 100');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'H100');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'H100 WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'I 10');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'INTREPID');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'JOURNEY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'LE BARON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'LIBERTY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'NEON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'NEW YORKER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'NITRO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PACIFICA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PANEL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PATRIOT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PHANTOM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PICK UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'PT CRUISER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'RAM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'RAM CHARGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'RAM QUAD CAB');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'RAM WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'RENEGADE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'R\T  SEBRING');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'R\T SEBRING');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'SHADOW');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'SPIRIT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'STRATUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'TOWN COUNTRY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'VERNA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'VISION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'VOYAGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', 'WRANGLER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', '300 C');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER', '300 M');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'ATOS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'BARRACUDA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'BREEZE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CHARGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CHEROKEE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CHRYSLER 600');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CIRRUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CONCORDE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CORDOBA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'CORONET');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'DART');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'DURANGO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'GRAND CHEROKEE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'IMPERIAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'INTREPID');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'LE BARON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'LHS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'MONACO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'NEON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'NEW YORKER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'PHANTOM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'PT CRUISER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'RAM CHARGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'RAM WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'SHADOW');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'SPIRIT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'STRATUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'VALIANT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'VOLARE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'VOYAGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', 'WRANGLER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER ANT', '300 M');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('CHRYSLER1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('DINA', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('DINA', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FAMSA', 'PESADOS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FAW', 'F 1 HL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FAW', 'F5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'ALBEA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'DUCATO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'FIAT 500');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'GRANDE PUNTO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'IDEA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'IDEA ADVENTURE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'LINEA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'MOBI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'PALIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'PANDA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'PUNTO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'STILO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'TREKKING');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'UNO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FIAT', '124 SPIDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'AEROSTAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'CLUB WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'CONTOUR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'COUGAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'CROWN VICTORIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'ECO SPORT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'ECONOLINE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'EDGE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'EQUINOX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'ESCAPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'ESCORT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'EXCURSION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'EXPEDITION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'EXPLORER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FIESTA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FIGO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FIVE HUNDRED');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FOCUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FREESTAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'FUSION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'GHIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'GRAND MARQUIS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'IKON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'KA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'LOBO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'MONDEO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'MUSTANG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'MYSTIQUE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'PICK UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'SABLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'THUNDERBIRD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'TOPAZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'TRANSIT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD', 'WINDSTAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'AEROSTAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'CLUB WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'CONTOUR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'COUGAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'ECONOLINE WAGON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'ESCAPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'ESCORT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'EXCURSION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'EXPEDITION');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'EXPLORER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'FAIRMONT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'FALCON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'FIESTA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'FOCUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'GALAXIE 500');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'GHIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'GRAND MARQUIS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'KA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'LTD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'MAVERICK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'MONDEO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'MUSTANG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'MYSTIQUE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'SABLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'TAURUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'THUNDERBIRD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'TOPAZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD ANT', 'WINDSTAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FORD1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FRONTERIZOS', 'AUTO ANTIGUO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('FRONTERIZOS', 'FRONTERIZO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HINO', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'ACCORD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'BR-V');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'CITY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'CIVIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'CR-V');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'CR-Z');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'FIT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'HR-V');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'INSIGHT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'ODYSSEY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA', 'PILOT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA ANT', 'ACCORD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA ANT', 'CIVIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA ANT', 'ODYSSEY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HONDA1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HUMMER', 'H2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HUMMER', 'H3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'ACCENT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'CRETA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'ELANTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'GRAND i10');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'IONIQ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'ix35');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'SANTA FE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'SONATA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'STAREX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'TUCSON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('HYUNDAI', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'FX35');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'FX37');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'FX50');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'G37');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'JX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'M37');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'M56');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX50');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX56');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'QX80');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'Q50');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'Q60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI', 'Q70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI ANT', 'I-30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INFINITI ANT', 'Q-45');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('INTERNATIONAL', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ISUZU', 'ELF 100');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ISUZU', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'J4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'SEI 2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'SEI 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'SEI 4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAC', 'SEI 7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR F');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR F PACE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR S-TYPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR XE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR XF');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'JAGUAR X-TYPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'S-TYPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'XJR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'XJ8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'XKR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'XK8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR', 'X-TYPE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR ANT', 'MARK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR ANT', 'S');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR ANT', 'XJ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('JAGUAR ANT', 'XK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'FORTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'NIRO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'OPTIMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'RIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'SEDONA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'SORENTO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'SOUL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'SPORTAGE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('KIA', 'STINGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'CLUB');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'CONNOISEUR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'DEFENDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'DISCOVERY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'EVOQUE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'FREELANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'LR MINI COOPER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'LR2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'LR3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'LR4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'MINI COOPER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'RANGE ROVER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER', 'VELAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER ANT', 'DISCOVERY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER ANT', 'FREELANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LAND ROVER ANT', 'RANGE ROVER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'AVIATOR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'BLACK WOOD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'CONTINENTAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'LS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MARK LT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MARK VII');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MARK VIII');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MKC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MKS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MKX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'MKZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'NAUTILUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'NAVIGATOR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'SIGNATURE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'TOWN CAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN', 'ZEPHYR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN ANT', 'CONTINENTAL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN ANT', 'LINCOLN LS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN ANT', 'MARK III');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN ANT', 'NAVIGATOR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LINCOLN ANT', 'TOWN CAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LUJO', 'AUTOS DE LUJO A');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('LUJO2', 'AUTOS DE LUJO A');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'CX-7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'CX-9');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA CX-3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA CX-30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA CX-5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA CX7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA CX-9');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA MX 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA 2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MAZDA 6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MAZDA', 'MX - 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE A');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE C');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE CL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE CLK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE E');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE G');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE M');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE S');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE SL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', 'CLASE SLK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', '180');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', '190');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES ANT', '220');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE A');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE B');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE C');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE CL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE CLA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE CLK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE CLS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE E');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE G');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GLA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GLC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GLK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE GLS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE ML');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE R');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE S');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE SL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE SLC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE SLK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'CLASE V');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'G 500 L');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'SMART');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'SMART ROADSTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'SPRINTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'VIANO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCEDES BENZ', 'VITO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCURY', 'MARINER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCURY', 'MILAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCURY', 'MONTEGO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCURY', 'MYSTIQUE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MERCURY', 'SABLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MINI ANT', 'COOPER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'ASX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'ECLIPSE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'ECLIPSE CROSS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'ENDEAVOR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'GALANT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'GRANDIS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'LANCER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'MIRAGE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'MONTERO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'OUTLANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'POLO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MITSUBISHI', 'SPACE STAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('MORGAN ANT', 'MG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ALMERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ALTIMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'APRIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ARMADA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'FRONTIER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ICHI VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'INFINITY I -30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'INFINITY I -35');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'INFINITY Q -45');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'INFINITY QX4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'I-30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'I-35');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'JUKE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'KICKS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'LEAF');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'LUCINO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'MARCH');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'MAXIMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'MICRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'MURANO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'NOTE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'PATHFINDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'PATHFINDER ARMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'PLATINA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'Q - 45');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'QUEST');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'QX4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'ROGUE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'SENTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'TIIDA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'TSUBAME');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'TSURU');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'URVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'V-DRIVE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'VERSA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'X TERRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', 'X-TRAIL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', '240 SX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', '300 ZX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', '350 Z');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN', '370 Z');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'ALMERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'ALTIMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'DATSUN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'HIKARI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'ICHI VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'LUCINO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'MAXIMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'PATHFINDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'QUEST');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'SAKURA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'SAMURAI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'SENTRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'TSUBAME');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'TSURU');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'URVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', 'X TERRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', '240 SX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN ANT', '300 ZX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN1', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('NISSAN1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'EXPERT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'GRAND RAID');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'MANAGER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'PARTNER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'RCZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'RIFTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'TRAVELLER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '2008');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '206');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '207');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '208');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '3008');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '301');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '306');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '307');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '308');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '405');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '406');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '407');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '5008');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '508');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT', '607');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '206');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '306');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '403');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '404');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '405');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '406');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PEUGEOT ANT', '607');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'AZTEK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'BONNEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'FIREBIRD');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'GRAND  AM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'GRAND  PRIX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'GRAND AM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'GRAND PRIX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'G3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'G4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'G5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'G6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'MATIZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'MATIZ G2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'MONTANA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'SOLSTICE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'SUNFIRE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC', 'TORRENT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'AZTEK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'BONEVILLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'FIREBIRD TRANS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'GRAND AM');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'GRAND PRIX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PONTIAC ANT', 'SUNFIRE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PORSCHE', 'PANAMERA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PORSCHE ANT', 'BOXTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('PORSCHE ANT', '911');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RC PRIMA FIJA', 'RC PRIMA FIJA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'CAPTUR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'CLIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'DUSTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'EURO CLIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'FLUENCE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'KANGOO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'KOLEOS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'KWID');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'LAGUNA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'LOGAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'MEGANE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'PANEL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'SAFRANE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'SANDERO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'SCALA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'SCENIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'STEPWAY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'TRAFIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'ALLIANCE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'CARAVELLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'DAUPHINE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'DINALPIN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'ENCORE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'FLORIDA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'GORDINI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'MEGANE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R10');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R12');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R18');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'R8');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('RENAULT ANT', 'SCENIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ROVER', 'MG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ROVER', 'ROVER MG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ROVER', 'ROVER 75');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ROVER', '75');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('ROVER ANT', 'ROVER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB', '9 - 3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB', '9 - 5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB', '9-3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB', '9-5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB ANT', '9-3');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SAAB ANT', '9-5');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'ALHAMBRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'ALTEA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'ARONA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'ATECA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'CORDOBA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'EXEO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'FREETRACK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'IBIZA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'LEON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'TARRACO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT', 'TOLEDO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT ANT', 'CORDOBA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT ANT', 'IBIZA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT ANT', 'LEON');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SEAT ANT', 'TOLEDO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'BRZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'FORESTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'IMPREZA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'LEGACY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'OUTBACK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'TRIBECA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'WRX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUBARU', 'XV');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'AERIO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'CIAZ');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'ERTIGA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'GRAND VITARA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'IGNIS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'KIZASHI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'S CROSS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'SWIFT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'SX4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'VITARA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('SUZUKI', 'XL7');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'AVANZA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'CAMRY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'C-HR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'COROLLA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'FJ CRUSIER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'HIACE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'HIGHLANDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'LAND CRUISER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'MATRIX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'MR2');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'MR2 SPYDER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'PANEL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'PRIUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'RAV 4');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'RUSH');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'SEQUOIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'SIENNA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'SOLARA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'SUPRA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', 'YARIS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA', '4 RUNNER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('TOYOTA1', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM', 'ESTACAS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'AMERICAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'GREMLIN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'JAVELIN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'JEEP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'LERMA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'PACER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VAM ANT', 'RAMBLER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'AMAROK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'BORA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'CADDY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'COMBI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'CRAFTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'CROSS FOX');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'CROSS GOLF');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'DERBY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'EOS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'EUROVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'GOL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'GOLF');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'GTI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'HASTA 3.5 TONS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'JETTA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'LUPO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'NEW BEETLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'NUEVO GOLF A6');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'PANEL');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'PASSAT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'PASSAT CC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'PICK-UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'POINTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'POLO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'ROUTAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'SAVEIRO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'SEDAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'SHARAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'SPORT VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'SPORTVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'T-CROSS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'TERAMONT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'TIGUAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'TOUAREG');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'TRANSPORTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'UP');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'VAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'VENTO');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN', 'VIRTUS');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'ATLANTIC');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'BEETLE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'BRASILIA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'CARIBE');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'COMBI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'CORSAR');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'DERBY');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'EUROVAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'GOLF');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'JETTA');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'KOMBI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'PASSAT');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'POINTER');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'SAFARI');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN ANT', 'SEDAN');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLKSWAGEN1', 'AMAROK');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'C 30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'C 70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'CX60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'C30');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'C70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S 40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S 60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S 70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S 80');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S80');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'S90');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V 40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V 50');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V 70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V50');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'V70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'XC40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'XC60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'XC70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO', 'XC90');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'C70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'S40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'S60');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'S70');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'S80');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'V40');
+Insert into T_REL_MARCA_TIPO
+   (MARCA, TIPO)
+ Values
+   ('VOLVO ANT', 'V70');
+COMMIT;
+
+
+
+-- ======================================= MARCAS ========================================================================================
