@@ -25,6 +25,26 @@ require __DIR__.'/php/conexion.php';
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 	<link href="assets/css/themify-icons.css" rel="stylesheet">
 	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/froala_editor.css">
+  <link rel="stylesheet" href="css/froala_style.css">
+  <link rel="stylesheet" href="css/plugins/code_view.css">
+  <link rel="stylesheet" href="css/plugins/image_manager.css">
+  <link rel="stylesheet" href="css/plugins/image.css">
+  <link rel="stylesheet" href="css/plugins/table.css">
+  <link rel="stylesheet" href="css/plugins/video.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    div#editor {
+      width: 81%;
+      margin: auto;
+      text-align: left;
+    }
+  </style>
 	
 	</head>
 
@@ -467,7 +487,7 @@ require __DIR__.'/php/conexion.php';
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DECLARACION INICIAL </label>
-														<textarea maxlength="20000" name="DECLA_INI" tabindex="1" class="form-control"></textarea>
+														<textarea class = "edit" maxlength="20000" name="DECLA_INI" tabindex="1"></textarea>
 													</div>
 												</div>
 											</div>
@@ -480,7 +500,7 @@ require __DIR__.'/php/conexion.php';
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DESARROLLO DE LA ENTREVISTA </label>
-														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class="form-control"></textarea>
+														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class = "edit"></textarea>
 													</div>
 												</div>
 												<div class="form-group">
@@ -522,7 +542,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class = "edit"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -597,7 +617,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class = "edit"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -642,7 +662,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class = "edit"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -676,7 +696,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class = "edit"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -729,7 +749,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class = "edit"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -826,7 +846,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class = "edit"></textarea>
 												</div>
 												<div class="col-sm-6">
 													<input type="submit" name="add" class="btn btn-sm btn-primary" value="Guardar datos">
@@ -890,4 +910,36 @@ require __DIR__.'/php/conexion.php';
 		});
     </script>
 
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" src="js/froala_editor.min.js"></script>
+  <script type="text/javascript" src="js/plugins/align.min.js"></script>
+  <script type="text/javascript" src="js/plugins/code_beautifier.min.js"></script>
+  <script type="text/javascript" src="js/plugins/code_view.min.js"></script>
+  <script type="text/javascript" src="js/plugins/draggable.min.js"></script>
+  <script type="text/javascript" src="js/plugins/link.min.js"></script>
+  <script type="text/javascript" src="js/plugins/lists.min.js"></script>
+  <script type="text/javascript" src="js/plugins/paragraph_format.min.js"></script>
+  <script type="text/javascript" src="js/plugins/paragraph_style.min.js"></script>
+  <script type="text/javascript" src="js/plugins/url.min.js"></script>
+  <script type="text/javascript" src="js/plugins/entities.min.js"></script>
+  <script>
+    (function () {
+      const editorInstance = new FroalaEditor('.edit', {
+        enter: FroalaEditor.ENTER_P,
+        placeholderText: null,
+        events: {
+          initialized: function () {
+            const editor = this
+            this.el.closest('form').addEventListener('submit', function (e) {
+              console.log(editor.$oel.val())
+              e.preventDefault()
+            })
+          }
+        }
+      })
+    })()
+  </script>
 </html>
