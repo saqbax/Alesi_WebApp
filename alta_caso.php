@@ -53,7 +53,7 @@ require __DIR__.'/php/conexion.php';
 		            <div class="wizard-container">
 
 		                <div class="card wizard-card" data-color="orange" id="wizardProfile">
-		                    <form action="" method="">
+		                    <form action="mc_rpo.php?nik=SURA" method="post" id="theform">
 		                <!--        You can switch " data-color="orange" "  with one of the next bright colors: "blue", "green", "orange", "red", "azure"          -->
 
 		                    	<div class="wizard-header text-center">
@@ -107,7 +107,7 @@ require __DIR__.'/php/conexion.php';
 											</a>
 										</li>
 			                            <li>
-											<a href="#account" data-toggle="tab">
+											<a href="#B6" data-toggle="tab">
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
@@ -157,7 +157,7 @@ require __DIR__.'/php/conexion.php';
 			                            <li>
 											<a href="#B12" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-settings"></i>
+													<i class="ti-user"></i>
 												</div>
 												<!-- CARPETA  INVESTIGACION -->
 											</a>
@@ -165,7 +165,7 @@ require __DIR__.'/php/conexion.php';
 			                            <li>
 											<a href="#B13" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-map"></i>
+													<i class="ti-user"></i>
 												</div>
 												<!-- DOCUMENTOS ANEXOS -->
 											</a>
@@ -173,7 +173,7 @@ require __DIR__.'/php/conexion.php';
 			                            <li>
 											<a href="#B14" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-map"></i>
+													<i class="ti-user"></i>
 												</div>
 												<!-- CONCLUSIONES -->
 											</a>
@@ -253,9 +253,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>ROBO CON VIOLENCIA:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="CON_VIOLENCIA"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="CON_VIOLENCIA"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="CON_VIOLENCIA"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="CON_VIOLENCIA"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -264,9 +264,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>ROBO SIN VIOLENCIA:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="SIN_VIOLENCIA"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="SIN_VIOLENCIA"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="SIN_VIOLENCIA"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="SIN_VIOLENCIA"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -275,9 +275,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>ROBO EN DOMICILIO:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="EN_DOMICILIO" value="S" checked="">
+															<input class="form-check-input" type="radio" name="EN_DOMICILIO" value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="EN_DOMICILIO" value="N" checked="">
+															<input class="form-check-input" type="radio" name="EN_DOMICILIO" value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -286,9 +286,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>COLICION Y/O VUELCO:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="COLISION_VUELCO"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="COLISION_VUELCO"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="COLISION_VUELCO"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="COLISION_VUELCO"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -354,14 +354,14 @@ require __DIR__.'/php/conexion.php';
 		                            <div class="tab-pane" id="B4">
 		                            	<div class="row">
 											<h5 class="info-text"> MOTIVO DE LA INVESTIGACION.</h5>
-											<div class="col-sm-10 col-sm-offset-1">												
+											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>SINIESTRO OCURRIDO DENTRO DE LOS 30 DIAS DE INICIO DE VIGENCIA:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="SINI_TREINTA_DIAS"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="SINI_TREINTA_DIAS"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="SINI_TREINTA_DIAS"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="SINI_TREINTA_DIAS"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -370,9 +370,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>SUMA ASEGURADA:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="SUMA_ASEGURADA"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="SUMA_ASEGURADA"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="SUMA_ASEGURADA"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="SUMA_ASEGURADA"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -381,9 +381,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>DUDOSA PREEXISTENCIA DEL VEHICULO:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="PREEXISTENCIA_AUTO"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="PREEXISTENCIA_AUTO"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="PREEXISTENCIA_AUTO"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="PREEXISTENCIA_AUTO"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -392,9 +392,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>RECONSTRUCCION DE LOS HECHOS:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="REECONSTRUCCION_HECHOS"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="REECONSTRUCCION_HECHOS"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="REECONSTRUCCION_HECHOS"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="REECONSTRUCCION_HECHOS"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -403,9 +403,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>CAMBIO DE CONDUCTOR:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="CAMBIO_CONDUCTOR"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="CAMBIO_CONDUCTOR"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="CAMBIO_CONDUCTOR"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="CAMBIO_CONDUCTOR"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -414,9 +414,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>POSIBLES DOCUMENTOS APOCRIFOS:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="DOC_APOCRIFOS"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="DOC_APOCRIFOS"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="DOC_APOCRIFOS"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="DOC_APOCRIFOS"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -425,9 +425,9 @@ require __DIR__.'/php/conexion.php';
 													<div class="form-check-radio form-check-inline">
 														<label>OTROS:   </label>
 														<label class="form-check-label">
-															<input class="form-check-input" type="radio" name="OTROS"  value="S" checked="">
+															<input class="form-check-input" type="radio" name="OTROS"  value="S" >
 															<span class="form-check-sign">SI </span>
-															<input class="form-check-input" type="radio" name="OTROS"  value="N" checked="">
+															<input class="form-check-input" type="radio" name="OTROS"  value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
 													</div>
@@ -444,155 +444,397 @@ require __DIR__.'/php/conexion.php';
 		                            <div class="tab-pane" id="B5">
 		                            	<div class="row">
 											<h5 class="info-text">RESULTADO DE LA INVESTIGACION.</h5>
-											<div class="col-sm-10 col-sm-offset-1">												
+											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
-														<div class="col-sm-8 col-sm-offset-2">
-															<div class="col-sm-4">
-																<div class="choice" data-toggle="wizard-checkbox">
-																	<input type="checkbox" name="RESULT_INVEST" value="P">
-																	<div class="card card-checkboxes card-hover-effect">
-																		<i class="ti-thumb-up"></i>
-																		<p>PROCEDENTE</p>
-																	</div>
-																</div>
-															</div>
-															<div class="col-sm-4">
-																<div class="choice" data-toggle="wizard-checkbox">
-																	<input type="checkbox" name="RESULT_INVEST" value="C">
-																	<div class="card card-checkboxes card-hover-effect">
-																		<i class="ti-stamp"></i>
-																		<p>CONVENIO</p>
-																	</div>
-																</div>
-															</div>
-															<div class="col-sm-4">
-																<div class="choice" data-toggle="wizard-checkbox">
-																	<input type="checkbox" name="RESULT_INVEST" value="R">
-																	<div class="card card-checkboxes card-hover-effect">
-																		<i class="ti-thumb-down"></i>
-																		<p>RECHAZO</p>
-																	</div>
-																</div>
-															</div>
-														</div>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="RESULT_INVEST"  value="C" >
+															<span class="form-check-sign">CONVENIO </span>
+															<input class="form-check-input" type="radio" name="RESULT_INVEST"  value="P" >
+															<span class="form-check-sign">PROCEDENTE </span>
+															<input class="form-check-input" type="radio" name="RESULT_INVEST"  value="R" >
+															<span class="form-check-sign">RECHAZO </span>
+														</label>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-		                            <div class="tab-pane" id="about2">
+		                            <div class="tab-pane" id="B6">
 		                            	<div class="row">
-											<h5 class="info-text"> Noe</h5>
-											<div class="col-sm-4 col-sm-offset-1">
-												<div class="picture-container">
-													<div class="picture">
-														<img src="assets/img/default-avatar.jpg" class="picture-src" id="wizardPicturePreview" title="" />
-														<input type="file" id="wizard-picture">
-													</div>
-													<h6>Choose Picture</h6>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<label>First Name <small>(required)</small></label>
-													<input name="firstname" type="text" class="form-control" placeholder="Andrew...">
-												</div>
-											</div>
+											<h5 class="info-text"> DECLARACION DEL ASEGURADO O CONDUCTOR VERTIDA AL AJUSTADOR </h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
-													<label>Email <small>(required)</small></label>
-													<input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+													<div class="form-check-radio form-check-inline">
+														<label>DECLARACION INICIAL </label>
+														<textarea maxlength="20000" name="DECLA_INI" tabindex="1" class="form-control"></textarea>
+													</div>
 												</div>
 											</div>
 										</div>
 		                            </div>
-		                            <div class="tab-pane" id="account">
-		                                <h5 class="info-text"> What are you doing? (checkboxes) </h5>
+		                            <div class="tab-pane" id="B7">
 		                                <div class="row">
-		                                    <div class="col-sm-8 col-sm-offset-2">
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Design">
-		                                                <div class="card card-checkboxes card-hover-effect">
-		                                                    <i class="ti-paint-roller"></i>
-															<p>Design</p>
-		                                                </div>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Code">
-		                                                <div class="card card-checkboxes card-hover-effect">
-		                                                    <i class="ti-pencil-alt"></i>
-															<p>Code</p>
-		                                                </div>
-		                                            </div>
-		                                        </div>
-		                                        <div class="col-sm-4">
-		                                            <div class="choice" data-toggle="wizard-checkbox">
-		                                                <input type="checkbox" name="jobb" value="Develop">
-		                                                <div class="card card-checkboxes card-hover-effect">
-		                                                    <i class="ti-star"></i>
-															<p>Develop</p>
-		                                                </div>
-		                                            </div>
-		                                        </div>
-		                                    </div>
+	                                        <h5 class="info-text"> ENTREVISTA CON EL ASEGURADO O CONDUCTOR </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>DESARROLLO DE LA ENTREVISTA </label>
+														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class="form-control"></textarea>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<div class="form-check-radio form-check-inline">
+															<label>LUGAR VISITADO:   </label>
+																<label class="form-check-label">
+																	<input class="form-check-input" type="radio" name="LUGAR_VISITADO"  value="S" >
+																	<span class="form-check-sign">SI </span>
+																	<input class="form-check-input" type="radio" name="LUGAR_VISITADO"  value="N" >
+																	<span class="form-check-sign">NO</span>
+																</label>
+														</div>
+													</div>
+												</div>
+											</div>
 		                                </div>
 		                            </div>
-		                            <div class="tab-pane" id="address">
+		                            <div class="tab-pane" id="B8">
 		                                <div class="row">
-		                                    <div class="col-sm-12">
-		                                        <h5 class="info-text"> Are you living in a nice area? </h5>
-		                                    </div>
-		                                    <div class="col-sm-7 col-sm-offset-1">
-		                                    	<div class="form-group">
-		                                            <label>Street Name</label>
-		                                            <input type="text" class="form-control" placeholder="5h Avenue">
-		                                        </div>
-		                                    </div>
-		                                    <div class="col-sm-3">
-		                                        <div class="form-group">
-		                                            <label>Street Number</label>
-		                                            <input type="text" class="form-control" placeholder="242">
-		                                        </div>
-		                                    </div>
-		                                    <div class="col-sm-5 col-sm-offset-1">
-		                                        <div class="form-group">
-		                                            <label>City</label>
-		                                            <input type="text" class="form-control" placeholder="New York...">
-		                                        </div>
-		                                    </div>
-		                                    <div class="col-sm-5">
-		                                        <div class="form-group">
-		                                            <label>Country</label><br>
-		                                            <select name="country" class="form-control">
-		                                                <option value="Afghanistan"> Afghanistan </option>
-		                                                <option value="Albania"> Albania </option>
-		                                                <option value="Algeria"> Algeria </option>
-		                                                <option value="American Samoa"> American Samoa </option>
-		                                                <option value="Andorra"> Andorra </option>
-		                                                <option value="Angola"> Angola </option>
-		                                                <option value="Anguilla"> Anguilla </option>
-		                                                <option value="Antarctica"> Antarctica </option>
-		                                                <option value="...">...</option>
-		                                            </select>
-		                                        </div>
-		                                    </div>
+	                                        <h5 class="info-text"> DOCUMENTOS DE LA PROPIEDAD </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>LUGAR VISITADO:   </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="LUGAR_VISITADO"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="LUGAR_VISITADO"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>UBICACION </label>
+														<input type="text" maxlength="250" name="UBICACION" tabindex="2" class="form-control" placeholder="Ubicaciones">
+													</div>
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class="form-control"></textarea>
+												</div>
+											</div>
 		                                </div>
 		                            </div>
-		                        </div>
-		                        <div class="wizard-footer">
-		                            <div class="pull-right">
-		                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' />
-		                                <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='finish' value='Finish' />
+		                            <div class="tab-pane" id="B9">
+		                                <div class="row">
+	                                        <h5 class="info-text"> PREEXISTENCIA DEL VEHICULO </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<label>TIPO DE DOCUMENTO </label>
+													<input type="text" maxlength="45" name="TIP_DOC_PROP" tabindex="2" class="form-control" placeholder="Tipo de documento">
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<div class="form-group">
+															<label>FECHA </label>
+															<input name="F_DOC" type="text" class="form-control datepicker">
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>RAZON SOCIAL O NOMBRE DEL ESTABLECIMIENTO </label>
+													<input type="text" maxlength="45" name="RFC_PROP" tabindex="2" class="form-control" placeholder="Razón Social">
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>DOCUMENTO LEGAL </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="DOC_LEGAL"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="DOC_LEGAL"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>COTEJADO CON </label>
+													<input type="text" maxlength="150" name="COTEJADO_CON" tabindex="2" class="form-control" placeholder="Cotejado con">
+												</div>
+												<div class="form-group">
+													<label>CARGO Y/O DEPARTAMENTO </label>
+													<input type="text" maxlength="150" name="CARGO_DTO" tabindex="2" class="form-control" placeholder="Cargo">
+												</div>
+												<div class="form-group">
+													<label>TELEFONO </label>
+													<input type="text" maxlength="45" name="TEL_PROP" tabindex="2" class="form-control" placeholder="Telefono">
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>TIPO DE CONTACTO: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="CONTACTO"  value="1" >
+															<span class="form-check-sign"> PERSONAL </span>
+															<input class="form-check-input" type="radio" name="CONTACTO"  value="2" >
+															<span class="form-check-sign"> TELEFONICO </span>
+															<input class="form-check-input" type="radio" name="CONTACTO"  value="3" >
+															<span class="form-check-sign"> OTRO MEDIO </span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<div class="form-group">
+															<label>FECHA </label>
+															<input name="F_CONTACTO" type="text" class="form-control datepicker">
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>LUGAR DE CONTACTO (DIRECCION) </label>
+													<input type="text" maxlength="150" name="LUGAR_CONTACTO" tabindex="2" class="form-control" placeholder="Lugar de contacto">
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class="form-control"></textarea>
+												</div>
+											</div>
+		                                </div>
 		                            </div>
-
-		                            <div class="pull-left">
-		                                <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Previous' />
+		                            <div class="tab-pane" id="B10">
+		                                <div class="row">
+	                                        <h5 class="info-text"> PREEXISTENCIA DEL VEHICULO </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>DOMICILIO DE N/A: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="DOMICILIO_NA"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="DOMICILIO_NA"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>DIRECCION </label>
+													<input type="text" maxlength="150" name="DIRECCION_PREX" tabindex="2" class="form-control" placeholder="Dirección">
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>TESTIGOS DE LA PREEXISTENCIA DEL VEHICULO: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="TESTIGOS_PREX"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="TESTIGOS_PREX"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>NOMBRE </label>
+													<input type="text" maxlength="150" name="NOMBRE_PREX" tabindex="2" class="form-control" placeholder="Nombre">
+												</div>
+												<div class="form-group">
+													<label>DIRECCION O REFERENCIA </label>
+													<input type="text" maxlength="150" name="DIR_REF_PREX" tabindex="2" class="form-control" placeholder="Dirección">
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class="form-control"></textarea>
+												</div>
+											</div>
+		                                </div>
 		                            </div>
-		                            <div class="clearfix"></div>
+		                            <div class="tab-pane" id="B11">
+		                                <div class="row">
+	                                        <h5 class="info-text"> VERIFICACION DE POLIZAS </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>POLIZA ANTERIOR: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="POL_ANTER"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="POL_ANTER"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>COBERTURA </label>
+													<select name="COBERTURA_ANTER" tabindex="2" class="input-group form-control"><option value="">--Seleccione--</option><option value="A">AMPLIA</option><option value="B">BASICA</option><option value="L">LIMIATADA</option><option value="N/A">N/A</option><option value="T">TOTAL</option></select>
+												</div>
+												<div class="form-group">
+													<label>VIGENCIA DESDE </label>
+													<input name="F_INI_ANTER" type="text" class="form-control datepicker">
+												</div>
+												<div class="form-group">
+													<label>VIGENVIA HASTA </label>
+													<input name="F_FIN_ANTER" type="text" class="form-control datepicker">
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class="form-control"></textarea>
+												</div>
+											</div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="B12">
+		                                <div class="row">
+	                                        <h5 class="info-text"> CARPETA DE INVESTIGACION </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>DENUNCIA ANTE EL MINISTERIO PUBLICO: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="DENUNCIA_MP"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="DENUNCIA_MP"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>ALCALDIA O MONICIPIO </label>
+													<select name="MUNICIPIO" tabindex="2" class="input-group form-control" style="width:320px;"><option value="" ""="">--Seleccione--</option><option value="1">GUSTAVO MADERO</option><option value="2">MIGUEL HIDALGO</option><option value="3">VENUSTIANO CARRANZA</option></select>
+												</div>
+												<div class="form-group">
+													<label>CARPETA </label>
+													<input type="text" maxlength="150" name="CARPETA" tabindex="2" class="form-control" placeholder="Carpeta">
+												</div>
+												<div class="form-group">
+													<label>FECHA </label>
+													<input name="F_INV" type="text" class="form-control datepicker">
+												</div>
+												<div class="form-group">
+													<label>HORA </label>
+													<input type="text" maxlength="150" name="HORA_INV" tabindex="2" class="form-control" placeholder="Hora">
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>CARPETA RELACIONADA: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="CARP_REG"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="CARP_REG"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>MOTIVO DE LA CARPETA RELACIONADA </label>
+													<input type="text" maxlength="150" name="MOT_CARP_INV" tabindex="2" class="form-control" placeholder="Motivo">
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class="form-control"></textarea>
+												</div>
+											</div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="B13">
+		                                <div class="row">
+	                                        <h5 class="info-text"> DOCUMENTOS ANEXOS </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>POLIZA: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="POLIZA_DOC"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="POLIZA_DOC"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>FACTURAS: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="FACTURA_DOC"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="FACTURA_DOC"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>ACTAS: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="ACTA_MP_DOC"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="ACTA_MP_DOC"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>TENENCIAS: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="TENENCIAS"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="TENENCIAS"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>FOTOGRAFIAS: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="FOTOGRAFIAS_DOC"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="FOTOGRAFIAS_DOC"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>OTROS: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="CUEST_ROBO_OTROS_DOC"  value="S" >
+															<span class="form-check-sign">SI </span>
+															<input class="form-check-input" type="radio" name="CUEST_ROBO_OTROS_DOC"  value="N" >
+															<span class="form-check-sign">NO</span>
+														</label>
+													</div>
+												</div>
+											</div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="B14">
+		                                <div class="row">
+	                                        <h5 class="info-text"> CONCLUSIONES </h5>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<div class="form-check-radio form-check-inline">
+														<label>RESULTADO DEL SINIESTRO: </label>
+														<label class="form-check-label">
+															<input class="form-check-input" type="radio" name="CONCLUCION_CASO"  value="C" >
+															<span class="form-check-sign">CONVENIO </span>
+															<input class="form-check-input" type="radio" name="CONCLUCION_CASO"  value="P" >
+															<span class="form-check-sign">PROCEDENTE </span>
+															<input class="form-check-input" type="radio" name="CONCLUCION_CASO"  value="R" >
+															<span class="form-check-sign">RECHAZO </span>
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>	OBSERVACIONES </label>
+													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class="form-control"></textarea>
+												</div>
+												<div class="col-sm-6">
+													<input type="submit" name="add" class="btn btn-sm btn-primary" value="Guardar datos">
+													<a href="mc_list.php" class="btn btn-sm btn-danger">Cancelar</a>
+												</div>
+											</div>
+		                                </div>
+		                            </div>
 		                        </div>
 		                    </form>
 		                </div>
