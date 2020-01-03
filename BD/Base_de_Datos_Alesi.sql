@@ -1810,6 +1810,8 @@ commit;
 
 -- ======================================= MARCAS ========================================================================================
 
+/*
+
 CREATE TABLE T_REL_MARCA_TIPO
 (
   MARCA  VARCHAR2(15 BYTE),
@@ -5495,6 +5497,54 @@ Insert into T_REL_MARCA_TIPO
    ('VOLVO ANT', 'V70');
 COMMIT;
 
+*/
 
 
 -- ======================================= MARCAS ========================================================================================
+
+
+
+DROP procedure IF EXISTS `p_sample`;
+
+DELIMITER $$
+CREATE  PROCEDURE `p_sample`(p_caso int)
+BEGIN
+	SET @NUM_CASO  = p_caso;
+	
+	SELECT
+	  GROUP_CONCAT(DISTINCT
+	    CONCAT(
+	    	'(select  b.VALOR ',
+			'from ALESI_TATRICASO a, ALESI_TVALCASO b , ALESI_TCASO C',
+			' where b.ID_CASO =', @NUM_CASO, 
+			' AND b.ID_CASO = C.ID_CASO',
+			' AND a.ID_EMPRESA = C.ID_EMPRESA',
+			' and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO',
+			' AND a.ID_CAMPO = ''',ID_CAMPO,''') AS `',ID_CAMPO, '`'
+	    )
+	  ) INTO @sql
+	FROM
+	  (select  a.ID_CAMPO as ID_CAMPO, b.VALOR as VALOR
+		from ALESI_TATRICASO a, ALESI_TVALCASO b , ALESI_TCASO C
+		where b.ID_CASO =@NUM_CASO
+		AND b.ID_CASO = C.ID_CASO
+		AND a.ID_EMPRESA = C.ID_EMPRESA
+		and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO) v ;
+			
+	  
+	SET @sql = CONCAT('SELECT ID_CASO, ', @sql, ' 
+	                  from ALESI_TCASO
+		               WHERE ID_CASO =',@NUM_CASO);
+	                                     
+	
+	PREPARE stmt FROM @SQL;
+	
+	
+	EXECUTE stmt;
+	
+	
+	DEALLOCATE PREPARE stmt;
+END$$
+DELIMITER ;
+
+commit;
