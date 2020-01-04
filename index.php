@@ -28,46 +28,75 @@ header("location: profile.php");
 		<!--Google Fonts-->
 		<link href='//fonts.googleapis.com/css?family=Signika:400,600' rel='stylesheet' type='text/css'>
 		<!--google fonts-->
+
+<!--===============================================================================================-->	
+   <link rel="icon" type="image/png" href="index_/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="index_/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="index_/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="index_/css/util.css">
+	<link rel="stylesheet" type="text/css" href="index_/css/main.css">
+<!--===============================================================================================-->
+
+
 	</head>
 	<body>
 		<!--header start here>
 		<h1>Formulario de inicio de sesión</h1-->
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Inicio de Sesión</h3>
-				<div class="d-flex justify-content-end social_icon">
-					<!--span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span-->
-				</div>
-			</div>
+<div class="limiter">
+	<div class="container-login100" style="background-image: url('index_/images/bg-01.jpg');">
+		<div class="wrap-login100">
 			<div class="card-body">
-				<form action="#" method="post">
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<!--label for="exampleInputEmail1">Correo electrónico</label-->
-						<input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico">
-						<!--small id="emailHelp" class="form-text text-muted">Aqui es donde tienes que capturar tu correo Electronico</small-->
-					  </div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-							<!--label for="exampleInputPassword1">Password</label-->
-							<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<form action="#" method="post" class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<img src="img/alesi_logo1.png" width="300"></img>
+					</span>
+					<span class="login100-form-title p-b-34 p-t-27">	
+					<br>
+					<br>
+					Inicio de Sesión
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="email" name="username" placeholder="Correo electrónico">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
-					<div class="row align-items-center remember">
-						<!--input type="checkbox">Recordar mi usuario</input-->
+
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
-					<div class="form-group">
+
+
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+
+
+					<div class="form-group container-login100-form-btn">
 						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Entrar</button>
+						<button type="button" class="btn login100-form-btn" data-toggle="modal" data-target="#exampleModal">Entrar</button>
 						<button class="btn btn-primary" name="submit" type="submit" id="ingresa" style="display:none">Ingresar</button>
-					</div>
+					</div>	
+
 				</form>
 			<div class="clear"> </div>
 				<span><?php echo $error; echo $variable; ?></span>
@@ -95,5 +124,8 @@ divulgador, y no utilizar ningún dato de esa información de ninguna manera dis
     </div>
   </div>
 </div>
+
+
+
 	</body>
 </html>
