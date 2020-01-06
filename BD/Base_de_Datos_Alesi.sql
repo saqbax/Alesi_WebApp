@@ -5503,47 +5503,54 @@ COMMIT;
 -- ======================================= MARCAS ========================================================================================
 
 
-
 DROP procedure IF EXISTS `p_sample`;
 
 DELIMITER $$
 CREATE  PROCEDURE `p_sample`(p_caso int)
 BEGIN
-	SET @NUM_CASO  = p_caso;
+
+	DECLARE NUM_CASO INT;	
+	DECLARE v_sql TEXT;	
+	
+	SET NUM_CASO  = p_caso;
+	SET foreign_key_checks = 1;
+	SET SESSION group_concat_max_len = 1048576;
 	
 	SELECT
 	  GROUP_CONCAT(DISTINCT
 	    CONCAT(
 	    	'(select  b.VALOR ',
 			'from ALESI_TATRICASO a, ALESI_TVALCASO b , ALESI_TCASO C',
-			' where b.ID_CASO =', @NUM_CASO, 
+			' where b.ID_CASO =', NUM_CASO, 
 			' AND b.ID_CASO = C.ID_CASO',
 			' AND a.ID_EMPRESA = C.ID_EMPRESA',
 			' and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO',
 			' AND a.ID_CAMPO = ''',ID_CAMPO,''') AS `',ID_CAMPO, '`'
 	    )
-	  ) INTO @sql
+	  ) INTO v_sql
 	FROM
 	  (select  a.ID_CAMPO as ID_CAMPO, b.VALOR as VALOR
 		from ALESI_TATRICASO a, ALESI_TVALCASO b , ALESI_TCASO C
-		where b.ID_CASO =@NUM_CASO
+		where b.ID_CASO =NUM_CASO
 		AND b.ID_CASO = C.ID_CASO
 		AND a.ID_EMPRESA = C.ID_EMPRESA
 		and a.NUM_ATRIBUTO = b.NUM_ATRIBUTO) v ;
+		
+		
 			
 	  
-	SET @sql = CONCAT('SELECT ID_CASO, ', @sql, ' 
+	SET @sql = CONCAT('SELECT ID_CASO, ', v_sql, ' 
 	                  from ALESI_TCASO
-		               WHERE ID_CASO =',@NUM_CASO);
-	                                     
-	
-	PREPARE stmt FROM @SQL;
+		               WHERE ID_CASO =',NUM_CASO,';');
+		               
+
+	PREPARE stmt FROM @sql;
 	
 	
 	EXECUTE stmt;
 	
 	
-	DEALLOCATE PREPARE stmt;
+	DEALLOCATE PREPARE stmt; 
 END$$
 DELIMITER ;
 
