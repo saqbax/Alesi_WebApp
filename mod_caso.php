@@ -289,7 +289,7 @@ include("conexion.php");
 															<input class="form-check-input" type="radio" name="EN_DOMICILIO" id="EN_DOMICILIO_N" value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
-														<script>if("'.$row['name="EN_DOMICILIO"'].'" === "S"){document.getElementById("EN_DOMICILIO_S").checked = true} else {document.getElementById("EN_DOMICILIO_N").checked = true}</script>
+														<script>if("'.$row['EN_DOMICILIO'].'" === "S"){document.getElementById("EN_DOMICILIO_S").checked = true} else {document.getElementById("EN_DOMICILIO_N").checked = true}</script>
 													</div>
 												</div>
 												<div class="form-group">
@@ -301,7 +301,7 @@ include("conexion.php");
 															<input class="form-check-input" type="radio" name="COLISION_VUELCO" id="COLISION_VUELCO_N" value="N" >
 															<span class="form-check-sign">NO</span>
 														</label>
-														<script>if("'.$row['name="COLISION_VUELCO"'].'" === "S"){document.getElementById("COLISION_VUELCO_S").checked = true} else {document.getElementById("COLISION_VUELCO_N").checked = true}</script>
+														<script>if("'.$row['COLISION_VUELCO'].'" === "S"){document.getElementById("COLISION_VUELCO_S").checked = true} else {document.getElementById("COLISION_VUELCO_N").checked = true}</script>
 													</div>
 												</div>
 											</div>
