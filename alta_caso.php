@@ -848,10 +848,10 @@ require __DIR__.'/php/conexion.php';
 													<label>	OBSERVACIONES </label>
 													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class = "edit"></textarea>
 												</div>
-												<div class="col-sm-6">
+												<!-- <div class="col-sm-6">
 													<input type="submit" name="add" class="btn btn-sm btn-primary" value="Guardar datos">
 													<a href="mc_list.php" class="btn btn-sm btn-danger">Cancelar</a>
-												</div>
+												</div> -->
 											</div>
 		                                </div>
 		                            </div>
