@@ -856,6 +856,17 @@ require __DIR__.'/php/conexion.php';
 		                                </div>
 		                            </div>
 		                        </div>
+								<div class="wizard-footer">
+		                            <div class="pull-right">
+		                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Siguiente' />
+		                                <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='finish' value='Guardar'  onclick="document.getElementById('theform').submit();"/>
+		                            </div>
+
+		                            <div class="pull-left">
+		                                <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Atras' />
+		                            </div>
+		                            <div class="clearfix"></div>
+		                        </div>
 		                    </form>
 		                </div>
 		            </div> <!-- wizard container -->

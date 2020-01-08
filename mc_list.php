@@ -187,7 +187,13 @@ include('session.php');
 	<script>
 		function redirect(){
 			var URLactual = window.location;
-			var url = URLactual.toString().replace("mc_list.php","mc_add.php");
+			var v_empresa = document.getElementById("EMPRESA").value;
+			if (v_empresa == "SURA"){
+				 url = URLactual.toString().replace("mc_list.php","alta_caso.php");
+			}else{
+				 url = URLactual.toString().replace("mc_list.php","mc_add.php");
+			}
+
 			location.href = url + "?nik=" + document.getElementById("EMPRESA").value;
 		}
 	</script>
