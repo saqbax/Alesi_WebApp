@@ -24,8 +24,10 @@ echo $emp . '<br>';
    }
    
 try{
-
-		mysqli_query($con, "CALL p_insert_tvalocaso('U',".$nik.",'".$emp."','".$ink."','".$login_session."','".json_encode($_POST)."',@p_salida )");
+		function _JS($txt){
+			return str_replace("\r\n", '</br>',$txt);
+		}
+		mysqli_query($con, "CALL p_insert_tvalocaso('U',".$nik.",'".$emp."','".$ink."','".$login_session."','".json_encode(_JS($_POST))."',@p_salida )");
 
 		$resultado = mysqli_query( $con, "SELECT @p_salida as p_out");
 
