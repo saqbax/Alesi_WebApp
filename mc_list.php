@@ -128,7 +128,7 @@ include('session.php');
 							</td>
 							<td>
 
-								<a href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'" title="Editar datos" class="btn btn-primary btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="#" title="Editar datos" class="btn btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 								<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 							</td>
 						</tr>
@@ -187,9 +187,28 @@ include('session.php');
 	<script>
 		function redirect(){
 			var URLactual = window.location;
-			var url = URLactual.toString().replace("mc_list.php","mc_add.php");
+			var v_empresa = document.getElementById("EMPRESA").value;
+			if (v_empresa == "SURA"){
+				 url = URLactual.toString().replace("mc_list.php","alta_caso.php");
+			}else{
+				 url = URLactual.toString().replace("mc_list.php","mc_add.php");
+			}
+
 			location.href = url + "?nik=" + document.getElementById("EMPRESA").value;
 		}
+
+		function redirectMod( p_ncaso, p_emp ){
+			var URLactual = window.location;
+			if (p_emp == "SURA"){
+				url = URLactual.toString().replace("mc_list.php","mod_caso.php");
+			}else{
+				 url = URLactual.toString().replace("mc_list.php","mc_edit.php");
+				 // href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'
+			}
+
+			location.href = url + "?nik=" + p_ncaso + "&emp="+p_emp;
+		}
+
 	</script>
 </body>
 </html>

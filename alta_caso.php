@@ -826,13 +826,24 @@ require __DIR__.'/php/conexion.php';
 													<label>	OBSERVACIONES </label>
 													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3"></textarea>
 												</div>
-												<div class="col-sm-6">
+												<!-- <div class="col-sm-6">
 													<input type="submit" name="add" class="btn btn-sm btn-primary" value="Guardar datos">
 													<a href="mc_list.php" class="btn btn-sm btn-danger">Cancelar</a>
-												</div>
+												</div> -->
 											</div>
 		                                </div>
 		                            </div>
+		                        </div>
+								<div class="wizard-footer">
+		                            <div class="pull-right">
+		                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Siguiente' />
+		                                <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd' name='finish' value='Guardar'  onclick="document.getElementById('theform').submit();"/>
+		                            </div>
+
+		                            <div class="pull-left">
+		                                <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Atras' />
+		                            </div>
+		                            <div class="clearfix"></div>
 		                        </div>
 		                    </form>
 		                </div>
