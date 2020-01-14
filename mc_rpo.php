@@ -10,11 +10,16 @@ require __DIR__.'/php/conexion.php';
 		$emp = "SINIESTRO_AUTO_S";
 	}
 
+
+	function _JS($txt){
+		return str_replace("\r\n", '</br>',$txt);
+	}
+
 	/*echo $login_session . '<br>';
 	echo $nik . '<br>';
 	echo $emp . '<br>';*/
 
-	$v_json = json_encode($_POST);
+	$v_json = json_encode(_JS($_POST));
 	/*echo $v_json . '<br>';
 
 	if($_POST)
