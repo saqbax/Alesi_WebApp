@@ -477,7 +477,7 @@ include("conexion.php");
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DECLARACION INICIAL </label>
-														<textarea maxlength="20000" name="DECLA_INI" tabindex="1" class="form-control">"'.$row['DECLA_INI'].'"</textarea>
+														<textarea maxlength="20000" name="DECLA_INI" tabindex="1" class="form-control">'.$row['DECLA_INI'].'</textarea>
 													</div>
 												</div>
 											</div>
@@ -490,7 +490,7 @@ include("conexion.php");
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DESARROLLO DE LA ENTREVISTA </label>
-														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class="form-control">"'.$row['DESA_ENTREVISTA'].'"</textarea>
+														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class="form-control">'.$row['DESA_ENTREVISTA'].'</textarea>
 													</div>
 												</div>
 												<div class="form-group">
@@ -534,7 +534,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class="form-control">"'.$row['UBICACION'].'"</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class="form-control">'.$row['UBICACION'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -611,7 +611,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class="form-control">"'.$row['OBSERVACIONES_CONTACT'].'"</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class="form-control">'.$row['OBSERVACIONES_CONTACT'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -658,7 +658,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class="form-control">"'.$row['OBSERVACIONES_PREX'].'"</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class="form-control">'.$row['OBSERVACIONES_PREX'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -694,7 +694,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class="form-control">"'.$row['OBSERVACION_ANTER'].'"</textarea>
+													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class="form-control">'.$row['OBSERVACION_ANTER'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -750,7 +750,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class="form-control"></textarea>
+													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class="form-control">'.$row['OBSERVACION_INV'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -854,7 +854,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class="form-control">"'.$row['OBS_CONCLUSION'].'"</textarea>
+													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class="form-control">'.$row['OBS_CONCLUSION'].'</textarea>
 												</div>
 												<div class="col-sm-6">
 													<input type="submit" name="mod" class="btn btn-sm btn-primary" value="Guardar datos">
