@@ -26,6 +26,9 @@ require __DIR__.'/php/conexion.php';
 	<link href="assets/css/themify-icons.css" rel="stylesheet">
 	</head>
 
+	<!-- Nuevo Editor CKEditor -->
+	<script src="ckeditor/ckeditor.js"></script>
+
 	<body>
 			
 	<div class="image-container set-full-height" style="background-image: url('assets/img/paper-1.jpeg')">
@@ -465,7 +468,7 @@ require __DIR__.'/php/conexion.php';
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DECLARACION INICIAL </label>
-														<textarea maxlength="20000" name="DECLA_INI" tabindex="1"></textarea>
+														<textarea maxlength="20000" name="DECLA_INI" id="DECLA_INI" tabindex="1"></textarea>
 													</div>
 												</div>
 											</div>
@@ -478,7 +481,7 @@ require __DIR__.'/php/conexion.php';
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DESARROLLO DE LA ENTREVISTA </label>
-														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1"></textarea>
+														<textarea maxlength="20000" name="DESA_ENTREVISTA" id="DESA_ENTREVISTA" tabindex="1"></textarea>
 													</div>
 												</div>
 												<div class="form-group">
@@ -520,7 +523,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES" id="OBSERVACIONES" tabindex="3"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -595,7 +598,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" id="OBSERVACIONES_CONTACT" tabindex="3"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -640,7 +643,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_PREX" id="OBSERVACIONES_PREX" tabindex="3"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -674,7 +677,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBSERVACION_ANTER" id="OBSERVACION_ANTER" tabindex="3"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -727,7 +730,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBSERVACION_INV" id="OBSERVACION_INV" tabindex="3"></textarea>
 												</div>
 											</div>
 		                                </div>
@@ -824,7 +827,7 @@ require __DIR__.'/php/conexion.php';
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3"></textarea>
+													<textarea maxlength="20000" name="OBS_CONCLUSION" id="OBS_CONCLUSION" tabindex="3"></textarea>
 												</div>
 												<!-- <div class="col-sm-6">
 													<input type="submit" name="add" class="btn btn-sm btn-primary" value="Guardar datos">
@@ -898,4 +901,14 @@ require __DIR__.'/php/conexion.php';
 		});
 		});
     </script>
+	<script>
+		CKEDITOR.replace('DECLA_INI');
+		CKEDITOR.replace('DESA_ENTREVISTA');
+		CKEDITOR.replace('OBSERVACIONES');
+		CKEDITOR.replace('OBSERVACIONES_CONTACT');
+		CKEDITOR.replace('OBSERVACIONES_PREX');
+		CKEDITOR.replace('OBSERVACION_ANTER');
+		CKEDITOR.replace('OBSERVACION_INV');
+		CKEDITOR.replace('OBS_CONCLUSION');
+	</script>
 </html>

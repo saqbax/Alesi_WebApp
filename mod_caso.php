@@ -20,6 +20,9 @@ include("conexion.php");
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link href="assets/css/demo.css" rel="stylesheet" />
 
+	<!-- Nuevo Editor CKEditor -->
+	<script src="ckeditor/ckeditor.js"></script>
+
 	<!-- Fonts and Icons -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
@@ -477,7 +480,7 @@ include("conexion.php");
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DECLARACION INICIAL </label>
-														<textarea maxlength="20000" name="DECLA_INI" tabindex="1" class="form-control">'.$row['DECLA_INI'].'</textarea>
+														<textarea maxlength="20000" name="DECLA_INI" id="DECLA_INI" tabindex="1" class="form-control">'.$row['DECLA_INI'].'</textarea>
 													</div>
 												</div>
 											</div>
@@ -490,7 +493,7 @@ include("conexion.php");
 												<div class="form-group">
 													<div class="form-check-radio form-check-inline">
 														<label>DESARROLLO DE LA ENTREVISTA </label>
-														<textarea maxlength="20000" name="DESA_ENTREVISTA" tabindex="1" class="form-control">'.$row['DESA_ENTREVISTA'].'</textarea>
+														<textarea maxlength="20000" name="DESA_ENTREVISTA" id="DESA_ENTREVISTA" tabindex="1" class="form-control">'.$row['DESA_ENTREVISTA'].'</textarea>
 													</div>
 												</div>
 												<div class="form-group">
@@ -534,7 +537,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES" tabindex="3" class="form-control">'.$row['UBICACION'].'</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES" id="OBSERVACIONES" tabindex="3" class="form-control">'.$row['UBICACION'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -611,7 +614,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" tabindex="3" class="form-control">'.$row['OBSERVACIONES_CONTACT'].'</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_CONTACT" id="OBSERVACIONES_CONTACT" tabindex="3" class="form-control">'.$row['OBSERVACIONES_CONTACT'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -658,7 +661,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACIONES_PREX" tabindex="3" class="form-control">'.$row['OBSERVACIONES_PREX'].'</textarea>
+													<textarea maxlength="20000" name="OBSERVACIONES_PREX" id="OBSERVACIONES_PREX" tabindex="3" class="form-control">'.$row['OBSERVACIONES_PREX'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -694,7 +697,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_ANTER" tabindex="3" class="form-control">'.$row['OBSERVACION_ANTER'].'</textarea>
+													<textarea maxlength="20000" name="OBSERVACION_ANTER" id="OBSERVACION_ANTER" tabindex="3" class="form-control">'.$row['OBSERVACION_ANTER'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -750,7 +753,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBSERVACION_INV" tabindex="3" class="form-control">'.$row['OBSERVACION_INV'].'</textarea>
+													<textarea maxlength="20000" name="OBSERVACION_INV" id="OBSERVACION_INV" tabindex="3" class="form-control">'.$row['OBSERVACION_INV'].'</textarea>
 												</div>
 											</div>
 		                                </div>
@@ -854,7 +857,7 @@ include("conexion.php");
 												</div>
 												<div class="form-group">
 													<label>	OBSERVACIONES </label>
-													<textarea maxlength="20000" name="OBS_CONCLUSION" tabindex="3" class="form-control">'.$row['OBS_CONCLUSION'].'</textarea>
+													<textarea maxlength="20000" name="OBS_CONCLUSION" id="OBS_CONCLUSION" tabindex="3" class="form-control">'.$row['OBS_CONCLUSION'].'</textarea>
 												</div>
 												<div class="col-sm-6">
 													<input type="submit" name="mod" class="btn btn-sm btn-primary" value="Guardar datos">
@@ -912,4 +915,14 @@ include("conexion.php");
 		});
 		});
     </script>
+	<script>
+		CKEDITOR.replace('DECLA_INI');
+		CKEDITOR.replace('DESA_ENTREVISTA');
+		CKEDITOR.replace('OBSERVACIONES');
+		CKEDITOR.replace('OBSERVACIONES_CONTACT');
+		CKEDITOR.replace('OBSERVACIONES_PREX');
+		CKEDITOR.replace('OBSERVACION_ANTER');
+		CKEDITOR.replace('OBSERVACION_INV');
+		CKEDITOR.replace('OBS_CONCLUSION');
+	</script>
 </html>
