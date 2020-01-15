@@ -1570,7 +1570,8 @@ BEGIN
 		end if;
         
         
-        set v_PDF_CODIGO = replace(v_PDF_CODIGO, v_REEMPLAZO,v_VALOR);   
+        set v_PDF_CODIGO = replace(v_PDF_CODIGO, v_REEMPLAZO,v_VALOR);
+        set v_PDF_CODIGO = replace(v_PDF_CODIGO, '</br>','<br>');
     END LOOP getATRIBUTOS;
     CLOSE cur_ATRIBUTOS;
     
