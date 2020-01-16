@@ -18,7 +18,9 @@ if(!$mysqli){
 }
 
 // Seleccionamos los datos de la tabla casos
-$query = sprintf("SELECT id, nombre, stock, precio FROM casos");
+$query = sprintf("SELECT STATUS,COUNT(*) NUM_CASOS
+					FROM ALESI_TCASO
+					GROUP BY STATUS");
 
 $result = $mysqli->query($query);
 
