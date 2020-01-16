@@ -67,7 +67,7 @@ include('session.php');
 									<p class="category">Esta información es requerida para dar seguimiento a un siniestro</p><br/>
 									<a href="mc_upl.php?cas=<?php echo $nik;?>&emp=<?php echo $emp;?>" title="Manejo de Archivos" class="btn btn-success openBtn">Archivos</span></a>
 									<!--button type="button" class="btn btn-success openBtn">Archivos</button-->
-									<a target="_blank" href="genera_pdf.php?id=<?php echo $nik_2;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
+									<a target="_blank" href="genera_pdf.php?id=<?php echo $nik;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
 									<input type="submit" name="mod" class="btn btn-sm btn-primary" value="Guardar datos">
 									<a href="mc_list.php" class="btn btn-sm btn-danger">Cancelar</a>
 		                    	</div>
