@@ -12,8 +12,9 @@ $(document).ready(function() {
             console.log(data);
 
             for (var i in data) {
-                nombre.push(data[i].nombre);
-                stock.push(data[i].stock);
+                console.log("neo" + data[i].STATUS);
+                nombre.push(data[i].STATUS);
+                stock.push(data[i].NUM_CASOS);
             }
 
             var chartdata = {

@@ -30,7 +30,7 @@ include('session.php');
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Estado de Casos</h1>
+          <h1 class="jumbotron-heading">CASOS SURA</h1>
 
           <div class="row mt-4">
             <div class="col-md-12">
