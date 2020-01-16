@@ -65,6 +65,11 @@ include('session.php');
 		                    	<div class="wizard-header text-center">
 		                        	<h3 class="wizard-title">Alta de Caso de Sura</h3>
 									<p class="category">Esta información es requerida para dar seguimiento a un siniestro</p>
+									<a href="mc_upl.php?cas=<?php echo $nik;?>&emp=<?php echo $emp;?>" title="Manejo de Archivos" class="btn btn-success openBtn">Archivos</span></a>
+									<!--button type="button" class="btn btn-success openBtn">Archivos</button-->
+									<a target="_blank" href="genera_pdf.php?id=<?php echo $nik_2;?>"><button type="button" class="btn btn-success ">Generar PDF</button> </a>
+									<input type="submit" name="mod" class="btn btn-sm btn-primary" value="Guardar datos">
+									<a href="mc_list.php" class="btn btn-sm btn-danger">Cancelar</a>
 		                    	</div>
 
 								<div class="wizard-navigation">
