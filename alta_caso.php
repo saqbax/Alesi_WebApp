@@ -1,5 +1,6 @@
 <?php
 require __DIR__.'/php/conexion.php';
+include('session.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -8,7 +9,7 @@ require __DIR__.'/php/conexion.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
 	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-	<title>Material Bootstrap Wizard by Creative Tim | Free Boostrap Wizard</title>
+	<title>Alta del Caso</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -31,16 +32,14 @@ require __DIR__.'/php/conexion.php';
 
 	<body>
 			
-	<div class="image-container set-full-height" style="background-image: url('assets/img/paper-1.jpeg')">
+	<div class="image-container set-full-height" style="background-image: url('assets/img/Alesi-Investigacion.jpg')">
 	    <!--   Creative Tim Branding   -->
 	    <a href="#">
 	         <div class="logo-container">
 	            <div class="logo">
 	                <img src="assets/img/new_logo.png">
 	            </div>
-	            <div class="brand">
-	                Noe Santiago
-	            </div>
+	            <div class="brand"><?php echo $login_session; ?></div>
 	        </div>
 	    </a>
 

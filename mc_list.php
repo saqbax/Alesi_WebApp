@@ -108,7 +108,7 @@ include('session.php');
 						<tr>
 							<td>'.$no.'</td>
 							<td>'.$row['ID_CASO'].'</td>
-							<td><a href="mc_det.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['ID_EMPRESA'].'</a></td>
+							<td><a href="det_caso.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['ID_EMPRESA'].'</a></td>
                             <td>'.$row['TIPO_CASO'].'</td>
 							<td>'.$row['F_ALTA'].'</td>
                             <td>'.$row['F_CIERRE'].'</td>
