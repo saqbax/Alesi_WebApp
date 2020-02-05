@@ -10,6 +10,9 @@ require __DIR__.'/php/conexion.php';
 		$emp = "SINIESTRO_AUTO_S";
 	}
 
+	function _J($txt){
+		return str_replace("\/", '/',$txt);
+	}
 
 	function _JS($txt){
 		return str_replace("\r\n", '</br>',$txt);
@@ -19,7 +22,7 @@ require __DIR__.'/php/conexion.php';
 	echo $nik . '<br>';
 	echo $emp . '<br>';*/
 
-	$v_json = json_encode(_JS($_POST));
+	$v_json = json_encode(_JS(_J($_POST)));
 	/*echo $v_json . '<br>';
 
 	if($_POST)
