@@ -46,6 +46,22 @@ $(document).ready(function() {
                     }
                 }
             });
+            var mostrar = $("#miGraf");
+
+            var grafico = new Chart(mostrar, {
+                type: 'doughnut',
+                data: chartdata,
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
         },
         error: function(data) {
             console.log(data);

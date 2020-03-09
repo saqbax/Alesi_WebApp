@@ -27,8 +27,8 @@ include('session.php');
 		<div class="content">
 
     <main role="main">
-
-      <section class="jumbotron text-center">
+	<div>
+      <section class="jumbotron text-center" style = 'width:600px;height:500px;'>
         <div class="container">
           <h1 class="jumbotron-heading">CASOS SURA</h1>
 
@@ -42,6 +42,22 @@ include('session.php');
           
         </div>
       </section>
+
+      <section class="jumbotron text-center" style = 'width:600px;height:500px;'>
+        <div class="container">
+          <h1 class="jumbotron-heading">CASOS CARDIF</h1>
+
+          <div class="row mt-4">
+            <div class="col-md-12">
+
+              <canvas id="miGraf"></canvas> 
+              
+            </div>
+          </div>               
+          
+        </div>
+      </section>
+	</div>
 
     <script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

@@ -71,7 +71,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DIRIGIDO A -->
+												DIRIGIDO A 
 											</a>
 										</li>
 			                            <li>
@@ -79,7 +79,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DATOS DEL SINIESTRO -->
+												DATOS DEL SINIESTRO
 											</a>
 										</li>
 			                            <li>
@@ -87,7 +87,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DATOS DEL VEHICULO -->
+												DATOS DEL VEHICULO
 											</a>
 										</li>
 			                            <li>
@@ -95,7 +95,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- MOTIVO INVESTIGACION -->
+												MOTIVO INVESTIGACION
 											</a>
 										</li>
 			                            <li>
@@ -103,7 +103,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- RESULTADO INVESTIGACION -->
+												RESULTADO INVESTIGACION
 											</a>
 										</li>
 			                            <li>
@@ -111,7 +111,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DECLARACIONES -->
+												DECLARACIONES
 											</a>
 										</li>
 			                            <li>
@@ -119,7 +119,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- ENTREVISTAS -->
+												ENTREVISTAS
 											</a>
 										</li>
 			                            <li>
@@ -127,7 +127,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- RECONSTRUCCION -->
+												RECONSTRUCCION
 											</a>
 										</li>
 			                            <li>
@@ -135,7 +135,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DOCUMENTOS -->
+												DOCUMENTOS
 											</a>
 										</li>
 			                            <li>
@@ -143,7 +143,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- PREEXISTENCIA  VEHICULO -->
+												PREEXISTENCIA  VEHICULO
 											</a>
 										</li>
 			                            <li>
@@ -151,7 +151,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- VERIFICACION POLIZAS -->
+												VERIFICACION POLIZAS
 											</a>
 										</li>
 			                            <li>
@@ -159,7 +159,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- CARPETA  INVESTIGACION -->
+												CARPETA  INVESTIGACION
 											</a>
 										</li>
 			                            <li>
@@ -167,7 +167,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- DOCUMENTOS ANEXOS -->
+												DOCUMENTOS ANEXOS
 											</a>
 										</li>
 			                            <li>
@@ -175,7 +175,7 @@ include('session.php');
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
-												<!-- CONCLUSIONES -->
+												CONCLUSIONES
 											</a>
 										</li>
 			                        </ul>

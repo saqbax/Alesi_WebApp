@@ -2,6 +2,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 require __DIR__.'/php/conexion.php';
+include('session.php');
+
 
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
