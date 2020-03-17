@@ -2,7 +2,14 @@
 // Estableciendo la conexion a la base de datos
 include("conexion.php");//Contiene de conexion a la base de datos
 
-session_start();// Iniciando Sesion
+//session_start();// Iniciando Sesion
+
+
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
 // Guardando la sesion
 $user_check=$_SESSION['login_user_sys'];
 // SQL Query para completar la informacion del usuario

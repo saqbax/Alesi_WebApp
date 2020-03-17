@@ -77,7 +77,7 @@ include('session.php');
 			                            <li>
 											<a href="#B2" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-user"></i>
+													<i class="ti-vector"></i>
 												</div>
 												DATOS DEL SINIESTRO
 											</a>
