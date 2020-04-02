@@ -39,7 +39,12 @@ include('session.php');
 			$cat = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_EMPRESA') AND CAMPO_A = 'ASG'");
             $cat1 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_TIP_CASO')");
             
-            $p_operacion = $_GET['aksi'];
+            if (isset($_GET['aksi'])){
+                $p_operacion = $_GET['aksi'];
+            }else {
+                $p_operacion = 'null';
+            }
+            
 
 			if( $p_operacion == 'delete'){
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
@@ -170,7 +175,7 @@ include('session.php');
 							echo '</td>
 									<td>
 
-									<a href="#" title="Editar datos" class="btn btn-primary btn-sm"  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_CASO'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+									<a href="#" title="Editar datos" class="btn btn-primary btn-sm"  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
                                     <a href="mc_list.php?aksi=cerrado&nik='.$row['ID_CASO'].'" title="Cerrar Caso" onclick="return confirm(\'Esta seguro de cerrar el caso '.$row['ID_CASO'].'?\')" class="btn btn-warning btn-sm"  ><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>
 									<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_CASO'].'?\')" class="btn btn-danger btn-sm"  ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 									</td>
@@ -240,20 +245,24 @@ include('session.php');
         } else {
             url = URLactual.toString().replace("mc_list.php", "mc_add.php");
         }
+        
+        url = url.slice(0, url.indexOf(".php"));
 
-        location.href = url + "?nik=" + document.getElementById("EMPRESA").value;
+        location.href = url + ".php?nik=" + document.getElementById("EMPRESA").value;
     }
 
     function redirectMod(p_ncaso, p_emp) {
         var URLactual = window.location;
         if (p_emp == "SURA") {
             url = URLactual.toString().replace("mc_list.php", "mod_caso.php");
+            
         } else {
             url = URLactual.toString().replace("mc_list.php", "mc_edit.php");
             // href="mc_edit.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'
         }
+        url = url.slice(0, url.indexOf(".php"));
 
-        location.href = url + "?nik=" + p_ncaso + "&emp=" + p_emp;
+        location.href = url + ".php?nik=" + p_ncaso + "&emp=" + p_emp;
     }
     </script>
 </body>
