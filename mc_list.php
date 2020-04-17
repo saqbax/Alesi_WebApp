@@ -117,6 +117,7 @@ include('session.php');
                         <th>F. Cierre</th>
                         <th>Usu. Alta</th>
                         <th>Usu. Asignado</th>
+                        <th>Archivos</th>
                         <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
@@ -149,6 +150,10 @@ include('session.php');
                             <td>'.$row['F_CIERRE'].'</td>
                             <td>'.$row['ID_USUARIO_ALTA'].'</td>
                             <td>'.$row['ID_USUARIO_ASIGNADO'].'</td>
+                            <td>
+                                <a href="#" title="Fotografias" class="btn  btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
+                                <a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-primary btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
+                            </td>
 							<td>';
 							if($row['STATUS'] == 'EN_CURSO'){
 								echo '<span class="label label-success">En Curso</span>';
@@ -168,7 +173,7 @@ include('session.php');
 									<td>
 
 										<a href="#" title="Editar datos" class="btn btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-										<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+										<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
 									</td>
 								</tr>';
 						}else{
