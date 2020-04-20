@@ -7,8 +7,8 @@ services:
             - "80:80"
         volumes:
             - .:/var/www/html
-        networks:
-            - default
+        #networks:
+        #    - default
         links:
             - mysql
         depends_on:
@@ -27,5 +27,5 @@ services:
         restart: always
         volumes: 
             - /home/ryzen-fedora/Software/Docker-Volumes/mysql:/var/lib/mysql
-        networks:
-            - default        
+        #networks:
+        #    - default        
