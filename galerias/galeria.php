@@ -14,50 +14,9 @@ require('../session.php');
     <html lang="es-ES">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,500,600,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="../css/neo-stiles.css" rel="stylesheet">
+    
     <style>
-        html, body {
-            margin:0;
-            padding:0;
-        }
-        
-        html {
-            font-size: 62.5%;
-        }
-
-        body {
-            font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            font-size: 1.8rem;
-            background-color: #f3f3f3;
-            color: #666;
-            background: #f2f2f2; 
-            line-height: 1.5em;            
-            padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
-
-
-        }
-
-        header {
-            text-align: center;
-        }
-        
-        main > header {
-            background-color: #02223a;
-        }
-
-        h1 {
-            color:#003366;
-            font-size: 30px;
-            font-size:3rem;
-            -webkit-column-span:all;
-            -moz-column-span:all;
-            column-span:all;
-        }
-
-        a {
-            text-decoration: none;
-            color:#036;
-        }
 
         #galeria {
             margin: 1rem auto;
@@ -131,74 +90,6 @@ require('../session.php');
             }
         }
 
-
-        #main-header {
-            background: #333;
-            color: white;
-            height: 80px;
-            
-            width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
-            left: 0; /* Posicionamos la cabecera al lado izquierdo */
-            top: 0; /* Posicionamos la cabecera pegada arriba */
-            position: fixed; /* Hacemos que la cabecera tenga una posición fija */
-            z-index: 1;
-
-        }	
-            #main-header a {
-                color: white;
-            }
-
-        /*
-        * Logo
-        */
-        #logo-header {
-            float: left;
-            padding: 15px 0 0 20px;
-            text-decoration: none;
-        }
-            #logo-header:hover {
-                color: #0b76a6;
-            }
-            
-            #logo-header .site-img {
-                display: block;
-            }
-            
-            #logo-header .site-desc {
-                display: block;
-                font-weight: 300;
-                font-size: 0.8em;
-                color: #999;
-            }
-            
-
-        /*
-        * Navegación
-        */
-        nav {
-            float: right;
-        }
-            nav ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                padding-right: 20px;
-            }
-            
-                nav ul li {
-                    display: inline-block;
-                    line-height: 80px;
-                }
-                    
-                    nav ul li a {
-                        display: block;
-                        padding: 0 10px;
-                        text-decoration: none;
-                    }
-                    
-                        nav ul li a:hover {
-                            background: #0b76a6;
-                        }
 
         /*Estilos del modal*/
 
@@ -286,7 +177,7 @@ require('../session.php');
 		<nav>
 			<ul>
 				<li><a href="#"  onclick="click_load()">Cargar Imagen </a> </li>
-                <li><a href="#"  onclick="Hola()">Regresar</a></li>
+                <li><a href="#"  onclick="regreso()">Regresar</a></li>
                 
 			</ul>
         </nav><!-- / nav -->         
@@ -356,9 +247,10 @@ require('../session.php');
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>    
+
 <script>
-    function Hola(){
-        alert("Hola mundo!");
+    function regreso(){
+        window.location.href = "/mc_list.php";
 
     };
     function click_load() {
@@ -399,7 +291,7 @@ require('../session.php');
 						$(".alert-dismissible").fadeTo(500, 0).slideUp(500, function(){
 						$(this).remove();
                         location.reload(true);
-						});	}, 4000);
+						});	}, 3000);
 					}
 				});
 

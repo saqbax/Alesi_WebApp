@@ -16,7 +16,9 @@ include('session.php');
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style_nav.css" rel="stylesheet">
+
+    <!-- hojas de estilos -->
+    <link href="css/neo-stiles.css" rel="stylesheet">
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -27,9 +29,9 @@ include('session.php');
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <?php include('nav.php');?>
-    </nav>
+        
+    <?php include('nav.php');?>
+    
     <div class="container">
         <div class="content">
             <h2>Lista de casos</h2>
@@ -151,7 +153,7 @@ include('session.php');
                             <td>'.$row['ID_USUARIO_ALTA'].'</td>
                             <td>'.$row['ID_USUARIO_ASIGNADO'].'</td>
                             <td>
-                                <a href="#" title="Fotografias" class="btn  btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
+                                <a href="/galerias/galeria.php?nik='.$row['ID_CASO'].'" title="Fotografias" class="btn  btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
                                 <a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-primary btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
                             </td>
 							<td>';

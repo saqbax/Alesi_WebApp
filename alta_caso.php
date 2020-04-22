@@ -18,6 +18,9 @@ include('session.php');
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="assets/css/paper-bootstrap-wizard.css" rel="stylesheet" />
 
+	<!-- hojas de estilos -->
+    <link href="css/neo-stiles.css" rel="stylesheet">
+
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link href="assets/css/demo.css" rel="stylesheet" />
 
@@ -31,17 +34,31 @@ include('session.php');
 	<script src="ckeditor/ckeditor.js"></script>
 
 	<body>
-			
+
+	<header id="main-header">
+            <a id="logo-header">
+			<span class="site-img"><img src="../img/alesi_logo1.png" width="15%" alt="Alesi" /> <?php echo $login_session; ?></span>
+            </a> <!-- / #logo-header -->
+            
+            
+
+		<nav>
+			<ul>
+				<li><a href="#"  onclick="click_load()">Cargar Imagen </a> </li>
+                <li><a href="#"  onclick="regreso()">Regresar</a></li>
+                
+			</ul>
+        </nav><!-- / nav -->         
+
+        <div class="upload-msg"></div>
+           
+        </header>
+        <section id="galeria">
+        <header>
+	
+	
 	<div class="image-container set-full-height" style="background-image: url('assets/img/Alesi-Investigacion.jpg')">
-	    <!--   Creative Tim Branding   -->
-	    <a href="#">
-	         <div class="logo-container">
-	            <div class="logo">
-	                <img src="assets/img/new_logo.png">
-	            </div>
-	            <div class="brand"><?php echo $login_session; ?></div>
-	        </div>
-	    </a>
+
 
 
 	    <!--   Big container   -->
@@ -899,6 +916,11 @@ include('session.php');
 				});
 		});
 		});
+
+		function regreso(){
+			window.location.href = "/mc_list.php";
+		};
+		
     </script>
 	<script>
 		CKEDITOR.replace('DECLA_INI');

@@ -1,0 +1,110 @@
+#main-header {
+    background: #333;
+    color: white;
+    height: 80px;
+    
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    z-index: 5;
+
+}	
+    #main-header a {
+        color: white;
+    }
+
+/*
+* Logo
+*/
+#logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+    text-decoration: none;
+}
+    #logo-header:hover {
+        color: #0b76a6;
+    }
+    
+    #logo-header .site-img {
+        display: block;
+    }
+    
+    #logo-header .site-desc {
+        display: block;
+        font-weight: 300;
+        font-size: 0.8em;
+        color: #999;
+    }
+    
+
+/*
+* Navegación
+*/
+nav {
+    float: right;
+}
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+        }
+            
+            nav ul li a {
+                display: block;
+                padding: 0 10px;
+                text-decoration: none;
+            }
+            
+                nav ul li a:hover {
+                    background: #0b76a6;
+                }
+html, body {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    background-color: #f3f3f3;
+    color: #666;
+    background: #f2f2f2; 
+    line-height: 1.5em;            
+    padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+
+
+}
+
+header {
+    text-align: center;
+}
+
+main > header {
+    background-color: #02223a;
+}
+
+h1 {
+    color:#003366;
+    font-size: 30px;
+    font-size:3rem;
+    -webkit-column-span:all;
+    -moz-column-span:all;
+    column-span:all;
+}
+
+a {
+    text-decoration: none;
+    color:#036;
+}                

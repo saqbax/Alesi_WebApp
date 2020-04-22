@@ -8,7 +8,7 @@ require '../php/conexion.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $id_caso = $_POST["id_caso"];
-    $nombre = $_FILES['imagen']['name'];
+    $nombre = $id_caso.'-' .$_FILES['imagen']['name'];
     $imagen_temporal = $_FILES['imagen']['tmp_name'];
     $type = $_FILES['imagen']['type'];
 
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		try {
 
 
-      $target_file = $carpeta . basename($_FILES["imagen"]["name"]);
+      $target_file = $carpeta . $id_caso.'-' .basename($_FILES["imagen"]["name"]);
       $uploadOk = 1;
       $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
       // Check if image file is a actual image or fake image

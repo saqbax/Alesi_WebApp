@@ -10,8 +10,9 @@ include('session.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Datos de personas</title>
 
-    <!-- Bootstrap -->
-    <link href="css/style_nav.css" rel="stylesheet">
+
+    <!-- hojas de estilos -->
+    <link href="css/neo-stiles.css" rel="stylesheet">
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
