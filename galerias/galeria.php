@@ -169,7 +169,7 @@ require('../session.php');
     <main>
         <header id="main-header">
             <a id="logo-header">
-			<span class="site-img"><img src="../img/alesi_logo1.png" width="22%" alt="Alesi" /> </span>
+			<span class="site-img"><img src="../img/alesi_logo1.png" width="27.5%" alt="Alesi" /> </span>
             </a> <!-- / #logo-header -->
             
             

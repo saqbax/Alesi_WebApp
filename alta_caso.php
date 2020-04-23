@@ -3,7 +3,7 @@ require __DIR__.'/php/conexion.php';
 include('session.php');
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -36,25 +36,20 @@ include('session.php');
 	<body>
 
 	<header id="main-header">
-            <a id="logo-header">
-			<span class="site-img"><img src="../img/alesi_logo1.png" width="15%" alt="Alesi" /> <?php echo $login_session; ?></span>
-            </a> <!-- / #logo-header -->
-            
-            
-
+		<a id="logo-header">
+		<span class="site-img"><img src="../img/alesi_logo1.png" width="20%" alt="Alesi" /> <?php echo $login_session; ?></span>
+		</a> <!-- / #logo-header -->
 		<nav>
 			<ul>
-				<li><a href="#"  onclick="click_load()">Cargar Imagen </a> </li>
-                <li><a href="#"  onclick="regreso()">Regresar</a></li>
-                
+				<li><a href="#"  onclick="FGuardar()">Guardar </a> </li>
+				<li><a href="#"  onclick="FGegreso()">Regresar</a></li>
+				
 			</ul>
-        </nav><!-- / nav -->         
+		</nav><!-- / nav -->         
 
-        <div class="upload-msg"></div>
-           
-        </header>
-        <section id="galeria">
-        <header>
+		<div class="upload-msg"></div>
+		
+	</header>
 	
 	
 	<div class="image-container set-full-height" style="background-image: url('assets/img/Alesi-Investigacion.jpg')">
@@ -76,7 +71,32 @@ include('session.php');
 		                    	<div class="wizard-header text-center">
 		                        	<h3 class="wizard-title">Alta de caso de Sura</h3>
 									<p class="category">Esta información es requerida para dar seguimiento a un siniestro</p>
-		                    	</div>
+								</div>
+								<div>
+								<table style="border: 1px solid black;">
+								<tr>
+									<th>
+										DIRIGIDO A
+									</th>
+									<th>
+										DIRIGIDO A
+									</th>
+								</tr>
+									
+									<div >
+										<div class="form-group">
+											<label>NOMBRE <small>(required)</small></label>
+											<input name="DIRIGIDO_A" type="text" class="form-control" placeholder="a quien va dirigido el documento">
+										</div>
+									</div>
+									<div >
+										<div class="form-group">
+											<label>CARGO  <small>(required)</small></label>
+											<input name="CARGO" type="text" class="form-control" placeholder="cargo que ocupa la persona">
+										</div>
+									</div>
+								</table>
+								</div>
 
 								<div class="wizard-navigation">
 									<div class="progress-with-circle">
@@ -917,7 +937,13 @@ include('session.php');
 		});
 		});
 
-		function regreso(){
+		function FGuardar() {
+
+			alert('Hola guardar');
+			
+		}
+
+		function FRegreso(){
 			window.location.href = "/mc_list.php";
 		};
 		
