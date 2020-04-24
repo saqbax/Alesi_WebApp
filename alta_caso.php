@@ -42,7 +42,7 @@ include('session.php');
 		<nav>
 			<ul>
 				<li><a href="#"  onclick="FGuardar()">Guardar </a> </li>
-				<li><a href="#"  onclick="FGegreso()">Regresar</a></li>
+				<li><a href="#"  onclick="FRegreso()">Regresar</a></li>
 				
 			</ul>
 		</nav><!-- / nav -->         
@@ -72,49 +72,15 @@ include('session.php');
 		                        	<h3 class="wizard-title">Alta de caso de Sura</h3>
 									<p class="category">Esta información es requerida para dar seguimiento a un siniestro</p>
 								</div>
-								<div>
-								<table style="border: 1px solid black;">
-								<tr>
-									<th>
-										DIRIGIDO A
-									</th>
-									<th>
-										DIRIGIDO A
-									</th>
-								</tr>
-									
-									<div >
-										<div class="form-group">
-											<label>NOMBRE <small>(required)</small></label>
-											<input name="DIRIGIDO_A" type="text" class="form-control" placeholder="a quien va dirigido el documento">
-										</div>
-									</div>
-									<div >
-										<div class="form-group">
-											<label>CARGO  <small>(required)</small></label>
-											<input name="CARGO" type="text" class="form-control" placeholder="cargo que ocupa la persona">
-										</div>
-									</div>
-								</table>
-								</div>
-
 								<div class="wizard-navigation">
 									<div class="progress-with-circle">
 									     <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 21%;"></div>
 									</div>
 									<ul>
 			                            <li>
-											<a href="#B1" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-user"></i>
-												</div>
-												DIRIGIDO A 
-											</a>
-										</li>
-			                            <li>
 											<a href="#B2" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-car"></i>
+													<i class="ti-target"></i>
 												</div>
 												DATOS DEL SINIESTRO
 											</a>
@@ -122,7 +88,7 @@ include('session.php');
 			                            <li>
 											<a href="#B3" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-user"></i>
+													<i class="ti-car"></i>
 												</div>
 												DATOS DEL VEHICULO
 											</a>
@@ -130,41 +96,17 @@ include('session.php');
 			                            <li>
 											<a href="#B4" data-toggle="tab">
 												<div class="icon-circle">
-													<i class="ti-user"></i>
+													<i class="ti-help-alt"></i>
 												</div>
 												MOTIVO INVESTIGACION
 											</a>
-										</li>
-			                            <li>
-											<a href="#B5" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-user"></i>
-												</div>
-												RESULTADO INVESTIGACION
-											</a>
-										</li>
+										</li>			                            
 			                            <li>
 											<a href="#B6" data-toggle="tab">
 												<div class="icon-circle">
 													<i class="ti-user"></i>
 												</div>
 												DECLARACIONES
-											</a>
-										</li>
-			                            <li>
-											<a href="#B7" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-user"></i>
-												</div>
-												ENTREVISTAS
-											</a>
-										</li>
-			                            <li>
-											<a href="#B8" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-user"></i>
-												</div>
-												RECONSTRUCCION
 											</a>
 										</li>
 			                            <li>
@@ -223,14 +165,14 @@ include('session.php');
 											<h5 class="info-text"> Por favor indica a quien va dirigido el caso</h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
-													<label>NOMBRE <small>(required)</small></label>
-													<input name="DIRIGIDO_A" type="text" class="form-control" placeholder="a quien va dirigido el documento">
+													<label>NOMBRE </label>
+													<input name="DIRIGIDO_A" type="text" class="form-control" placeholder="a quien va dirigido el documento" value = "Noe S.G.">
 												</div>
 											</div>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
-													<label>CARGO  <small>(required)</small></label>
-													<input name="CARGO" type="text" class="form-control" placeholder="cargo que ocupa la persona">
+													<label>CARGO  </label>
+													<input name="CARGO" type="text" class="form-control" placeholder="cargo que ocupa la persona"value = "Maestro">
 												</div>
 											</div>
 										</div>
@@ -240,35 +182,35 @@ include('session.php');
 											<h5 class="info-text"> DATOS DEL SINIESTRO.</h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
-													<label>NÚMERO DE SINIESTRO <small>(required)</small></label>
+													<label>NÚMERO DE SINIESTRO </label>
 													<input name="N_DE_SINIESTRO" type="text" class="form-control" placeholder="Folio o numero del asegurado">
 												</div>
 												<div class="form-group">
-													<label>FECHA DEL SINIESTRO <small>(required)</small></label>
+													<label>FECHA DEL SINIESTRO </label>
 													<input name="F_DE_SINIESTRO" type="text" class="form-control datepicker">
 												</div>
 												<div class="form-group">
-													<label>FECHA DEL REPORTE <small>(required)</small></label>
+													<label>FECHA DEL REPORTE </label>
 													<input name="F_DE_REPORTE" type="text" class="form-control datepicker">
 												</div>
 												<div class="form-group">
-													<label>NO. DE POLIZA <small>(required)</small></label>
+													<label>NO. DE POLIZA </label>
 													<input name="N_DE_POLIZA" type="text" class="form-control">
 												</div>												
 												<div class="form-group">
-													<label>INCISO <small>(required)</small></label>
+													<label>INCISO </label>
 													<input name="INCISO" type="text" class="form-control">
 												</div>
 												<div class="form-group">
-													<label>INICIO VIGENCIA <small>(required)</small></label>
+													<label>INICIO VIGENCIA </label>
 													<input name="INI_VIG" type="text" class="form-control datepicker">
 												</div>
 												<div class="form-group">
-													<label>TERMINO VIGENCIA <small>(required)</small></label>
+													<label>TERMINO VIGENCIA </label>
 													<input name="FIN_VIG" type="text" class="form-control datepicker">
 												</div>
 												<div class="form-group">
-													<label>COBERTURA <small>(required)</small></label>
+													<label>COBERTURA </label>
 													<select name = "COBERTURA"  class="input-group form-control" >
 														<option value ="N/A">--Seleccione--</option>
 														<option value = "A">AMPLIA</option>
@@ -278,11 +220,11 @@ include('session.php');
 													</select>
 												</div>
 												<div class="form-group">
-													<label>NOMBRE DEL ASEGURADO <small>(required)</small></label>
+													<label>NOMBRE DEL ASEGURADO </label>
 													<input name="NOM_ASEGURADO" type="text" class="form-control" placeholder="nombre del asegurado">
 												</div>
 												<div class="form-group">
-													<label>NOMBRE DEL CONDUCTOR <small>(required)</small></label>
+													<label>NOMBRE DEL CONDUCTOR </label>
 													<input name="NOM_CONDUCTOR" type="text" class="form-control" placeholder="nombre del conductor">
 												</div>
 												<h6 class="info-text"> ROBO</h6>
@@ -357,7 +299,7 @@ include('session.php');
 													</select>
 												</div>												
 												<div class="form-group">
-													<label>MODELO <small>(required)</small></label>
+													<label>MODELO </label>
 													<input name="MODELO" type="text" class="form-control" placeholder="modelo/año del vehiculo">
 												</div>
 												<div class="form-group">
@@ -374,15 +316,15 @@ include('session.php');
 													</select>
 												</div>												
 												<div class="form-group">
-													<label>NO. DE SERIE <small>(required)</small></label>
+													<label>NO. DE SERIE </label>
 													<input name="N_DE_SERIE" type="text" class="form-control" placeholder="numero de serie del vehiculo">
 												</div>												
 												<div class="form-group">
-													<label>NO. DE MOTOR <small>(required)</small></label>
+													<label>NO. DE MOTOR </label>
 													<input name="N_MOTOR" type="text" class="form-control" placeholder="numero de serie del motor">
 												</div>												
 												<div class="form-group">
-													<label>PLACAS <small>(required)</small></label>
+													<label>PLACAS </label>
 													<input name="PLACAS" type="text" class="form-control" placeholder="numero de palcas">
 												</div>
 											</div>
@@ -477,9 +419,7 @@ include('session.php');
 												</div>
 											</div>
 										</div>
-									</div>
-		                            <div class="tab-pane" id="B5">
-		                            	<div class="row">
+										<div class="row">
 											<h5 class="info-text">RESULTADO DE LA INVESTIGACION.</h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
@@ -496,7 +436,7 @@ include('session.php');
 												</div>
 											</div>
 										</div>
-									</div>
+									</div>		                            
 		                            <div class="tab-pane" id="B6">
 		                            	<div class="row">
 											<h5 class="info-text"> DECLARACION DEL ASEGURADO O CONDUCTOR VERTIDA AL AJUSTADOR </h5>
@@ -509,9 +449,7 @@ include('session.php');
 												</div>
 											</div>
 										</div>
-		                            </div>
-		                            <div class="tab-pane" id="B7">
-		                                <div class="row">
+										 <div class="row">
 	                                        <h5 class="info-text"> ENTREVISTA CON EL ASEGURADO O CONDUCTOR </h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
@@ -534,10 +472,8 @@ include('session.php');
 													</div>
 												</div>
 											</div>
-		                                </div>
-		                            </div>
-		                            <div class="tab-pane" id="B8">
-		                                <div class="row">
+										</div>
+										<div class="row">
 	                                        <h5 class="info-text"> DOCUMENTOS DE LA PROPIEDAD </h5>
 											<div class="col-sm-10 col-sm-offset-1">
 												<div class="form-group">
