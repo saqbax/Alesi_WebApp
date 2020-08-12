@@ -20,5 +20,5 @@
 /composer.lock
 
 #propio del proyecto de alesi
-galerias/docs/*
-galerias/imagenes/*
+#galerias/docs/a.txt
+#galerias/imagenes/*.*
