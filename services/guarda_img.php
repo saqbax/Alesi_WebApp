@@ -43,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           $uploadOk = 0;
       }
       // Check file size
-      if ($_FILES["imagen"]["size"] > 524288) {
+      /*if ($_FILES["imagen"]["size"] > 524288) {
           $errors[]= "Lo sentimos, el archivo es demasiado grande.  Tamaño máximo admitido: 0.5 MB";
           $uploadOk = 0;
-      }
+      }*/
       // Allow certain file formats
       if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
       && $imageFileType != "gif" ) {
