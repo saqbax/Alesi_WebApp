@@ -24,7 +24,7 @@ services:
             MYSQL_ROOT_PASSWORD: root
         ports:
             - "3306:3306"
-        restart: always
+        #restart: always
         volumes: 
             - /home/ryzen-fedora/Software/Docker-Volumes/mysql:/var/lib/mysql
         #networks:

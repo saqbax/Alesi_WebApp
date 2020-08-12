@@ -8,7 +8,7 @@ include('session.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Datos de personas</title>
+    <title>Dashboard</title>
 
 
     <!-- hojas de estilos -->
@@ -32,67 +32,106 @@ include('session.php');
       </center>
     </div>
     <div class="container" style="margin-top: 80px;">
-        <div class="content">
+        <div class="content" center>
+                <?php
+                if ($login_emp == 'SURA' ){
+                    echo '<div class="row">
+                                    <section class="jumbotron text-center" style="width:100%;height:90%;">
+                                    <div class="container">
+                                        <h2 class="jumbotron-heading">CASOS de SURA</h2>
 
-            <main role="main">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <section class="jumbotron text-center" style='width:600px;height:500px;'>
-                            <div class="container">
-                                <h2 class="jumbotron-heading">CASOS SURA</h2>
+                                        <div class="row mt-6">
+                                            <div class="col-md-12">
 
-                                <div class="row mt-6">
-                                    <div class="col-md-12">
+                                                <canvas id="dashSura"></canvas>
 
-                                        <canvas id="miGrafico"></canvas>
+                                            </div>
+                                        </div>
 
                                     </div>
-                                </div>
+                                </section>
+                            </div>';
+                }elseif ($login_emp == 'CARDIF' ) {
+                    echo '<div class="row">
+                                <section class="jumbotron text-center" style="width:100%;height:90%;">
+                                    <div class="container">
+                                        <h2 class="jumbotron-heading">CASOS de CARDIF</h2>
 
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-sm-6">
-                    <section class="jumbotron text-center" style='width:600px;height:500px;'>
-                        <div class="container">
-                            <h2 class="jumbotron-heading">CASOS CARDIF</h2>
+                                        <div class="row mt-6">
+                                            <div class="col-md-12">
 
-                            <div class="row mt-4">
-                                <div class="col-md-12">
+                                                <canvas id="dashCardif"></canvas>
 
-                                    <canvas id="miGraf"></canvas>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </div>
+                                    </div>
+                                </section>
+                          </div>';
+                }elseif ($login_emp == 'ALESI' ) {
+                    echo '<div class="row">
+                                    <section class="jumbotron text-center" style="width:100%;height:90%;">
+                                    <div class="container">
+                                        <h2 class="jumbotron-heading">CASOS de SURA</h2>
 
-                        </div>
-                    </section>
-                    </div>
-                </div>
+                                        <div class="row mt-6">
+                                            <div class="col-md-12">
 
-                <script crossorigin="anonymous"
-                    integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
-                    src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                <script crossorigin="anonymous"
-                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-                <script crossorigin="anonymous"
-                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                                                <canvas id="dashSura"></canvas>
 
-                <!-- Chart JS -->
+                                            </div>
+                                        </div>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"
-                    integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
-                    integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"
-                    integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"
-                    integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
-                <script type="text/javascript" src="js/datos.js"></script>
+                                    </div>
+                                </section>
+                            </div>';
 
+
+
+                    echo '<div class="row">
+                                <section class="jumbotron text-center" style="width:100%;height:90%;">
+                                    <div class="container">
+                                        <h2 class="jumbotron-heading">CASOS de CARDIF</h2>
+
+                                        <div class="row mt-6">
+                                            <div class="col-md-12">
+
+                                                <canvas id="dashCardif"></canvas>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
+                          </div>';
+                }
+
+                ?>            
         </div>
+    </div>
+                
+<script crossorigin="anonymous"
+    integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
+    src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script crossorigin="anonymous"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Chart JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"
+    integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
+    integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"
+    integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"
+    integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/datos.js"></script>
+
 </body>
 
 </html>

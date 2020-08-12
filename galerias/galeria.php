@@ -1,6 +1,6 @@
 <?php
 require '../php/conexion.php';
-require('../session.php');
+require '../session.php';
 
 ?>
 
@@ -176,7 +176,7 @@ require('../session.php');
 
 		<nav>
 			<ul>
-				<li><a href="#"  onclick="click_load()">Cargar Imagen </a> </li>
+				<li><a href="#" <?php if(($login_rol == "ASG")){echo "style='display:none'";}?>  onclick="click_load()">Cargar Imagen </a> </li>
                 <li><a href="#"  onclick="regreso()">Regresar</a></li>
                 
 			</ul>
@@ -192,7 +192,7 @@ require('../session.php');
                 $nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
                 //consultamos los datos para el cabezero
 
-                $resultado = mysqli_query($con, "SELECT f_num_siniestro(".$nik.") AS NUM_SINIESTRO");
+                $resultado = mysqli_query($con, "SELECT NUM_SINIESTRO from ALESI_TCASO where ID_CASO = $nik");
                 $row = mysqli_fetch_assoc($resultado);
                 $content = $row['NUM_SINIESTRO'];
 
@@ -203,7 +203,7 @@ require('../session.php');
         <?php
         //se inicia logica para mostrar las fotos asociadas al caso
 
-        $resultado = mysqli_query($con, "SELECT * from ALESI_IMAGENES where ID_CASO  = ".$nik);        
+        $resultado = mysqli_query($con, "SELECT * from ALESI_BINARIOS where ID_CASO  = ".$nik." and TIPO NOT in ('pdf','xlsx','xls','docx','doc')");        
 
         if(mysqli_num_rows($resultado) == 0){
             echo ("No se ha cargado ninguna imagen");
@@ -214,17 +214,17 @@ require('../session.php');
                 echo ('<article>
                         <a href="#img'.$n.'">
                             <figure>
-                                <img src="imagenes/'.$row['NOMBRE_IMAGEN'].'" />
-                                <figcaption>'.$row['NOMBRE_IMAGEN'].'</figcaption>
+                                <img src="imagenes/'.$row['NOMBRE_BINARIO'].'" />
+                                <figcaption>'.$row['NOMBRE_BINARIO'].'</figcaption>
                             </figure>
                         </a>
                     </article>
                     
                     <div class="modal" id="img'.$n.'">
-                    <h3>'.$row['NOMBRE_IMAGEN'].'</h3>
+                    <h3>'.$row['NOMBRE_BINARIO'].'</h3>
                     <div class="imagen">
                         <a href="#img'.($n-1).'">&#60;</a>
-                        <a ><img src="imagenes/'.$row['NOMBRE_IMAGEN'].'"></a>
+                        <a ><img src="imagenes/'.$row['NOMBRE_BINARIO'].'"></a>
                         <a href="#img'.($n+1).'">></a>
                     </div>
                     <a class="cerrar" href="">X</a>

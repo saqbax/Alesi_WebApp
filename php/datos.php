@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 // Configuramos la conexión a la base de datos
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql');
 define('DB_USERNAME', 'alesiorg_ALESI_BD_USER');
 define('DB_PASSWORD', 'EGWZXNGWPDG');
 define('DB_NAME', 'alesiorg_ALESI_BD');
@@ -18,9 +18,9 @@ if(!$mysqli){
 }
 
 // Seleccionamos los datos de la tabla casos
-$query = sprintf("SELECT STATUS,COUNT(*) NUM_CASOS
-					FROM ALESI_TCASO
-					GROUP BY STATUS");
+$query = sprintf("SELECT ID_EMPRESA,STATUS,COUNT(*) NUM_CASOS
+				FROM ALESI_TCASO
+				GROUP BY ID_EMPRESA,STATUS");
 
 $result = $mysqli->query($query);
 

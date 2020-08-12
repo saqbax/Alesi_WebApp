@@ -8,7 +8,7 @@ include('session.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Datos del caso</title>
+    <title>Lista de siniestros</title>
 
     <!-- JQuery -->
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
@@ -34,12 +34,12 @@ include('session.php');
     
     <div class="container">
         <div class="content">
-            <h2>Lista de casos</h2>
+            <h2>Lista de siniestros</h2>
             <hr />
 
             <?php
 			$cat = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_EMPRESA') AND CAMPO_A = 'ASG'");
-            $cat1 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_TIP_CASO')");
+            //$cat1 = mysqli_query($con, "SELECT * FROM ALESI_NTABLAS WHERE ID_TABLA = (SELECT ID_TABLA FROM ALESI_TABLAS WHERE COD_TABLA = 'CAT_TIP_CASO')");
             
             if (isset($_GET['aksi'])){
                 $p_operacion = $_GET['aksi'];
@@ -126,15 +126,39 @@ include('session.php');
                     <?php
 				if(($filter) and ($filter != 'status') ){
 					if($login_rol == "ASG"){
-						$sql = mysqli_query($con, "SELECT f_num_siniestro(A.ID_CASO) AS NUM_SINIESTRO, A.* FROM ALESI_TCASO A WHERE A.STATUS='$filter' AND A.ID_EMPRESA = '".$login_emp."' ORDER BY A.ID_CASO ASC");
+						$sql = mysqli_query($con, "SELECT A.*,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ALTA),1,10) as NOM_USER_ALTA,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ASIGNADO),1,10) AS NOM_USER_ASIG,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ULTIMA_ACT),1,10) AS NOM_USER_ULT
+                                                    FROM ALESI_TCASO A 
+                                                    WHERE A.STATUS='$filter' 
+                                                    AND A.ID_EMPRESA = '".$login_emp."' 
+                                                    ORDER BY A.ID_CASO ASC");
 					} else {
-						$sql = mysqli_query($con, "SELECT f_num_siniestro(A.ID_CASO) AS NUM_SINIESTRO, A.* FROM ALESI_TCASO A WHERE A.STATUS='$filter' ORDER BY A.ID_CASO ASC");
+						$sql = mysqli_query($con, "SELECT A.*,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ALTA,1,10)) as NOM_USER_ALTA,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ASIGNADO),1,10) AS NOM_USER_ASIG,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ULTIMA_ACT),1,10) AS NOM_USER_ULT
+                                                    FROM ALESI_TCASO A 
+                                                    WHERE A.STATUS='$filter' 
+                                                    ORDER BY A.ID_CASO ASC");
 					}
 				}else{
 					if($login_rol == "ASG"){
-						$sql = mysqli_query($con, "SELECT f_num_siniestro(A.ID_CASO) AS NUM_SINIESTRO, A.* FROM ALESI_TCASO A WHERE A.ID_EMPRESA = '".$login_emp."' ORDER BY A.ID_CASO ASC");
+						$sql = mysqli_query($con, "SELECT A.*,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ALTA),1,10) as NOM_USER_ALTA,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ASIGNADO),1,10) AS NOM_USER_ASIG,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ULTIMA_ACT),1,10) AS NOM_USER_ULT
+                                                    FROM ALESI_TCASO A
+                                                    WHERE A.ID_EMPRESA = '".$login_emp."' 
+                                                    ORDER BY A.ID_CASO ASC");
 					} else {
-						$sql = mysqli_query($con, "SELECT f_num_siniestro(A.ID_CASO) AS NUM_SINIESTRO, A.* FROM ALESI_TCASO A ORDER BY A.ID_CASO ASC");
+						$sql = mysqli_query($con, "SELECT A.*,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ALTA),1,10) as NOM_USER_ALTA,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ASIGNADO),1,10) AS NOM_USER_ASIG,
+                                                        SUBSTRING((SELECT NOMBRE FROM ALESI_TPERSONAS B WHERE B.ID_PERSONA= A.ID_USUARIO_ULTIMA_ACT),1,10) AS NOM_USER_ULT
+                                                    FROM ALESI_TCASO A 
+                                                    ORDER BY A.ID_CASO ASC");
 					}
 				}
 				if(mysqli_num_rows($sql) == 0){
@@ -147,14 +171,16 @@ include('session.php');
 							<td>'.$no.'</td>
 							<td>'.$row['ID_CASO'].'</td>
 							<td><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['ID_EMPRESA'].'</a></td>
-                            <td><a href="det_caso.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'">'.$row['NUM_SINIESTRO'].'</td>
+                            <td><a href="#">'.$row['NUM_SINIESTRO'].'</td>
+                            <!--<td><a href="det_caso.php?nik='.$row['ID_CASO'].'&emp='.$row['ID_EMPRESA'].'">'.$row['NUM_SINIESTRO'].'</td>-->
 							<td>'.$row['F_ALTA'].'</td>
                             <td>'.$row['F_CIERRE'].'</td>
-                            <td>'.$row['ID_USUARIO_ALTA'].'</td>
-                            <td>'.$row['ID_USUARIO_ASIGNADO'].'</td>
+                            <td>'.$row['NOM_USER_ALTA'].'</td>
+                            <td>'.$row['NOM_USER_ASIG'].'</td>
                             <td>
-                                <a href="/galerias/galeria.php?nik='.$row['ID_CASO'].'" title="Fotografias" class="btn  btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
-                                <a target="_blank" href="genera_pdf.php?id='.$row['ID_CASO'].'" title="Generar PDF"  class="btn btn-primary btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
+                                <a href="/galerias/galeria.php?nik='.$row['ID_CASO'].'" title="Fotografias" class="btn  btn-primary btn-sm" onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
+                                <!--<a target="_blank" href="genera_pdf.php?id='.$row['ID_CASO'].'" title="Ver documentos"  class="btn btn-primary btn-sm"  ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>-->
+                                <a href="/galerias/documentos.php?nik='.$row['ID_CASO'].'" title="Ver documentos"  class="btn btn-primary btn-sm"  ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
                             </td>
 							<td>';
 							if($row['STATUS'] == 'EN_CURSO'){
@@ -174,7 +200,7 @@ include('session.php');
 							echo '</td>
 									<td>
 
-										<a href="#" title="Editar datos" class="btn btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+										<!--<a href="#" title="Editar datos" class="btn btn-primary btn-sm"'.$nueva.'  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a> -->
 										<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_EMPRESA'].'?\')" class="btn btn-danger btn-sm" '.$nueva.' ><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
 									</td>
 								</tr>';
@@ -182,7 +208,7 @@ include('session.php');
 							echo '</td>
 									<td>
 
-									<a href="#" title="Editar datos" class="btn btn-primary btn-sm"  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+									<!--<a href="#" title="Editar datos" class="btn btn-primary btn-sm"  onclick="redirectMod('.$row['ID_CASO'].',\''.$row['ID_EMPRESA'].'\');" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>-->
                                     <a href="mc_list.php?aksi=cerrado&nik='.$row['ID_CASO'].'" title="Cerrar Caso" onclick="return confirm(\'Esta seguro de cerrar el caso '.$row['ID_CASO'].'?\')" class="btn btn-warning btn-sm"  ><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>
 									<a href="mc_list.php?aksi=delete&nik='.$row['ID_CASO'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['ID_CASO'].'?\')" class="btn btn-danger btn-sm"  ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 									</td>
@@ -218,24 +244,31 @@ include('session.php');
                             <tr>
                                 <td>
                                     <?php
-						if(mysqli_num_rows($cat) == 0){
-							echo 'No hay datos.';
-						}else{
-							echo '<select name = "EMPRESA" id = "EMPRESA" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
-								$nu = 1;
-									while($ca = mysqli_fetch_assoc($cat)){
-										echo '<option value = "'.$ca['ID_CODIGO'].'" ';
-										echo '>'.$ca['DESCIPCION'].'</option>';
-									$nu++;
-									}
-								echo '</select>';
-							}
-						?>
+                                    if(mysqli_num_rows($cat) == 0){
+                                        echo 'No hay datos.';
+                                    }else{
+                                        echo '<select name = "EMPRESA" id = "EMPRESA" class="input-group form-control" style = "width:320px;"><option value "">--Seleccione--</option>';
+                                            $nu = 1;
+                                                while($ca = mysqli_fetch_assoc($cat)){
+                                                    echo '<option value = "'.$ca['ID_CODIGO'].'" ';
+                                                    echo '>'.$ca['DESCIPCION'].'</option>';
+                                                $nu++;
+                                                }
+                                            echo '</select>';
+                                        }
+						            ?>
                                 </td>
                             </tr>
+
                             <tr>
-                                <td><a href="#" title="Editar datos" class="btn btn-primary btn-sm"
-                                        onclick="redirect();">Confirmar</a></td>
+                                <th align="center">Llave de siniestro</th>
+                            </tr>
+                            <tr>
+                                <th><input type="text" id="llaveSiniestro" name="nllaveSiniestro"></th>
+                            </tr>
+                            <tr>
+                                <td><a href="#" title="Confirmar" class="btn btn-primary btn-sm"
+                                        onclick="btnNuevoCaso();">Confirmar</a></td>
                             </tr>
                         </table>
                     </form>
@@ -244,8 +277,56 @@ include('session.php');
         </div>
     </div>
     <script>
-    function redirect() {
-        var URLactual = window.location;
+    function btnNuevoCaso() {
+
+        var v_empresa = document.getElementById("EMPRESA").value;
+        var v_llaveSiniestro = document.getElementById("llaveSiniestro").value;
+        var v_login_id_persona = <?php echo $login_id_persona ?> ;
+
+        if (v_empresa == "" ||v_llaveSiniestro =="" ){
+            alert('Los campos de Empresa y llave de siniestro no pueden ir vacios ');
+        }else{
+            var data = new FormData();
+            data.append('p_empresa', v_empresa);
+            data.append('p_num_siniestro', v_llaveSiniestro);
+            data.append('p_usuario', v_login_id_persona);
+
+            $.ajax({
+                        url: "../services/abc_siniestros.php",        // Url to which the request is send
+                        type: "POST",             // Type of request to be send, called as method
+                        data: data, 			  // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+                        contentType: false,       // The content type used when sending data to the server.
+                        cache: false,             // To unable request pages to be cached
+                        processData:false,        // To send DOMDocument or non processed data file it is set to false
+                        success: function(data)   // A function to be called if request succeeds
+                        {
+                            var data2 =JSON.parse(data);
+
+                            if (data2.success == true){
+                                console.log('chido');
+                                window.setTimeout(function() {
+                                    $(this).remove();
+                                    location.reload(true);
+                                    alert('El siniestro se dio de alta con exito ');
+
+                                },1000);
+
+                            }else{
+                                console.log('valio');
+                                window.setTimeout(function() {
+                                    $(this).remove();
+                                    location.reload(true);
+                                    alert('Hubo un error al insertar  ');
+
+                                },1000);
+                            }
+
+                        }
+                    });
+        }
+
+
+        /*var URLactual = window.location;
         var v_empresa = document.getElementById("EMPRESA").value;
         if (v_empresa == "SURA") {
             url = URLactual.toString().replace("mc_list.php", "alta_caso.php");
@@ -255,7 +336,7 @@ include('session.php');
         
         url = url.slice(0, url.indexOf(".php"));
 
-        location.href = url + ".php?nik=" + document.getElementById("EMPRESA").value;
+        location.href = url + ".php?nik=" + document.getElementById("EMPRESA").value;*/
     }
 
     function redirectMod(p_ncaso, p_emp) {

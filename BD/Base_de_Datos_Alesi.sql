@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- SCHEMA alesiorg_ALESI_BD
 -- -----------------------------------------------------
 -- CREATE SCHEMA IF NOT EXISTS `alesiorg_ALESI_BD` DEFAULT CHARACTER SET UTF8 ;
--- USE `alesiorg_ALESI_BD` ;
+ USE `alesiorg_ALESI_BD` ;
 
 -- -----------------------------------------------------
 -- TABLE `alesiorg_ALESI_BD`.`ALESI_TUSUARIOS`
@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `alesiorg_ALESI_BD`.`ALESI_TCASO` (
   `ID_CASO` INT NOT NULL AUTO_INCREMENT,
   `ID_EMPRESA` VARCHAR(45) NOT NULL,
   `TIPO_CASO` VARCHAR(45) NOT NULL,
+  `NUM_SINIESTRO` VARCHAR(45) NOT NULL,
   `F_ALTA` DATE NOT NULL,
   `F_ESTATUS` DATE NOT NULL,
   `F_CIERRE` DATE NOT NULL,
@@ -1149,19 +1150,23 @@ INSERT INTO `ALESI_NTABLAS` (`ID_TABLA`,`ID_CODIGO`,`DESCIPCION`,`CAMPO_A`,`CAMP
 --
 
 
-INSERT INTO `ALESI_TPERSONAS` (`ID_PERSONA`, `NOMBRE`, `EDAD`, `SEXO`, `TELEFONO`, `EMAIL`, `ID_EMPRESA`, `CARGO`,`ESTADO`,  `OTROS`) VALUES
-(1, 'JESUS ACOSTA MAYA', 99, 'M', '9999999999', 'algo@algo.com', 'SOPORTEALESI', 'DEVELOPER1', 1, NULL);
+INSERT INTO ALESI_TPERSONAS (ID_PERSONA,NOMBRE,EDAD,SEXO,TELEFONO,EMAIL,ID_EMPRESA,CARGO,OTROS,ESTADO) VALUES 
+(1,'JESUS ACOSTA MAYA',99,'M','9999999999','algo@algo.com','SOPORTEALESI','DEVELOPER1',NULL,1)
+,(2,'NOE SANTIAGO G',99,'M','9999999999','algo@algo.com','SOPORTEALESI','DEVELOPER1',NULL,1)
+,(3,'Usuario1',99,NULL,'999999999','user1@segurossura.com.mx','SURA','USR',NULL,NULL)
+,(4,'Usuario1',99,NULL,'999999999','user1@cardif.com.mx','CARDIF','USR',NULL,NULL)
+,(5,'CÉSAR QUIÑONES GRANADOS',99,'M','9999999999','algo@algo.com','ALESI','ADM',NULL,1)
 
-INSERT INTO `ALESI_TPERSONAS` (`ID_PERSONA`, `NOMBRE`, `EDAD`, `SEXO`, `TELEFONO`, `EMAIL`, `ID_EMPRESA`, `CARGO`,`ESTADO`,  `OTROS`) VALUES
-(2, 'NOE SANTIAGO G', 99, 'M', '9999999999', 'algo@algo.com', 'SOPORTEALESI', 'DEVELOPER1', 1, NULL);
-
+;
 -- pas holamundo
 
-INSERT INTO `ALESI_TUSUARIOS` (`USUARIO`, `ID_PERSONA`, `PASS`, `ROL`, `ID_EMPRESA`, `STATUS`, `F_ALTA`, `F_ULTIMA_CONEXION`) VALUES
-('JECHUS', 1, 'e516f979536994a14d9b0500bca3a1287b9ea9fe', 'DEV1', 'SURA','ACTIVO', '2019-10-30', '2019-10-30');
-
-INSERT INTO `ALESI_TUSUARIOS` (`USUARIO`, `ID_PERSONA`, `PASS`, `ROL`, `ID_EMPRESA`, `STATUS`, `F_ALTA`, `F_ULTIMA_CONEXION`) VALUES
-('noe@algo.com', 2, 'e516f979536994a14d9b0500bca3a1287b9ea9fe', 'DEV1','CARDIF', 'ACTIVO', '2019-10-30', '2019-10-30');
+INSERT INTO ALESI_TUSUARIOS (USUARIO,ID_PERSONA,PASS,ROL,ID_EMPRESA,STATUS,F_ALTA,F_ULTIMA_CONEXION) VALUES 
+('adm@alesi.com.mx',5,'12426c59f4afabf84f5c414c2182fbdbbc63ccaa','ADM','ALESI','ACTIVO','2020-08-09',NULL)
+,('JECHUS',1,'e516f979536994a14d9b0500bca3a1287b9ea9fe','DEV1','SURA','ACTIVO','2019-10-30','2019-10-30')
+,('noe@algo.com',2,'99800b85d3383e3a2fb45eb7d0066a4879a9dad0','DEV1','CARDIF','ACTIVO','2019-10-30','2019-10-30')
+,('user1@cardif.com.mx',4,'2f735d5182e0c9003b3c54bc4b82ed189eae8ee0','ASG','CARDIF','ACTIVO','2020-08-05',NULL)
+,('user1@segurossura.com.mx',3,'827ed34588534e47b8216f3d94baa5f3ff9a4197','ASG','SURA','ACTIVO','2020-08-05',NULL)
+;
 
 COMMIT;
 -- ----------------------------------------------------------------------------------
@@ -1249,9 +1254,10 @@ commit;
 
 
 -- ----------------------------------------------
-
+/*
 INSERT INTO `ALESI_TCASO` (`ID_CASO`,`ID_EMPRESA`,`TIPO_CASO`,`F_ALTA`,`F_ESTATUS`,`F_CIERRE`,`STATUS`,`ID_USUARIO_ALTA`,`ID_USUARIO_ASIGNADO`,`ID_USUARIO_ULTIMA_ACT`) VALUES (1,'SURA','SINIESTRO_AUTO_S','2018-11-03','2018-11-03','2018-11-03','EN_CURSO','JECHUS','JECHUS','JECHUS');
 INSERT INTO `ALESI_TCASO` (`ID_CASO`,`ID_EMPRESA`,`TIPO_CASO`,`F_ALTA`,`F_ESTATUS`,`F_CIERRE`,`STATUS`,`ID_USUARIO_ALTA`,`ID_USUARIO_ASIGNADO`,`ID_USUARIO_ULTIMA_ACT`) VALUES (2,'SURA','SINIESTRO_AUTO_S','2019-11-08','2019-11-08','2019-11-13','EN_CURSO','JECHUS','JECHUS','JECHUS');
+
 
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,1,'JOSE PERES LEON');
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (1,2,'PRESIDENTE');
@@ -1403,7 +1409,7 @@ INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,73,'S'
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,74,'S');
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,75,'R');
 INSERT INTO `ALESI_TVALCASO` (`ID_CASO`,`NUM_ATRIBUTO`,`VALOR`) VALUES (2,76,'Con fecha 10 de enero del presente año, se turna a esta firma la investigación de referencia por la posibilidad de encontrarnos ante una falsedad en la declaración y un posible robo preexistente al inicio de vigencia.\n\nEn la misma fecha nos damos a la tarea inmediata de comenzar con la presente investigación, inicialmente con la solicitud de los audios de cabina y realizando las gestiones propias para enriquecer la presente investigación.\n\nUn segundo elemento que se considera para declinar el presente siniestro se basa en las diversas documentales para acreditar la preexistencia del vehículo, apuntalaban una línea más de investigación y que arrojaba como resultado el robo previo al inicio de vigencia. Es importante mencionar que los vecinos del lugar donde supuestamente ocurre el robo, en ningún momento vieron la unidad asegurada estacionada por varios días.\n\nUn tercer elemento que apuntala la información del presente informe consiste en la entrevista con los CC Christian Martín Mercado López y Lucia Duran González,, encontrado discrepancias conforme a los datos de prueba recolectados en el lugar del siniestro, y a los manifestados en las entrevistas por parte del C. Christian Martín Mercado López. Adicionalmente la información proporcionada la consideramos falaz, ya que se encontraba alejada de toda lógica y de la mecánica real del siniestro. \n\nAnte la situación anterior y derivado de que se le hace saber a la C. Lucia Duran González,, la falsedad de la declaración inicial por parte del C. Christian Martín Mercado López, manifiesta que no es su deseo intervenir en ningún procedimiento legal, por lo que firma el desistimiento correspondiente.\n\nPor lo anterior, bajo el orden de argumentos y datos de prueba señalados, una vez que dicha información se contrasta con entrevistas, resulta improcedente el siniestro, toda vez que se puede comprobar de manera indubitable que la mecánica de hechos narrada al ajustador, no corresponde. Existiendo dolo en la declaración inicial al ajustador, simulando los hechos, encontrando para ello diversos datos de prueba e indicios que fueron susceptibles de investigación.\n\nSin más por el momento reciba un afectuoso saludo, no sin antes reiterarle que quedo a sus órdenes para cualquier aclaración al respecto.\n');
-
+*/
 
 --
 -- Estructura de tabla para la tabla `casos`
@@ -1677,7 +1683,7 @@ INSERT INTO `ALESI_TATRICASO`(`ID_EMPRESA`, `TIPO_CASO`, `BLOQUE`, `ORDEN`, `NUM
 
 
 -- ----- caso de prueba cardif
-
+/*
 INSERT INTO `ALESI_TCASO` (`ID_CASO`,`ID_EMPRESA`,`TIPO_CASO`,`F_ALTA`,`F_ESTATUS`,`F_CIERRE`,`STATUS`,`ID_USUARIO_ALTA`,`ID_USUARIO_ASIGNADO`,`ID_USUARIO_ULTIMA_ACT`) VALUES (3,'CARDIF','SINIESTRO_TDC_C','2018-11-03','2018-11-03','2018-11-03','EN_CURSO','JECHUS','JECHUS','JECHUS');
 
 
@@ -1722,7 +1728,7 @@ INSERT INTO `ALESI_TVALCASO`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 38, 
 INSERT INTO `ALESI_TVALCASO`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 39, 'P');
 INSERT INTO `ALESI_TVALCASO`(`ID_CASO`, `NUM_ATRIBUTO`, `VALOR`) VALUES (3, 40, 'MUCHO TEXTO');
 
-
+*/
 COMMIT;
 
 
@@ -5595,21 +5601,22 @@ DELIMITER ;
 commit;
 
 
-DROP TABLE IF EXISTS `ALESI_IMAGENES` ;
+DROP TABLE IF EXISTS `ALESI_BINARIOS` ;
 
-CREATE TABLE IF NOT EXISTS `ALESI_IMAGENES` (
+CREATE TABLE IF NOT EXISTS `ALESI_BINARIOS` (
+  `ID_BINARIO` INT NOT NULL AUTO_INCREMENT,
   `ID_CASO` INT NOT NULL,
-  `NOMBRE_IMAGEN` VARCHAR(150) NOT NULL,
+  `NOMBRE_BINARIO` VARCHAR(150) NOT NULL,
   `F_ALTA` DATE NOT NULL, 
   -- `IMAGEN` mediumblob NOT NULL,
   `TIPO` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`ID_CASO`,`NOMBRE_IMAGEN`),
+  PRIMARY KEY ( `ID_BINARIO`,`ID_CASO`,`NOMBRE_BINARIO`),
   CONSTRAINT `FK_3`
     FOREIGN KEY (`ID_CASO`)
     REFERENCES `alesiorg_ALESI_BD`.`ALESI_TCASO` (`ID_CASO`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
-);
+)ENGINE = INNODB;
 
 
 
