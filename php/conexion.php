@@ -1,6 +1,6 @@
 <?php
 /*Datos de conexion a la base de datos*/
-$db_host = "localhost";
+$db_host = "neo-bdmysql.mariadb.database.azure.com";
 $db_user = "alesiorg_ALESI_BD_USER";
 $db_pass = "EGWZXNGWPDG";
 $db_name = "alesiorg_ALESI_BD";

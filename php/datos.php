@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 // Configuramos la conexión a la base de datos
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'neo-bdmysql.mariadb.database.azure.com');
 define('DB_USERNAME', 'alesiorg_ALESI_BD_USER');
 define('DB_PASSWORD', 'EGWZXNGWPDG');
 define('DB_NAME', 'alesiorg_ALESI_BD');
